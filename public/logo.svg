@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="200" height="200" viewBox="36.474 17.625 130.479 129.01" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <bx:export>
+      <bx:file format="svg" normalization="{&quot;removeAnimations&quot;:true,&quot;removeBoxySVGMetadata&quot;:true,&quot;removeForeignMetadata&quot;:true}" path="mp-pharma-logo.svg"/>
+    </bx:export>
+  </defs>
+  <circle cx="75.45" cy="30.766" r="10" fill="#002f6c"/>
+  <circle cx="152.274" cy="57.184" r="10" fill="#00b5c8"/>
+  <circle cx="49.659" cy="106.642" r="10" fill="#00b5c8"/>
+  <circle cx="127.241" cy="132.184" r="10" fill="#002f6c"/>
+  <path d="M 87.732 94.649 L 87.732 44.649 C 60.118 44.649 37.732 67.035 37.732 94.649 L 87.732 94.649 Z" fill="#002f6c" style="transform-origin: 62.732px 69.649px;"/>
+  <path d="M 87.767 69.29 L 137.767 69.29 C 137.767 41.675 115.381 19.29 87.767 19.29 L 87.767 69.29 Z" fill="#00b5c8"/>
+  <path d="M 114.962 69.329 L 114.962 119.329 C 142.576 119.329 164.962 96.944 164.962 69.329 L 114.962 69.329 Z" fill="#002f6c"/>
+  <path d="M 114.98 94.507 L 64.98 94.507 C 64.98 122.121 87.366 144.507 114.98 144.507 L 114.98 94.507 Z" fill="#00b5c8"/>
+</svg>
