@@ -1,10 +1,12 @@
+import FaqAndContact from '@/components/shared/contact/ContactFAQ'
+import Testimonials from '@/components/shared/testimonials/Testimonials'
 import React from 'react'
 
 const page = () => {
   return (
-    <div className="flex flex-col items-center justify-center h-screen">
-      
-      
+    <div className="">
+      <Testimonials />
+      <FaqAndContact/>
     </div>
   )
 }
