@@ -6,7 +6,11 @@ import type { Product } from "@/types/product";
 
 export const ProductDialog = ({ image, name, quantity, ingredients }: Product) => {
   return (
-    <DialogContent className="sm:max-w-[600px] border border-black">
+    <DialogContent 
+      className="sm:max-w-[600px] border border-black"
+      hideTitle={true}
+      title={name} // Add the title prop for accessibility
+    >
       <div className="grid gap-6 sm:grid-cols-2">
         <div className="aspect-square overflow-hidden rounded-md">
           <img

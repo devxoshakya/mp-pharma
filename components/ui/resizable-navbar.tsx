@@ -276,19 +276,19 @@ export const NavbarButton = ({
 export const FeaturesDropdown = () => {
   const categories = [
     {
-      name: "Analytics Platform",
-      description: "Real-time data visualization and insights",
-      image: "/placeholder.svg?height=80&width=80",
+      name: "Baby Care Products",
+      description: "Gentle and safe for your little ones",
+      image: "/category/baby.png",
     },
     {
-      name: "Collaboration Tools",
-      description: "Work together seamlessly with your team",
-      image: "/placeholder.svg?height=80&width=80",
+      name: "Color Cosmetics",
+      description: "Enhance your beauty with our vibrant range",
+      image: "/category/color.png",
     },
     {
-      name: "Automation Suite",
-      description: "Streamline your workflow with smart automation",
-      image: "/placeholder.svg?height=80&width=80",
+      name: "Essential Oils",
+      description: "Natural and therapeutic",
+      image: "/category/oil.png",
     },
   ]
 
@@ -298,25 +298,25 @@ export const FeaturesDropdown = () => {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 10 }}
       transition={{ duration: 0.2 }}
-      className="absolute left-1/2 top-full z-50 mt-2 w-[600px] -translate-x-1/2 rounded-xl bg-white p-4 shadow-lg dark:bg-neutral-900"
+      className="absolute left-1/2 top-full z-50 mt-[1.25rem] w-[600px] -translate-x-1/2 rounded-xl bg-white p-4 shadow-lg dark:bg-neutral-900"
     >
-      <div className="grid grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 gap-4">
         {categories.map((category, idx) => (
           <div
             key={idx}
             className="col-span-1 cursor-pointer rounded-lg p-3 transition-colors hover:bg-gray-50 dark:hover:bg-neutral-800"
           >
-            <div className="flex items-start gap-3">
-              <div className="h-12 w-12 overflow-hidden rounded-md">
+            <div className="flex items-center gap-4">
+              <div className="h-16 w-16 flex-shrink-0 overflow-hidden rounded-md">
                 <Image
                   src={category.image || "/placeholder.svg"}
                   alt={category.name}
-                  width={80}
-                  height={80}
+                  width={64}
+                  height={64}
                   className="h-full w-full object-cover"
                 />
               </div>
-              <div>
+              <div className="flex-1">
                 <h3 className="font-medium text-neutral-800 dark:text-neutral-200">{category.name}</h3>
                 <p className="mt-1 text-xs text-neutral-500 dark:text-neutral-400">{category.description}</p>
               </div>
@@ -324,9 +324,14 @@ export const FeaturesDropdown = () => {
           </div>
         ))}
         <div className="col-span-1 cursor-pointer rounded-lg bg-gray-50 p-3 transition-colors hover:bg-gray-100 dark:bg-neutral-800 dark:hover:bg-neutral-700">
-          <div className="flex h-full flex-col items-center justify-center">
-            <h3 className="font-medium text-neutral-800 dark:text-neutral-200">View All</h3>
-            <p className="mt-1 text-xs text-neutral-500 dark:text-neutral-400">Explore all features</p>
+          <div className="flex items-center gap-4">
+            <div className="h-16 w-16 flex-shrink-0 rounded-md bg-gray-200 dark:bg-neutral-700 flex items-center justify-center">
+              <span className="text-xl font-bold text-gray-400 dark:text-neutral-500">+</span>
+            </div>
+            <div className="flex-1">
+              <h3 className="font-medium text-neutral-800 dark:text-neutral-200">View All</h3>
+              <p className="mt-1 text-xs text-neutral-500 dark:text-neutral-400">Explore all features</p>
+            </div>
           </div>
         </div>
       </div>

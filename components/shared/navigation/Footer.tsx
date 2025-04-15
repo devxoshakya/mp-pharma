@@ -10,7 +10,7 @@ const Footer = () => {
   const isMobile = useIsMobile();
 
   return (
-    <footer className="bg-white border-t border-b border-neutral-200 bottom-0 mt-auto left-0 right-0">
+    <footer className="bg-white border-t border-b border-neutral-200 bottom-0 mt-auto left-0 right-0 max-w-7xl">
       <div className="container mx-auto px-4 py-8 md:py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Company Info Section */}

@@ -68,7 +68,7 @@ const logos = [
   }
 ]
 
-export default function Hero() {
+export default function Clients() {
   return (
     <div className="h-[70vh] w-full overflow-hidden">
       <div className="mx-auto mt-32 w-full max-w-2xl">
