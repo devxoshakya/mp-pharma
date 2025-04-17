@@ -109,7 +109,7 @@ export const products = [
     quantity: "50ML TO 100ML",
   },
   {
-    image: "",
+    image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/assets/24k%20gold%20face%20serum.png",
     category: "FACE SERUM RANGE",
     name: "24K GOLD Face Serum",
     ingredients:
@@ -117,7 +117,7 @@ export const products = [
     quantity: "50 ML",
   },
   {
-    image: null,
+    image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/assets/retinol%20face%20serum.png",
     category: "FACE SERUM RANGE",
     name: "RETINOL Face Serum",
     ingredients:
