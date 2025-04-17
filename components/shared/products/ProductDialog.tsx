@@ -16,7 +16,7 @@ export const ProductDialog = ({ image, name, quantity, ingredients }: Product) =
           <img
             src={image}
             alt={name}
-            className="h-full w-full object-cover object-center"
+            className="h-full w-full object-contain object-center"
           />
         </div>
         <div className="flex flex-col">

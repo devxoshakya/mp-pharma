@@ -47,8 +47,8 @@ export default function FeaturedProducts({
         {limitedProducts.length > 0 ? (
           limitedProducts.map((product) => (
             <ProductCard
-              key={`product-${product.id}-${Math.random().toString(36).substring(2, 9)}`}
-              id={product.id}
+              key={`product-${Math.random().toString(36).substring(2, 9)}`}
+              
               name={product.name}
               image={product.image}
               quantity={product.quantity}

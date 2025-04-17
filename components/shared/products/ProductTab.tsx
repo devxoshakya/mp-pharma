@@ -74,28 +74,28 @@ export default function ProductsTab() {
       </TabsList>
       {/* TabsContent sections remain unchanged */}
       <TabsContent value="tab-1">
-        <ProductShowcase filter="200g" />
+        <ProductShowcase filter="50ML TO 100ML" />
       </TabsContent>
       <TabsContent value="tab-2">
-        <ProductShowcase filter="200g" />
+        <ProductShowcase filter="50ML TO 100ML" />
       </TabsContent>
       <TabsContent value="tab-3">
-        <ProductShowcase filter="200g" />
+        <ProductShowcase filter="50ML TO 100ML" />
       </TabsContent>
       <TabsContent value="tab-4">
-        <ProductShowcase filter="200g" />
+        <ProductShowcase filter="50ML TO 100ML" />
       </TabsContent>
       <TabsContent value="tab-5">
-      <ProductShowcase filter="200g" />
+      <ProductShowcase filter="50ML TO 100ML" />
       </TabsContent>
       <TabsContent value="tab-6">
-      <ProductShowcase filter="200g" />
+      <ProductShowcase filter="50ML TO 100ML" />
       </TabsContent>
       <TabsContent value="tab-7">
-      <ProductShowcase filter="200g" />
+      <ProductShowcase filter="50ML TO 100ML" />
       </TabsContent>
       <TabsContent value="tab-8">
-      <ProductShowcase filter="200g" />
+      <ProductShowcase filter="50ML TO 100ML" />
       </TabsContent>
     </Tabs>
     </>
