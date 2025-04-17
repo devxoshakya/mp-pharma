@@ -9,7 +9,7 @@ interface FeaturedProductsProps {
   quantity?: number;
   filter?: string;
   sortBy?: SortOption;
-  productsData?: Product[]; // Optional override for products data
+  productsData?: any[]; // Optional override for products data
 }
 
 export default function FeaturedProducts({ 
@@ -22,10 +22,12 @@ export default function FeaturedProducts({
   // First apply filtering if filter is provided
   const filteredProducts = filter 
     ? productsData.filter(product => 
-        product.name.toLowerCase().includes(filter.toLowerCase()) || 
-        product.quantity.toLowerCase().includes(filter.toLowerCase())
+        product.image && (
+          product.name.toLowerCase().includes(filter.toLowerCase()) || 
+          product.quantity.toLowerCase().includes(filter.toLowerCase())
+        )
       )
-    : productsData;
+    : productsData.filter(product => product.image !== null);
 
   // Then apply sorting if specified
   const sortedProducts = [...filteredProducts].sort((a, b) => {
