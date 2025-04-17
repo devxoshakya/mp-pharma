@@ -125,4 +125,19 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  .texture {
+    background-image: url(/bg.png);
+    background-size: 50% 100%;
+    background-repeat: repeat;
+    opacity: 0.12;
+    mix-blend-mode: multiply;
+    z-index: 0;
+    isolation: isolate;
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100dvh;
+    pointer-events: none;
+  }
 }
