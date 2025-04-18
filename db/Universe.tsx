@@ -125,7 +125,7 @@ export const products = [
     quantity: "50 ML",
   },
   {
-    image: null,
+    image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/assets/rejuvenating%20face%20serum'%3B.png",
     category: "FACE SERUM RANGE",
     name: "REJUVENATING Face Serum",
     ingredients:
@@ -133,7 +133,7 @@ export const products = [
     quantity: "50 ML",
   },
   {
-    image: null,
+    image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/assets/glutathione%20face%20serum.png",
     category: "FACE SERUM RANGE",
     name: "GLUTATHIONE Face Serum",
     ingredients:
@@ -141,7 +141,7 @@ export const products = [
     quantity: "30 ML",
   },
   {
-    image: null,
+    image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/assets/10%25%20Niacinamide%20face%20serum.png",
     category: "FACE SERUM RANGE",
     name: "10% NIACINAMIDE Face Serum",
     ingredients:
@@ -149,12 +149,13 @@ export const products = [
     quantity: "30 ML",
   },
   {
-    image: null,
+    image: "",
     category: "HAIR SERUM RANGE",
     name: "Hair Serum",
     ingredients:
       "DM Water, Procapil, Capixyl, Redensyl, Hydrovance, Dimethicone, DM DM Hydantoin, Sodium CMC, Methylchloroisothiaz-olinone, Fragrance, 6 Gingerol, Topical Valproic Acid, Catechin, Biotin and Chamomile Extract",
     quantity: "50 ML TO 100 ML",
+    // not available
   },
   {
     image: null,
@@ -173,7 +174,7 @@ export const products = [
     quantity: "75 ML TO 200 ML",
   },
   {
-    image: null,
+    image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/assets/day%20moisturizing%20cream.png",
     category: "FACE CREAM RANGE",
     name: "DAY MOISTURIZING CREAM",
     ingredients:
@@ -181,7 +182,7 @@ export const products = [
     quantity: "30 GM TO 100 GM",
   },
   {
-    image: null,
+    image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/assets/night%20moisturizing%20cream.png",
     category: "FACE CREAM RANGE",
     name: "NIGHT FACE CREAM",
     ingredients:
@@ -189,7 +190,7 @@ export const products = [
     quantity: "30 GM TO 100 GM",
   },
   {
-    image: null,
+    image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/assets/de%20tan%20removal%20cream.png",
     category: "FACE CREAM RANGE",
     name: "DE-TAN FACE CREAM",
     ingredients:
@@ -197,15 +198,16 @@ export const products = [
     quantity: "30 GM TO 100 GM",
   },
   {
-    image: null,
+    image: "",
     category: "FACE CREAM RANGE",
-    name: "21K GOLD FACE CREAM",
+    name: "24K GOLD FACE CREAM",
     ingredients:
       "Purfied Water, Sunflower Oil (Helianthus Annus), Shea Butter (Butyrospermum Parkii), Rose ext (Rosa Centifolia), Olive oil (Olea Europe Koku Garcinia indical, Wheat germ oil (Triticum Vulgare), Almond oil (Prunus Amygdalus Dulcis), Aloe Vera ext (Aloe Barbadensis), Licorice ext (Glycys Sex (Cera Alba), Apple ext (Pyrus Malus), Chamomile ext (Matricaria recutita), Mulberry ext (Morus Alba Leaf), Gingko biloba ext (Ginkgo bilobal, Rosemary exc Romanus officinalis) Jojoba oil (Simmondsia Chinensis), Grapeseed oil (Vitis Vinifera). Sandalwood oil (Santalum Album), Swarna Bhasma (Gold) Base 05",
     quantity: "30 GM TO 100 GM",
+    // not available
   },
   {
-    image: null,
+    image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/assets/vitamin%20C%20Cream.png",
     category: "FACE CREAM RANGE",
     name: "VITAMIN C FACE CREAM",
     ingredients:
@@ -213,15 +215,16 @@ export const products = [
     quantity: "30 GM TO 100 GM",
   },
   {
-    image: null,
+    image: "",
     category: "FACE CREAM RANGE",
     name: "ANTI-WRINKLE CREAM",
     ingredients:
       "Glycolic Acid, Lactic Acid, Vitamin-A, C, E & Dpanthanol (vitamin-b5), Aloe Vera Extract, Salicylic Acid, Fragrance & DM Water",
     quantity: "30 GM TO 100 GM",
+    // same image url as of vitamin C face cream
   },
   {
-    image: null,
+    image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/assets/skin-whiting%20cream.png",
     category: "FACE CREAM RANGE",
     name: "SKIN WHITENING CREAM",
     ingredients:
@@ -229,7 +232,7 @@ export const products = [
     quantity: "30 GM TO 100 GM",
   },
   {
-    image: null,
+    image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/assets/skin%20hydarting%20cream.png",
     category: "FACE CREAM RANGE",
     name: "HYDRATING FACE CREAM",
     ingredients:
@@ -237,7 +240,7 @@ export const products = [
     quantity: "30 GM TO 100 GM",
   },
   {
-    image: null,
+    image: "",
     category: "FACE CREAM RANGE",
     name: "SKIN WHITENING FACE CREAM",
     ingredients:
@@ -245,7 +248,7 @@ export const products = [
     quantity: "50 GM TO 100 GM",
   },
   {
-    image: null,
+    image: "",
     category: "FACE CREAM RANGE",
     name: "REFRESHING & SKIN HYDRATING FACE CREAM",
     ingredients:
@@ -253,7 +256,7 @@ export const products = [
     quantity: "50 GM TO 100 GM",
   },
   {
-    image: null,
+    image: "",
     category: "SUNSCREEN & BB CREAM RANGE",
     name: "SPF 50 PA+++ SUNSCREEN",
     ingredients:
@@ -261,7 +264,7 @@ export const products = [
     quantity: "50 GM TO 100 GM",
   },
   {
-    image: null,
+    image: "",
     category: "SUNSCREEN & BB CREAM RANGE",
     name: "ALL IN ONE (BB) FACE CREAM",
     ingredients:
@@ -269,7 +272,7 @@ export const products = [
     quantity: "50 GM TO 100 GM",
   },
   {
-    image: null,
+    image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/assets/cold%20winter%20cream.png",
     category: "COLD CREAM RANGE",
     name: "COLD CREAM",
     ingredients:
@@ -277,7 +280,7 @@ export const products = [
     quantity: "30 GM TO 100 GM",
   },
   {
-    image: null,
+    image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/assets/tea%20tree%20essential%20oil.png",
     category: "FACIAL OIL RANGE",
     name: "TEA TREE ESSENTIAL OIL",
     ingredients:
@@ -285,7 +288,7 @@ export const products = [
     quantity: "30 ML TO 100 ML",
   },
   {
-    image: null,
+    image: "",
     category: "FACIAL OIL RANGE",
     name: "BRIGHTENING ALMOND OIL",
     ingredients:
@@ -293,7 +296,7 @@ export const products = [
     quantity: "30 ML TO 100 ML",
   },
   {
-    image: null,
+    image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/assets/kumkumandi%20oil.png",
     category: "FACIAL OIL RANGE",
     name: "KUMKUMADI OIL",
     ingredients:
@@ -301,7 +304,7 @@ export const products = [
     quantity: "30 ML TO 100 ML",
   },
   {
-    image: null,
+    image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/assets/jojoba%20oil%20%2BRosehip%20extract%20face%20oil.png",
     category: "FACIAL OIL RANGE",
     name: "JOJOBA FACIAL OIL",
     ingredients:
@@ -309,7 +312,7 @@ export const products = [
     quantity: "30 ML TO 100 ML",
   },
   {
-    image: null,
+    image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/assets/charcoal%20plus%20coffee%20face%20sheet%20mask.png",
     category: "FACE SHEET MASK RANGE",
     name: "CHARCOAL + COFFEE FACE SHEET MASK",
     ingredients:
@@ -317,7 +320,7 @@ export const products = [
     quantity: "25 ML",
   },
   {
-    image: null,
+    image: "",
     category: "FACE SHEET MASK RANGE",
     name: "TEA TREE HYALURONIC ACID FACE SHEET MASK",
     ingredients:
@@ -325,7 +328,7 @@ export const products = [
     quantity: "25 ML",
   },
   {
-    image: null,
+    image: "",
     category: "FACE SHEET MASK RANGE",
     name: "STRAWBERRY FACE SHEET MASK",
     ingredients:
@@ -333,7 +336,7 @@ export const products = [
     quantity: "25 ML",
   },
   {
-    image: null,
+    image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/assets/blueberry%20%20face%20sheet%20mask.png",
     category: "FACE SHEET MASK RANGE",
     name: "BLUEBERRY FACE SHEET MASK",
     ingredients:
@@ -341,7 +344,7 @@ export const products = [
     quantity: "25 ML",
   },
   {
-    image: null,
+    image: "",
     category: "FACE & BODY SCRUB RANGE",
     name: "ACTIVATED CHARCOAL FACE & BODY SCRUB",
     ingredients:
@@ -349,7 +352,7 @@ export const products = [
     quantity: "100 GM TO 500 GM",
   },
   {
-    image: null,
+    image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/assets/ubtan%20scrub%20-.png",
     category: "FACE & BODY SCRUB RANGE",
     name: "UBTAN FACE & BODY SCRUB",
     ingredients:
@@ -357,7 +360,7 @@ export const products = [
     quantity: "100 GM TO 500 GM",
   },
   {
-    image: null,
+    image: "",
     category: "FACE & BODY SCRUB RANGE",
     name: "ARABICA COFFEE FACE & BODY SCRUB",
     ingredients:
@@ -365,7 +368,7 @@ export const products = [
     quantity: "100 GM TO 500 GM",
   },
   {
-    image: null,
+    image: "",
     category: "FACE & BODY SCRUB RANGE",
     name: "VITAL VITAMIN C FACE & BODY SCRUB",
     ingredients:
@@ -373,7 +376,7 @@ export const products = [
     quantity: "100 GM TO 500 GM",
   },
   {
-    image: null,
+    image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/assets/lavenderascrub.png",
     category: "FACE & BODY SCRUB RANGE",
     name: "LAVENDER & VANILLA FACE & BODY SCRUB",
     ingredients:
@@ -381,7 +384,7 @@ export const products = [
     quantity: "100 GM TO 500 GM",
   },
   {
-    image: null,
+    image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/assets/honeyscrub.png",
     category: "FACE & BODY SCRUB RANGE",
     name: "HONEY & APRICOT FACE & BODY SCRUB",
     ingredients:
@@ -389,7 +392,7 @@ export const products = [
     quantity: "100 GM TO 500 GM",
   },
   {
-    image: null,
+    image: "",
     category: "HAIR REMOVAL PRODUCT RANGE",
     name: "HAIR REMOVAL CREAM FOR MEN & WOMEN",
     ingredients:
@@ -397,7 +400,7 @@ export const products = [
     quantity: "50 GM TO 100 GM",
   },
   {
-    image: null,
+    image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/assets/hair%20removal%20sparay%20for%20men%20and%20woman.png",
     category: "HAIR REMOVAL PRODUCT RANGE",
     name: "HAIR REMOVAL SPRAY FOR MEN & WOMEN",
     ingredients:
@@ -405,7 +408,7 @@ export const products = [
     quantity: "100 ML",
   },
   {
-    image: null,
+    image: "",
     category: "SPECIAL PRODUCT RANGE",
     name: "HERBAL LIP BALM",
     ingredients:
@@ -413,7 +416,7 @@ export const products = [
     quantity: "15 GM TO 50 GM",
   },
   {
-    image: null,
+    image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/assets/foot%20care%20cream.png",
     category: "SPECIAL PRODUCT RANGE",
     name: "FOOT CARE CREAM",
     ingredients:
@@ -421,7 +424,7 @@ export const products = [
     quantity: "50 GM TO 100 GM",
   },
   {
-    image: null,
+    image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/assets/baby%20shampoo%20of%20mp.png",
     category: "Baby's Care Range",
     name: "Baby Shampoo",
     ingredients:
@@ -429,7 +432,7 @@ export const products = [
     quantity: "100 ML TO 200 ML",
   },
   {
-    image: null,
+    image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/assets/baby%20oil%20of%20mp.png",
     category: "Baby's Care Range",
     name: "Baby Massage Oil",
     ingredients:
@@ -437,7 +440,7 @@ export const products = [
     quantity: "100 ML TO 200 ML",
   },
   {
-    image: null,
+    image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/assets/baby%20lotion%20of%20mp.png",
     category: "Baby's Care Range",
     name: "Baby Moisturizing Lotion",
     ingredients:
@@ -445,7 +448,7 @@ export const products = [
     quantity: "100 ML TO 200 ML",
   },
   {
-    image: null,
+    image: "",
     category: "Baby's Care Range",
     name: "Baby Moisturizing Cream",
     ingredients:
@@ -461,14 +464,14 @@ export const products = [
     quantity: "50 GM TO 100 GM",
   },
   {
-    image: null,
+    image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/assets/minoxidil%205%25%20Solution%20New%20mp.png",
     category: "Men's Care Range",
     name: "Minoxidil Topical Solution USP 5%",
     ingredients: "Minoxidil IP 5% W/V",
     quantity: "60 ML TO 100 ML",
   },
   {
-    image: null,
+    image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/assets/biotin%20capsules%20mp.png",
     category: "Men's Care Range",
     name: "Biotin 4000MC Capsules",
     ingredients:
