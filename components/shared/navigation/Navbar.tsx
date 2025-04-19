@@ -20,11 +20,11 @@ export default function AcchaNavbar({children}: {children: React.ReactNode}) {
     },
     {
       name: "Products",
-      link: "#products",
+      link: "/products",
     },
     {
       name: "About",
-      link: "#pricing",
+      link: "/about",
     },
     {
       name: "Contact",
@@ -43,7 +43,7 @@ export default function AcchaNavbar({children}: {children: React.ReactNode}) {
           <NavItems items={navItems} featuresDropdown={true} />
           <div className="flex items-center gap-4">
             
-            <NavbarButton variant="primary">Book a call</NavbarButton>
+            <NavbarButton variant="primary" className="bg-emerald-800 text-white">Book a call</NavbarButton>
           </div>
         </NavBody>
 

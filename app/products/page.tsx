@@ -1,6 +1,7 @@
 "use client";
 import ProductsList from "@/components/shared/products/main/ProductListing";
 import AnimatedTextCycle from "@/components/ui/animated-text-cycle";
+import { LogoCarousel } from "@/components/ui/logo-carousel";
 import { useSearchParams } from "next/navigation";
 
 const ProductsPage = () => {
@@ -9,6 +10,9 @@ const ProductsPage = () => {
     
     // Default to 'tab-1' if no query param or invalid value
     const activeTab = queryTab && ["2", "3","4","1"].includes(queryTab) ? `tab-${queryTab}` : "tab-1";
+
+  
+      
 
     return (
         <div className="p-4 text-center mx-auto">

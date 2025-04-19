@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import AcchaNavbar from "@/components/shared/navigation/Navbar";
 import Footer from "@/components/shared/navigation/Footer";
+import { BusinessChatbot } from "@/components/shared/chat/ChatIcon";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -36,6 +37,7 @@ export default function RootLayout({
         <div className="">
           <AcchaNavbar>{children}</AcchaNavbar>
           <Footer />
+        {/* <BusinessChatbot/> */}
         </div>
       </body>
     </html>

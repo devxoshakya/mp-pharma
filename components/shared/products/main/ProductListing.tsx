@@ -5,7 +5,7 @@ export default function ProductsList({defaultTab}:any) {
   return (
     <>
      
-    <Tabs defaultValue={defaultTab} className="px-1 max-w-[950px] my-4 mx-auto ">
+    <Tabs defaultValue={defaultTab} className="px-1 max-w-[950px] my-4 mx-auto min-h-screen">
       <TabsList className="bg-transparent px-1 mx-auto gap-1 rounded-lg  border-2 border-muted flex flex-wrap justify-center">
         <TabsTrigger
           value="tab-1"

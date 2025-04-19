@@ -19,12 +19,12 @@ export default function ProductsTab() {
             MP Pharmaceuticals'
           </span>
         </div>
-        <div className="font-medium text-3xl mb-8">Featured Products
+        <div className="font-medium text-3xl mb-8 text-emerald-800">Featured Products
       
         </div>
       </div>
     <Tabs defaultValue="tab-1" className="px-1 max-w-[950px] mx-auto">
-      <TabsList className="bg-transparent px-1 mx-auto gap-1 rounded-lg  border-2 border-muted flex flex-wrap justify-center">
+      <TabsList className="bg-transparent px-1 mx-auto gap-1 rounded-lg  border-2  border-emerald-700 flex flex-wrap justify-center">
         <TabsTrigger
           value="tab-1"
           className="data-[state=active]:bg-muted data-[state=active]:shadow-none my-1"

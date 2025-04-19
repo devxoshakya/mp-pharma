@@ -73,7 +73,7 @@ export default function Clients() {
     <div className="h-[70vh] w-full overflow-hidden">
       <div className="mx-auto mt-32 w-full max-w-2xl">
         <div className="text-center text-3xl text-foreground">
-          <span className="text-green-900 dark:text-indigo-200">
+          <span className="text-green-600 dark:text-indigo-200">
             The best are already here
           </span>
           <br />
