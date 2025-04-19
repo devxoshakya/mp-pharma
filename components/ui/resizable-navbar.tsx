@@ -235,7 +235,11 @@ export const NavbarLogo = () => {
       className="transition-transform duration-1000 group-hover:animate-spin" 
       style={{ animationDuration: '0.75s' }} 
       />
-      <span className="font-semibold text-black dark:text-white">MP Pharmaceuticals</span>
+      <div className="gap-0 flex flex-col space-x-0 space-y-0">
+      <span className="font-semibold text-emerald-950 dark:text-white">MP Pharmaceuticals</span>
+     
+      <span className="text-sm font-semibold text-emerald-900">Group of Co.</span>
+      </div>
     </Link>
   )
 }

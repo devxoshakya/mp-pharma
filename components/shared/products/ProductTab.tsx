@@ -19,7 +19,9 @@ export default function ProductsTab() {
             MP Pharmaceuticals'
           </span>
         </div>
-        <div className="font-medium text-3xl mb-8">Featured Products</div>
+        <div className="font-medium text-3xl mb-8">Featured Products
+      
+        </div>
       </div>
     <Tabs defaultValue="tab-1" className="px-1 max-w-[950px] mx-auto">
       <TabsList className="bg-transparent px-1 mx-auto gap-1 rounded-lg  border-2 border-muted flex flex-wrap justify-center">
@@ -77,19 +79,19 @@ export default function ProductsTab() {
         <ProductShowcase filter="50ML TO 100ML" />
       </TabsContent>
       <TabsContent value="tab-2">
-        <ProductShowcase filter="50ML TO 100ML" />
+        <ProductShowcase filter="30 GM TO 100 GM" />
       </TabsContent>
       <TabsContent value="tab-3">
-        <ProductShowcase filter="50ML TO 100ML" />
+        <ProductShowcase filter="50 GM TO 100 GM" />
       </TabsContent>
       <TabsContent value="tab-4">
-        <ProductShowcase filter="50ML TO 100ML" />
+        <ProductShowcase filter="30 ML TO 100 ML" />
       </TabsContent>
       <TabsContent value="tab-5">
       <ProductShowcase filter="50ML TO 100ML" />
       </TabsContent>
       <TabsContent value="tab-6">
-      <ProductShowcase filter="50ML TO 100ML" />
+      <ProductShowcase filter="100 ML TO 200 ML" />
       </TabsContent>
       <TabsContent value="tab-7">
       <ProductShowcase filter="50ML TO 100ML" />

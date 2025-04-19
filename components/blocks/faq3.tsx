@@ -105,7 +105,7 @@ const Faq3 = ({
             </AccordionItem>
           ))}
         </Accordion>
-        <div className="mx-auto flex max-w-4xl flex-col items-center rounded-lg bg-accent p-4 text-center md:rounded-xl md:p-6 lg:p-8" 
+        <div className="mx-auto flex max-w-4xl flex-col items-center rounded-lg bg-green-50 border-2 border-emerald-700 p-4 text-center md:rounded-xl md:p-6 lg:p-8" 
         id="contact">
           <div className="relative">
             <Avatar className="absolute mb-4 size-16 origin-bottom -translate-x-[60%] scale-[80%] border md:mb-5">

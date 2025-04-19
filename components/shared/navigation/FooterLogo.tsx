@@ -6,12 +6,9 @@ const FooterLogo = () => {
   return (
     <div className="space-y-4">
       <div className="flex items-center">
-        <div className="h-10 w-10 rounded-md bg-neutral-100 text-white p-1 flex items-center justify-center font-bold text-xl">
-            <Image src="/logo.svg" width={100} height={100} alt="logo"/>
-        </div>
-        <div className="ml-2">
-          <h2 className="font-bold text-neutral-800 text-xl">PharmaBrand</h2>
-          <p className="text-neutral-500 text-xs">Pharmaceutical Excellence</p>
+        <div className="h-20 w-56 rounded-md border border-emerald-600 text-white p-1 flex items-center justify-center font-bold text-xl">
+            <Image src="/logo-footer.png" className="w-50 left-1" width={100} height={100} alt="logo"/>
+
         </div>
       </div>
       <div className="flex flex-wrap gap-x-4 gap-y-2 mt-2">
