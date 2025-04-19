@@ -19,7 +19,7 @@ export default function Component() {
       <DialogTrigger asChild>
         <Button variant="outline">Sign up</Button>
       </DialogTrigger>
-      <DialogContent>
+      <DialogContent title="Sign up" hideTitle={true}>
         <div className="flex flex-col items-center gap-2">
           <div
             className="flex size-11 shrink-0 items-center justify-center rounded-full border"
