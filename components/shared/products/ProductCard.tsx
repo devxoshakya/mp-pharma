@@ -19,16 +19,15 @@ export const ProductCard = ({
               <Image
                 src={image}
                 alt={name}
-                fill
+               fill
+                
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="object-contain object-center transition-transform group-hover:scale-105"
                 loading="lazy"
-                placeholder="blur"
-                blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjBmMGYwIi8+PC9zdmc+"
               />
             </div>
             <div className="mt-2">
-              <h3 className="line-clamp-2 min-h-[42px] text-sm font-semibold text-gray-900">
+              <h3 className="line-clamp-2 min-h-[42px] text-sm font-semibold text-gray-900 text-left">
                 {name}
               </h3>
               <div className="mt-0">

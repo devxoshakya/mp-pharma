@@ -15,6 +15,10 @@ import { useState } from "react"
 export default function AcchaNavbar({children}: {children: React.ReactNode}) {
   const navItems = [
     {
+      name: "Home",
+      link: "/",
+    },
+    {
       name: "Products",
       link: "#products",
     },
@@ -24,7 +28,7 @@ export default function AcchaNavbar({children}: {children: React.ReactNode}) {
     },
     {
       name: "Contact",
-      link: "#contact",
+      link: "/contact",
     },
   ]
 

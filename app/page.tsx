@@ -11,10 +11,10 @@ import GoogleReviews from "@/components/shared/testimonials/GoogleTestimonials";
 
 const page = async () => {
   return (
-    <div className="mx-auto md:max-w-7xl sm:max-w-4xl max-w-[385px] px-4 py-8 z-10">
+    <div className="mx-auto md:max-w-7xl sm:max-w-4xl max-w-[385px] px-4 z-10">
       {/* <ImageGrid/> */}
-      <CarouselHero/>
       <HeroGeometric/>
+      <CarouselHero/>
       <CategoryCards />
       <Clients />
       <ProductsTab />

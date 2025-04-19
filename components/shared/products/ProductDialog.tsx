@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Phone, MessageSquare } from "lucide-react";
 import type { Product } from "@/types/product";
+import Image from "next/image";
 
 export const ProductDialog = ({ image, name, quantity, ingredients }: Product) => {
   return (
@@ -13,9 +14,11 @@ export const ProductDialog = ({ image, name, quantity, ingredients }: Product) =
     >
       <div className="grid gap-6 sm:grid-cols-2">
         <div className="aspect-square overflow-hidden rounded-md">
-          <img
+          <Image
             src={image}
             alt={name}
+            height={300}
+            width={300}
             className="h-full w-full object-contain object-center"
           />
         </div>
@@ -31,7 +34,7 @@ export const ProductDialog = ({ image, name, quantity, ingredients }: Product) =
           </div>
           <div className="mt-4 flex-1">
             <h3 className="text-sm font-medium text-gray-5</span>00">Ingredients:</h3>
-            <ScrollArea className="h-[120px] mt-1 rounded-md border p-2">
+            <ScrollArea className="h-[120px] mt-1 rounded-md p-2">
               <p className="text-sm text-gray-600">{ingredients}</p>
             </ScrollArea>
           </div>
