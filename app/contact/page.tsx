@@ -121,16 +121,7 @@ const Preview = () => {
             />
           </BlurFade>
         </FloatingElement>
-
-        <FloatingElement depth={1} className="top-[40%] left-[2%]">
-          <BlurFade key={exampleImages[4].url} delay={0.45} inView>
-            <motion.img
-              initial={{ opacity: 0 }}
-              src={exampleImages[4].url}
-              className="w-28 h-28 md:w-36 md:h-36 object-cover hover:scale-105 duration-200 cursor-pointer transition-transform"
-            />
-          </BlurFade>
-        </FloatingElement>
+        
         <FloatingElement depth={2} className="top-[70%] left-[77%]">
           <BlurFade key={exampleImages[7].url} delay={0.50} inView>
             <motion.img
