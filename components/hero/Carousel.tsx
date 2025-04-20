@@ -94,24 +94,42 @@ export const Carousel = ({ images, autoPlayInterval = 5000 }: CarouselProps) => 
     const slideVariants = {
         enter: (direction: number) => ({
             x: direction > 0 ? '100%' : '-100%',
-            opacity: 1
+            opacity: 0,
+            scale: 0.85,
+            filter: "blur(8px)"
         }),
         center: {
             x: 0,
-            opacity: 1
+            opacity: 1,
+            scale: 1,
+            filter: "blur(0px)",
+            transition: {
+                x: { type: "spring", stiffness: 200, damping: 25, duration: 1.5 },
+                opacity: { duration: 1.2 },
+                scale: { duration: 1.5, ease: "easeOut" },
+                filter: { duration: 1.2 }
+            }
         },
         exit: (direction: number) => ({
             x: direction < 0 ? '100%' : '-100%',
-            opacity: 1
+            opacity: 0,
+            scale: 0.85,
+            filter: "blur(8px)",
+            transition: {
+                x: { type: "spring", stiffness: 200, damping: 25, duration: 1.5 },
+                opacity: { duration: 1 },
+                scale: { duration: 1.2, ease: "easeIn" },
+                filter: { duration: 1 }
+            }
         })
     };
 
     return (
         <>
-        <div className="relative w-full overflow-hidden rounded-lg">
+        <div className="relative w-full overflow-hidden">
             <div
                 className={cn(
-                    "relative h-64 sm:h-80 md:h-80",
+                    "relative h-48  sm:h-80 md:h-[60vh]",
                     isGrabbing ? "cursor-grabbing" : "cursor-grab"
                 )}
                 onTouchStart={onTouchStart}
@@ -129,10 +147,6 @@ export const Carousel = ({ images, autoPlayInterval = 5000 }: CarouselProps) => 
                         initial="enter"
                         animate="center"
                         exit="exit"
-                        transition={{
-                            x: { type: "spring", stiffness: 400, damping: 35 },
-                            opacity: { duration: 0.5 }
-                        }}
                         className="absolute w-full h-full"
                     >
                         <Image
@@ -149,19 +163,55 @@ export const Carousel = ({ images, autoPlayInterval = 5000 }: CarouselProps) => 
 
             {/* Navigation buttons */}
             <motion.button
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
+                whileHover={{ 
+                    scale: 1.15, 
+                    backgroundColor: 'rgba(255, 255, 255, 0.95)',
+                    transition: { duration: 0.6, ease: "easeOut" }
+                }}
+                whileTap={{ 
+                    scale: 0.9,
+                    transition: { duration: 0.4 } 
+                }}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ 
+                    opacity: 1, 
+                    x: 0,
+                    transition: { 
+                        type: "spring", 
+                        stiffness: 60, 
+                        damping: 12,
+                        duration: 1.2
+                    }
+                }}
                 onClick={prevSlide}
-                className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white/90 rounded-full p-2 transition-colors"
+                className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white/90 rounded-full p-2 transition-all duration-500 shadow-md backdrop-blur-sm"
                 aria-label="Previous slide"
             >
                 <ChevronLeft className="w-6 h-6 text-gray-800" />
             </motion.button>
             <motion.button
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
+                whileHover={{ 
+                    scale: 1.15, 
+                    backgroundColor: 'rgba(255, 255, 255, 0.95)',
+                    transition: { duration: 0.6, ease: "easeOut" }
+                }}
+                whileTap={{ 
+                    scale: 0.9,
+                    transition: { duration: 0.4 } 
+                }}
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ 
+                    opacity: 1, 
+                    x: 0,
+                    transition: { 
+                        type: "spring", 
+                        stiffness: 60, 
+                        damping: 12,
+                        duration: 1.2
+                    }
+                }}
                 onClick={nextSlide}
-                className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white/90 rounded-full p-2 transition-colors"
+                className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white/90 rounded-full p-2 transition-all duration-500 shadow-md backdrop-blur-sm"
                 aria-label="Next slide"
             >
                 <ChevronRight className="w-6 h-6 text-gray-800" />
@@ -170,37 +220,73 @@ export const Carousel = ({ images, autoPlayInterval = 5000 }: CarouselProps) => 
             {/* Indicators */}
             
         </div>
-        <div className="absolute mt-1 left-1/2 -translate-x-1/2 flex gap-2">
+        <motion.div 
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ 
+                opacity: 1, 
+                y: 0,
+                transition: {
+                    delay: 0.3,
+                    duration: 0.5
+                }
+            }}
+            className="absolute mt-2 left-1/2 -translate-x-1/2 flex gap-2 pb-16"
+        >
                 {images.map((_, index) => (
-                    <motion.button
+                    <motion.div
                         key={index}
-                        whileHover={{ scale: 1.2 }}
+                        whileHover={{ 
+                            scale: 1.3,
+                            transition: { duration: 0.8, ease: "easeOut" } 
+                        }}
+                        whileTap={{ 
+                            scale: 0.85,
+                            transition: { duration: 0.6 } 
+                        }}
                         onClick={() => {
                             setDirection(index > currentIndex ? 1 : -1);
                             setCurrentIndex(index);
                         }}
                         className={cn(
-                            "transition-colors",
+                            "transition-all duration-500",
                             index === currentIndex 
-                                ? "text-green-600 font-bold scale-80" 
+                                ? "text-green-600 font-bold " 
                                 : "text-gray-400 hover:text-gray-600"
                         )}
                         aria-label={`Go to slide ${index + 1}`}
                     >
                         {index === currentIndex ? (
                             <motion.div
-                                initial={{ scale: 0.8 }}
-                                animate={{ scale: 1 }}
-                                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                                initial={{ scale: 0.7, rotate: -15 }}
+                                animate={{ 
+                                    scale: 1, 
+                                    rotate: 0,
+                                    transition: { 
+                                        type: "spring", 
+                                        stiffness: 100, 
+                                        damping: 8,
+                                        duration: 1.5
+                                    }
+                                }}
                             >
-                                <Leaf className="w-6 h-6" />
+                                <Leaf className="w-4 h-auto pb-4 mt-[-4]" />
                             </motion.div>
                         ) : (
-                            <div className="w-2 h-2 rounded-full bg-current" />
+                            <motion.div 
+                                initial={{ scale: 0.6 }}
+                                animate={{ scale: 1 }}
+                                transition={{ 
+                                    type: "spring", 
+                                    damping: 8, 
+                                    duration: 1.2,
+                                    ease: "easeOut" 
+                                }}
+                                className="w-2 h-2 rounded-full bg-current"
+                            />
                         )}
-                    </motion.button>
+                    </motion.div>
                 ))}
-            </div>
+            </motion.div>
         </>
     );
 };

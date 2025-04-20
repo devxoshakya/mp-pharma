@@ -1,34 +1,61 @@
 "use client"
 
 import { useState, FormEvent, useEffect, useRef } from "react"
-import { Send, Bot, Paperclip, Mic, CornerDownLeft } from "lucide-react"
+import { Send, Bot, Paperclip, X, MessageCircle, CornerDownLeft } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import {
-  ChatBubble,
-  ChatBubbleAvatar,
-  ChatBubbleMessage,
-} from "@/components/ui/chat-bubble"
+import { cn } from "@/lib/utils"
 import { ChatInput } from "@/components/ui/chat-input"
-import {
-  ExpandableChat,
-  ExpandableChatHeader,
-  ExpandableChatBody,
-  ExpandableChatFooter,
-} from "@/components/ui/expandable-chat"
-import { ChatMessageList } from "@/components/ui/chat-message-list"
 
-export function BusinessChatbot() {
-  const [messages, setMessages] = useState<Array<{
-    id: number,
-    content: string,
-    sender: "user" | "ai"
-  }>>([])
+type ChatPosition = "bottom-right" | "bottom-left"
+type ChatSize = "sm" | "md" | "lg" | "xl" | "full"
 
+const chatConfig = {
+  dimensions: {
+    sm: "sm:max-w-sm sm:max-h-[500px]",
+    md: "sm:max-w-md sm:max-h-[600px]",
+    lg: "sm:max-w-lg sm:max-h-[700px]",
+    xl: "sm:max-w-xl sm:max-h-[800px]",
+    full: "sm:w-full sm:h-full",
+  },
+  positions: {
+    "bottom-right": "bottom-5 right-5",
+    "bottom-left": "bottom-5 left-5",
+  },
+  chatPositions: {
+    "bottom-right": "sm:bottom-[calc(100%+10px)] sm:right-0",
+    "bottom-left": "sm:bottom-[calc(100%+10px)] sm:left-0",
+  },
+  states: {
+    open: "pointer-events-auto opacity-100 visible scale-100 translate-y-0",
+    closed: "pointer-events-none opacity-0 invisible scale-100 sm:translate-y-5",
+  },
+}
+
+type Message = {
+  id: number
+  content: string
+  sender: "user" | "ai"
+}
+
+export function AIBusinessChatbot({
+  position = "bottom-right",
+  size = "lg",
+  icon = <Bot className="h-6 w-6" />,
+  className
+}: {
+  position?: ChatPosition
+  size?: ChatSize
+  icon?: React.ReactNode
+  className?: string
+}) {
+  const [messages, setMessages] = useState<Message[]>([])
   const [sessionId, setSessionId] = useState<string | null>(null)
   const [input, setInput] = useState("")
   const [isLoading, setIsLoading] = useState(false)
   const [isInitializing, setIsInitializing] = useState(true)
+  const [isOpen, setIsOpen] = useState(false)
   const messagesEndRef = useRef<HTMLDivElement>(null)
+  const chatRef = useRef<HTMLDivElement>(null)
 
   // Initialize chat session when component mounts
   useEffect(() => {
@@ -71,6 +98,8 @@ export function BusinessChatbot() {
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
   }, [messages])
+
+  const toggleChat = () => setIsOpen(!isOpen)
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault()
@@ -133,64 +162,117 @@ export function BusinessChatbot() {
     }
   }
 
+  // Format message content with bold text support
+  const formatMessageContent = (content: string) => {
+    if (!content.includes("**")) return content;
+    
+    const parts = content.split(/(\*\*.*?\*\*)/g);
+    return parts.map((part, index) => {
+      if (part.startsWith("**") && part.endsWith("**")) {
+        const boldText = part.slice(2, -2);
+        return <strong key={index}>{boldText}</strong>;
+      }
+      return part;
+    });
+  };
+
   return (
-    <div className="h-[600px] relative">
-      <ExpandableChat
-        size="lg"
-        position="bottom-right"
-        icon={<Bot className="h-6 w-6" />}
+    <div className={cn("fixed z-50", chatConfig.positions[position], className)}>
+      <div
+        ref={chatRef}
+        className={cn(
+          "flex flex-col bg-background border shadow-md overflow-hidden transition-all duration-250 ease-out",
+          "sm:rounded-lg sm:absolute sm:w-[90vw] sm:h-auto sm:max-h-[80vh]",
+          "fixed w-full h-[95vh] bottom-0 left-0 right-0",
+          chatConfig.chatPositions[position],
+          chatConfig.dimensions[size],
+          isOpen ? chatConfig.states.open : chatConfig.states.closed
+        )}
+        style={{
+          maxHeight: isOpen ? (window.innerWidth >= 640 ? '80vh' : '95vh') : '0'
+        }}
       >
-        <ExpandableChatHeader className="flex-col text-center justify-center">
-          <h1 className="text-xl font-semibold">Business Assistant ✨</h1>
-          <p className="text-sm text-muted-foreground">
+        {/* Header */}
+        <div className="flex items-center p-4 border-b flex-col text-center">
+          <h1 className="text-xl font-semibold">MP Pharmaceuticals AI ✨</h1>
+          <p className="text-sm text-muted-foreground mb-1">
             Ask me anything about our products and services.
           </p>
-        </ExpandableChatHeader>
+          <Button variant="ghost" size="icon" className="absolute top-2 right-2" onClick={toggleChat}>
+            <X className="h-4 w-4" />
+          </Button>
+        </div>
 
-        <ExpandableChatBody>
-          <ChatMessageList>
+        {/* Chat Body */}
+        <div className="flex-grow overflow-y-auto p-4 h-full">
+          <div className="space-y-4">
             {isInitializing ? (
-              <ChatBubble variant="received">
-                <ChatBubbleAvatar
-                  className="h-8 w-8 shrink-0"
-                  fallback="AI"
-                />
-                <ChatBubbleMessage isLoading />
-              </ChatBubble>
+              <div className="flex gap-2 items-start">
+                <div className="h-8 w-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-medium shrink-0">
+                  AI
+                </div>
+                <div className="rounded-lg bg-muted p-3 text-sm max-w-[80%]">
+                  <div className="flex space-x-2">
+                    <div className="h-2 w-2 rounded-full bg-muted-foreground/40 animate-pulse"></div>
+                    <div className="h-2 w-2 rounded-full bg-muted-foreground/40 animate-pulse delay-150"></div>
+                    <div className="h-2 w-2 rounded-full bg-muted-foreground/40 animate-pulse delay-300"></div>
+                  </div>
+                </div>
+              </div>
             ) : (
               messages.map((message) => (
-                <ChatBubble
+                <div 
                   key={message.id}
-                  variant={message.sender === "user" ? "sent" : "received"}
+                  className={cn(
+                    "flex gap-2 items-start",
+                    message.sender === "user" ? "flex-row-reverse" : ""
+                  )}
                 >
-                  <ChatBubbleAvatar
-                    className="h-8 w-8 shrink-0"
-                    fallback={message.sender === "user" ? "You" : "AI"}
-                  />
-                  <ChatBubbleMessage
-                    variant={message.sender === "user" ? "sent" : "received"}
+                  <div 
+                    className={cn(
+                      "h-8 w-8 rounded-full flex items-center justify-center text-sm font-medium shrink-0",
+                      message.sender === "user" 
+                        ? "bg-primary text-primary-foreground" 
+                        : "bg-primary text-primary-foreground"
+                    )}
                   >
-                    {message.content}
-                  </ChatBubbleMessage>
-                </ChatBubble>
+                    {message.sender === "user" ? "U" : "AI"}
+                  </div>
+                  <div 
+                    className={cn(
+                      "rounded-lg p-3 text-sm max-w-[80%]",
+                      message.sender === "user" 
+                        ? "bg-primary text-primary-foreground" 
+                        : "bg-muted"
+                    )}
+                  >
+                    {formatMessageContent(message.content)}
+                  </div>
+                </div>
               ))
             )}
 
             {isLoading && (
-              <ChatBubble variant="received">
-                <ChatBubbleAvatar
-                  className="h-8 w-8 shrink-0"
-                  fallback="AI"
-                />
-                <ChatBubbleMessage isLoading />
-              </ChatBubble>
+              <div className="flex gap-2 items-start">
+                <div className="h-8 w-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-medium shrink-0">
+                  AI
+                </div>
+                <div className="rounded-lg bg-muted p-3 text-sm max-w-[80%]">
+                  <div className="flex space-x-2">
+                    <div className="h-2 w-2 rounded-full bg-muted-foreground/40 animate-pulse"></div>
+                    <div className="h-2 w-2 rounded-full bg-muted-foreground/40 animate-pulse delay-150"></div>
+                    <div className="h-2 w-2 rounded-full bg-muted-foreground/40 animate-pulse delay-300"></div>
+                  </div>
+                </div>
+              </div>
             )}
             
             <div ref={messagesEndRef} />
-          </ChatMessageList>
-        </ExpandableChatBody>
+          </div>
+        </div>
 
-        <ExpandableChatFooter>
+        {/* Footer */}
+        <div className="border-t p-2 sm:p-4 mt-auto">
           <form
             onSubmit={handleSubmit}
             className="relative rounded-lg border bg-background focus-within:ring-1 focus-within:ring-ring p-1"
@@ -202,8 +284,8 @@ export function BusinessChatbot() {
               className="min-h-12 resize-none rounded-lg bg-background border-0 p-3 shadow-none focus-visible:ring-0"
               disabled={isInitializing || !sessionId}
             />
-            <div className="flex items-center p-3 pt-0 justify-between">
-              <div className="flex">
+            <div className="flex items-center p-2 sm:p-3 pt-0 justify-between">
+              {/* <div className="flex">
                 <Button
                   variant="ghost"
                   size="icon"
@@ -212,20 +294,33 @@ export function BusinessChatbot() {
                 >
                   <Paperclip className="size-4" />
                 </Button>
-              </div>
+              </div> */}
               <Button 
                 type="submit" 
                 size="sm" 
                 className="ml-auto gap-1.5"
                 disabled={isInitializing || !sessionId || !input.trim()}
               >
-                Send Message
+                <span className="hidden sm:inline">Send Message</span>
+                <span className="sm:hidden">Send</span>
                 <CornerDownLeft className="size-3.5" />
               </Button>
             </div>
           </form>
-        </ExpandableChatFooter>
-      </ExpandableChat>
+        </div>
+      </div>
+
+      {/* Chat Toggle Button */}
+      <Button
+        variant="default"
+        onClick={toggleChat}
+        className={cn(
+          "w-14 h-14 rounded-full shadow-md flex items-center justify-center hover:shadow-lg hover:shadow-black/30 transition-all duration-300",
+          isOpen ? "sm:opacity-100 opacity-0" : "opacity-100"
+        )}
+      >
+        {isOpen ? <X className="h-6 w-6" /> : icon}
+      </Button>
     </div>
   )
 }

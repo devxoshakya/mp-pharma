@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { InfiniteSlider } from "@/components/ui/infinite-slider";
 import Image from "next/image";
 
 interface Logo {
@@ -17,7 +18,7 @@ interface LogoColumnProps {
 }
 
 function LogoColumn({ logos, columnIndex, currentTime }: LogoColumnProps) {
-  const CYCLE_DURATION = 2000;
+  const CYCLE_DURATION = 3000;
   const columnDelay = columnIndex * 200;
   const adjustedTime = (currentTime + columnDelay) % (CYCLE_DURATION * logos.length);
   const currentIndex = Math.floor(adjustedTime / CYCLE_DURATION);
@@ -109,20 +110,28 @@ export function LogoCarousel({ columns = 2, logos }: LogoCarouselProps) {
   useEffect(() => {
     const interval = setInterval(() => {
       setTime((prev) => prev + 100);
-    }, 100);
+    }, 500);
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="flex justify-center gap-4 py-8 max-w-7xl mx-auto">
-      {logoColumns.map((columnLogos, index) => (
-        <LogoColumn
-          key={index}
-          logos={columnLogos}
-          columnIndex={index}
-          currentTime={time}
-        />
-      ))}
+    <div className="flex justify-center gap-4 py-4 my-2 mt-8 max-w-7xl mx-auto relative overflow-hidden bg-gradient-to-r from-emerald-700 via-emerald-100 to-emerald-700 bg-[url('/bg-leaf.png')] bg-[length:900px_900px] bg-repeat">
+      <InfiniteSlider reverse>
+        {logoColumns.map((column, index) => (
+            <div key={index} className="flex items-center">
+            {column.map((logo, logoIndex) => (
+              <Image 
+              src={logo.src}
+              alt={logo.name}
+              key={`${logo.id}-${logoIndex}`}
+              width={200}
+              height={200}
+              className="mx-8 md:w-24 w-14"
+              />
+            ))}
+            </div>
+        ))}
+      </InfiniteSlider>
     </div>
   );
 }

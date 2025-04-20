@@ -126,7 +126,7 @@ export const NavItems = ({ items, className, onItemClick, featuresDropdown = fal
     <motion.div
       onMouseLeave={handleMouseLeave}
       className={cn(
-        "absolute inset-0 hidden flex-1 flex-row items-center justify-center space-x-2 text-sm font-medium text-zinc-600 transition duration-200 hover:text-zinc-800 lg:flex lg:space-x-2",
+        "absolute inset-0 hidden flex-1 flex-row items-center justify-center space-x-2 text-md font-semibold text-neutral-700 transition duration-200 hover:text-zinc-800 lg:flex lg:space-x-2",
         className,
       )}
     >
@@ -236,9 +236,11 @@ export const NavbarLogo = () => {
       style={{ animationDuration: '0.75s' }} 
       />
       <div className="gap-0 flex flex-col space-x-0 space-y-0">
-      <span className="font-semibold text-emerald-950 dark:text-white">MP Pharmaceuticals</span>
-     
-      <span className="text-sm font-semibold text-emerald-900">Group of Co.</span>
+    <div className="flex flex-col items-start gap-0">
+      <span className="font-semibold text-md text-emerald-950 text-sm leading-4 dark:text-white ">MP Pharmaceuticals</span>
+      <span className="text-xs font-semibold text-emerald-900 leading-2">Group of Co.</span>
+      <span className="text-muted-foreground text-[10px] font-medium">{"(Alliance with Zielcure Healthcare)"}</span>
+    </div>
       </div>
     </Link>
   )

@@ -28,6 +28,7 @@ export function InfiniteSlider({
   const translation = useMotionValue(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [key, setKey] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
 
   useEffect(() => {
     let controls;
@@ -35,6 +36,11 @@ export function InfiniteSlider({
     const contentSize = size + gap;
     const from = reverse ? -contentSize / 2 : 0;
     const to = reverse ? 0 : -contentSize / 2;
+
+    if (isPaused) {
+      // Don't animate when paused, just keep the current position
+      return;
+    }
 
     if (isTransitioning) {
       controls = animate(translation, [translation.get(), to], {
@@ -70,20 +76,30 @@ export function InfiniteSlider({
     isTransitioning,
     direction,
     reverse,
+    isPaused,
   ]);
 
-  const hoverProps = durationOnHover
-    ? {
-        onHoverStart: () => {
-          setIsTransitioning(true);
-          setCurrentDuration(durationOnHover);
-        },
-        onHoverEnd: () => {
-          setIsTransitioning(true);
-          setCurrentDuration(duration);
-        },
-      }
-    : {};
+  // Create hover props for pausing animation
+  const hoverProps = {
+    onMouseEnter: () => {
+      setIsPaused(true);
+    },
+    onMouseLeave: () => {
+      setIsPaused(false);
+    },
+    ...(durationOnHover
+      ? {
+          onHoverStart: () => {
+            setIsTransitioning(true);
+            setCurrentDuration(durationOnHover);
+          },
+          onHoverEnd: () => {
+            setIsTransitioning(true);
+            setCurrentDuration(duration);
+          },
+        }
+      : {}),
+  };
 
   return (
     <div className={cn('overflow-hidden', className)}>
@@ -97,7 +113,20 @@ export function InfiniteSlider({
           flexDirection: direction === 'horizontal' ? 'row' : 'column',
         }}
         ref={ref}
-        {...hoverProps}
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
+        {...(durationOnHover
+          ? {
+              onHoverStart: () => {
+                setIsTransitioning(true);
+                setCurrentDuration(durationOnHover);
+              },
+              onHoverEnd: () => {
+                setIsTransitioning(true);
+                setCurrentDuration(duration);
+              },
+            }
+          : {})}
       >
         {children}
         {children}
