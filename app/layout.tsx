@@ -32,9 +32,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased mx-auto flex flex-col justify-center items-center`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased mx-auto flex flex-col justify-center items-center bg-white bg-[url('/bg-pattern.png')] bg-repeat bg-[length:120px_120px] min-h-screen`}
       >
-        <div className="">
+
+
+        <div className=" ">
           <AcchaNavbar>{children}</AcchaNavbar>
           <Footer />
         {/* <BusinessChatbot/> */}
