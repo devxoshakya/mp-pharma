@@ -13,7 +13,7 @@ export default function ProductShowcase({
   sortBy = "name-asc",
 }: ProductShowcaseProps) {
   return (
-    <section className="container mx-auto px-4 py-12">
+    <section className="container mx-auto px-4 py-0 mb-16">
       <FeaturedProducts quantity={quantity} filter={filter} sortBy={sortBy} />
     </section>
   );

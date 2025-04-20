@@ -3,6 +3,8 @@ import { ProductDialog } from "./ProductDialog";
 import type { Product } from "@/types/product";
 import { Beaker } from "lucide-react";
 import Image from "next/image";
+import { ShineBorder } from "@/components/magicui/shine-border";
+import { BorderBeam } from "@/components/magicui/border-beam";
 
 export const ProductCard = ({
   image,
@@ -13,9 +15,10 @@ export const ProductCard = ({
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <div className="w-full cursor-pointer group">
-          <div className="rounded-lg border border-neutral-200 p-4 transition-shadow hover:shadow-xl">
-            <div className="aspect-square w-full overflow-hidden rounded-md relative">
+        <div className="w-full md:w-56 sm:w-60 cursor-pointer group">
+          <div className="rounded-lg bg-white border border-neutral-200 p-4 transition-shadow hover:shadow-xl">
+            <div className="aspect-square w-full overflow-hidden rounded-md relative bg-[url('/bg-leaf.png')] bg-[length:700px_700px]">
+            <BorderBeam duration={8} size={400} />
               <Image
                 src={image}
                 alt={name}

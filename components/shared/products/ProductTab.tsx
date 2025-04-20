@@ -19,86 +19,16 @@ export default function ProductsTab() {
             MP Pharmaceuticals'
           </span>
         </div>
-        <div className="font-medium text-3xl mb-8 text-emerald-800">Featured Products
+        <div className="font-medium text-5xl mb-8 text-emerald-800 text-center mx-auto">Featured Products
       
         </div>
       </div>
-    <Tabs defaultValue="tab-1" className="px-1 max-w-[950px] mx-auto">
-      <TabsList className="bg-transparent px-1 mx-auto gap-1 rounded-lg  border-2  border-emerald-700 flex flex-wrap justify-center">
-        <TabsTrigger
-          value="tab-1"
-          className="data-[state=active]:bg-muted data-[state=active]:shadow-none my-1"
-        >
-          Baby Care
-        </TabsTrigger>
-        <TabsTrigger
-          value="tab-2"
-          className="data-[state=active]:bg-muted data-[state=active]:shadow-none my-1"
-        >
-          Lip Care
-        </TabsTrigger>
-        <TabsTrigger
-          value="tab-3"
-          className="data-[state=active]:bg-muted data-[state=active]:shadow-none my-1"
-        >
-          Personal Care
-        </TabsTrigger>
-        <TabsTrigger
-          value="tab-4"
-          className="data-[state=active]:bg-muted data-[state=active]:shadow-none my-1"
-        >
-          Men Grooming
-        </TabsTrigger>
-        <TabsTrigger
-          value="tab-5"
-          className="data-[state=active]:bg-muted data-[state=active]:shadow-none my-1"
-        >
-          Color Cosmetics
-        </TabsTrigger>
-        <TabsTrigger
-          value="tab-6"
-          className="data-[state=active]:bg-muted data-[state=active]:shadow-none my-1"
-        >
-          Derma Products
-        </TabsTrigger>
-        <TabsTrigger
-          value="tab-7"
-          className="data-[state=active]:bg-muted data-[state=active]:shadow-none my-1"
-        >
-          Nutra Products
-        </TabsTrigger>
-        <TabsTrigger
-          value="tab-8"
-          className="data-[state=active]:bg-muted data-[state=active]:shadow-none my-1"
-        >
-          Essential Oil
-        </TabsTrigger>
-      </TabsList>
+    <Tabs defaultValue="tab-1" className="px-1 max-w-6xl mx-auto mt-0">
+     
       {/* TabsContent sections remain unchanged */}
-      <TabsContent value="tab-1">
-        <ProductShowcase filter="50ML TO 100ML" />
-      </TabsContent>
-      <TabsContent value="tab-2">
-        <ProductShowcase filter="30 GM TO 100 GM" />
-      </TabsContent>
-      <TabsContent value="tab-3">
-        <ProductShowcase filter="50 GM TO 100 GM" />
-      </TabsContent>
-      <TabsContent value="tab-4">
-        <ProductShowcase filter="30 ML TO 100 ML" />
-      </TabsContent>
-      <TabsContent value="tab-5">
+      
       <ProductShowcase filter="50ML TO 100ML" />
-      </TabsContent>
-      <TabsContent value="tab-6">
-      <ProductShowcase filter="100 ML TO 200 ML" />
-      </TabsContent>
-      <TabsContent value="tab-7">
-      <ProductShowcase filter="50ML TO 100ML" />
-      </TabsContent>
-      <TabsContent value="tab-8">
-      <ProductShowcase filter="50ML TO 100ML" />
-      </TabsContent>
+      
     </Tabs>
     </>
   );

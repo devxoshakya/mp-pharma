@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import AcchaNavbar from "@/components/shared/navigation/Navbar";
 import Footer from "@/components/shared/navigation/Footer";
-import { BusinessChatbot } from "@/components/shared/chat/ChatIcon";
+import { AIBusinessChatbot } from "@/components/shared/chat/ChatIcon";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,14 +32,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased mx-auto flex flex-col justify-center items-center bg-white bg-[url('/bg-pattern.png')] bg-repeat bg-[length:120px_120px] min-h-screen`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased mx-auto flex flex-col justify-center items-center bg-[url('/bg-2.png')] bg-repeat bg-[length:250px_250px]`}
       >
-
-
-        <div className=" ">
+        <div className="w-full relative flex flex-col min-h-screen items-center justify-center mx-auto">
           <AcchaNavbar>{children}</AcchaNavbar>
           <Footer />
-        {/* <BusinessChatbot/> */}
+          <AIBusinessChatbot position="bottom-left" size="lg"/>
         </div>
       </body>
     </html>
