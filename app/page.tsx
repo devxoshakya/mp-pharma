@@ -9,6 +9,8 @@ import { LogoCarousel } from "@/components/ui/logo-carousel";
 import { ProcessSection } from "@/components/shared/home/ProcessSection";
 import AnimatedTicker from "@/components/hero/AnimatedTicker";
 import { BlurFade } from "@/components/magicui/blur-fade";
+import Carousel from "@/components/carousel/Carousel";
+import { carouselSlides } from "@/db/carouselData";
 
 const page = async () => {
   const demoLogos = [
@@ -66,41 +68,44 @@ const page = async () => {
 
   return (
     <>
+      
+
+      <BlurFade key="carousel-hero" delay={0.3} inView>
+        <Carousel slides={carouselSlides} autoSlideInterval={4000} />
+      </BlurFade>
+
+      <BlurFade key="logo-carousel" delay={0.25} inView>
+        <LogoCarousel logos={demoLogos} columns={5} />
+      </BlurFade>
+
       <div className="mx-auto md:max-w-7xl sm:max-w-4xl max-w-[385px] px-1 z-10">
         {/* <ImageGrid/> */}
-        <BlurFade key="logo-carousel" delay={0.25} inView>
-          <LogoCarousel logos={demoLogos} columns={5} />
-        </BlurFade>
-        
-        <BlurFade key="carousel-hero" delay={0.30} inView>
-          <CarouselHero />
-        </BlurFade>
-        
+
         {/* <HeroGeometric/> */}
         <BlurFade key="animated-ticker" delay={0.35} inView>
           <AnimatedTicker />
         </BlurFade>
-        
-        <BlurFade key="category-cards" delay={0.40} inView>
+
+        <BlurFade key="category-cards" delay={0.4} inView>
           <CategoryCards />
         </BlurFade>
-        
+
         <BlurFade key="clients-section" delay={0.45} inView>
           <Clients />
         </BlurFade>
-        
-        <BlurFade key="products-tab" delay={0.50} inView>
+
+        <BlurFade key="products-tab" delay={0.5} inView>
           <ProductsTab />
         </BlurFade>
-        
+
         <BlurFade key="google-reviews" delay={0.55} inView>
           <GoogleReviews />
         </BlurFade>
-        
-        <BlurFade key="process-section" delay={0.60} inView>
+
+        <BlurFade key="process-section" delay={0.6} inView>
           <ProcessSection />
         </BlurFade>
-        
+
         {/* <Testimonials /> */}
         <BlurFade key="faq-contact" delay={0.65} inView>
           <FaqAndContact />

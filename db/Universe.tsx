@@ -135,7 +135,7 @@ export const products = [
   {
     image: "https://mp-pharma-cdn-worker.devxoshakya.workers.dev/assets/glutathione%20face%20serum.png",
     category: "FACE SERUM RANGE",
-    name: "GLUTATHIONE Face Serum",
+    name: "2% GLUTATHIONE Face Serum",
     ingredients:
       "DM Water, Ascorbic acid, Aloevera Extract, Sodium PCA, Hyaluronic Acid, Vitamin-E, Cedar Wood Essential Oil, Glutathione, Caprylhydroxamic Acid (and) Caprylyl Glycol (and) Glycerin, Carbomer, Retinol, Sodium Benzoate, Pomegranate Oil, Pottasium Sorbate, Kojic Acid and Sodium Gluconate",
     quantity: "30 ML",
@@ -149,16 +149,32 @@ export const products = [
     quantity: "30 ML",
   },
   {
-    image: "",
+    image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/assets/ADVANCE%20hair%20serum.png",
     category: "HAIR SERUM RANGE",
-    name: "Hair Serum",
+    name: "Advance Hair Serum",
     ingredients:
       "DM Water, Procapil, Capixyl, Redensyl, Hydrovance, Dimethicone, DM DM Hydantoin, Sodium CMC, Methylchloroisothiaz-olinone, Fragrance, 6 Gingerol, Topical Valproic Acid, Catechin, Biotin and Chamomile Extract",
     quantity: "50 ML TO 100 ML",
     // not available
   },
   {
-    image: null,
+    image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/assets/anti%20gray%20hair%20serum%202.png",
+    category: "HAIR SERUM RANGE",
+    name: "Anti Gray Hair Serum",
+    ingredients:
+      "DM Water, Procapil, Baicapil, Redensyl, Hydrovance, Dimethicone, DM DM Hydantoin, Sodium CMC, Keravis, Methylchloroisothiazolinone, Fragrance, 6 Gingerol, Topical Valproic Acid, Catechin, Biotin and Chamomile Extract",
+    quantity: "50 ML TO 100 ML",
+  },
+  {
+    image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/assets/capixyl%205%25%20hair%20serum.png",
+    category: "HAIR SERUM RANGE",
+    name: "Capixyl 5% Fall Serum",
+    ingredients:
+      "DM Water, Procapil, Capixly, Redensyl, Hydrovance, Dimethicone, DM DM Hydantoin, Sodium CMC, Keravis, Methylchloroisothiazolinone, Fragrance, 6 Gingerol, Topical Valproic Acid, Catechin, Biotin and Chamomile Extract",
+    quantity: "50 ML TO 100 ML",
+  },
+  {
+    image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/assets/Procapil%20hair%20serum.png",
     category: "HAIR SERUM RANGE",
     name: "3% PROCAPIL & 3% BAICAPIL Hair Serum",
     ingredients:
@@ -166,12 +182,28 @@ export const products = [
     quantity: "50 ML TO 100 ML",
   },
   {
-    image: null,
+    image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/assets/Coffe%20Shampoo.png",
     category: "HAIR SHAMPOO RANGE",
-    name: "ANTI DANDRUFF SHAMPOO",
+    name: "CAFFEINE STRENGTHENING SHAMPOO",
     ingredients:
-      "DM water, EGMS (Ethylene Glycol Mono Stearate), Ketoconazole, PEG-12, Dimethicone, Phenoxy Ethanol, Sodium Benzoate, Tea Tree Oil, Zinc Pyrithione, Cocamidopropyl Betaine, DL Panthenol, Polyquaternium-10, Sodium Lauryl Sulphate, Guar Gum, Dimethicone, Coco Diethanolamide, Sodium Cocamphoacetate and Fragrance",
-    quantity: "75 ML TO 200 ML",
+      "Aqua, Aloe Barba Densis Leaf Juice, Aqua/water, Cocamidopropyl Betaine, Sodium Cocoyl Taurate, Capryl Glucoside, Glycerin, Cocoamidopropyl Betaine, Polyquaternium-7, Coffee Arabica (coffee) Seed Extract, Glycerin, Zingiber Officinale (ginger) Root Extract, Polyquaternium - 10, Sodium Benzoate And Potassium Sorbate, Hibiscus Sabdariffa Oil, Disodium Edta, Triticum Vulgare (wheat) Germ Oil, Parfum.",
+    quantity: "100 TO 200 ML"
+  },
+  {
+    image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/assets/keratin%20shampoo.png",
+    category: "HAIR SHAMPOO RANGE",
+    name: "KERATIN SHAMPOO",
+    ingredients:
+      "Ammonium Lauryl Sulfate, Aqua, Laureth-4, Cocamidopropyl Betaine, Glycol Distearate, Bht, Sodium Cocoyl Glycinate, Cocamide Dea, Glycerin, Hydrolyzed Keratin, Polyquaternium-39, Dimethiconol, Tea-Dodecylbenzenesulfonate, Parfum, Guar Hydroxypropyltrimonium Chloride, Disodium Edta, Magnesium Nitrate, Methylchloroisothiazolinone, Magnesium Chloride, Methylisothiazolinone.",
+    quantity: "100 TO 200 ML"
+  },
+  {
+    image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/assets/yogurt%20shampoo.png",
+    category: "HAIR SHAMPOO RANGE",
+    name: "YOGURT SHAMPOO",
+    ingredients:
+      "DM Water, Sodium Lauryl Sarcosinate, Coco Glucoside, Decyl Glucoside, Ethylene Glycol Monostearate, Gaurhydroxytri ammonium chloride, Polyquaternium 10, EDTA, Cocodiethanol Amide, DM DM Hydantoin, Cocamidopropyl Betaine, Methyl Chloroisothiazoline, PEG-12 Dimethicone, Acrylate Copolymer, Yogurt Powder, Rose Extract, Banana Extract, Water (and) Propoxy Tetramethyl Piperidinyl Dimethicone (and) Trideceth, Fragrance and Rosemary Essential Oil.",
+    quantity: "100 TO 200 ML"
   },
   {
     image: "https://mp-pharma-cdn-worker.devxoshakya.workers.dev/assets/day%20moisturizing%20cream.png",
@@ -198,7 +230,7 @@ export const products = [
     quantity: "30 GM TO 100 GM",
   },
   {
-    image: "",
+    image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/assets/24K%20GOLD%20FACE%20CREAM.png",
     category: "FACE CREAM RANGE",
     name: "24K GOLD FACE CREAM",
     ingredients:
@@ -215,7 +247,7 @@ export const products = [
     quantity: "30 GM TO 100 GM",
   },
   {
-    image: "",
+    image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/assets/anti-wrinkle%20cream.png",
     category: "FACE CREAM RANGE",
     name: "ANTI-WRINKLE CREAM",
     ingredients:
@@ -240,32 +272,16 @@ export const products = [
     quantity: "30 GM TO 100 GM",
   },
   {
-    image: "",
+    image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/assets/spf50plus%20cream.png",
     category: "FACE CREAM RANGE",
-    name: "SKIN WHITENING FACE CREAM",
-    ingredients:
-      "L-glutathione 0.50%, Bearberry Extract, Liquorice Extract, Vitamin C & E, Glycolicacid 2%, Niacinamide 2% & Glycerin. Fragrance and DM Water",
-    quantity: "50 GM TO 100 GM",
-  },
-  {
-    image: "",
-    category: "FACE CREAM RANGE",
-    name: "REFRESHING & SKIN HYDRATING FACE CREAM",
-    ingredients:
-      "Aqua, Pentylene Glycol, Glycerin, Fructose, Urea, Citric Acid, Sodium Hydroxide. Maltose, Sodium PCA, Sodium Chloride, Sodium Lactate, Trehalose, Allantoin, Sodium Hyaluronate Glucose, Carbomer, Betaine, Phenoxyethanol, Triethanolamine Polysorbate 20. Cellulose, Laminaria digitata (Seaweed) Extract, Menthyl Lactate, Sodium Gluconate, Ethylhexylglycerin, CI 42090, Parfum",
-    quantity: "50 GM TO 100 GM",
-  },
-  {
-    image: "",
-    category: "SUNSCREEN & BB CREAM RANGE",
     name: "SPF 50 PA+++ SUNSCREEN",
     ingredients:
       "Zinc Oxide Topical 0.20%, Octyl Methoxy Cinnamate 1%, Avobenzone Topical 0.05%, Carbomer, Hydroxy Ethyl Cellulose, Hyaluronic Acid, Aloevera Extract, Glycerin, Carrot seed Extract, Ascorbic Acid, Xanthan Gum, EDTA, Methyl Paraben Sodium, Propyl Paraben Sodium, Sodium Benzoate, Sodium Hydroxide, Perfume, Approved Colour as per schedule Q will be used, Purified water",
     quantity: "50 GM TO 100 GM",
   },
   {
-    image: "",
-    category: "SUNSCREEN & BB CREAM RANGE",
+    image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/assets/bb%20cream.png",
+    category: "FACE CREAM RANGE",
     name: "ALL IN ONE (BB) FACE CREAM",
     ingredients:
       "Water, Niacinamide, Glycerin, Cyclopentasiloxane, Ethylhexyl Methoxycinnamate, Titanium Dioxide, Zinc Oxide, Dimethicone Crosspolymer, Potassium Chloride, PEG-10 Dimethicone. Dicaprylyl Carbonate, Magnesium Sulfate, Triethoxycaprylylsilane, Disteardimonium Hectorite, Stearic Acid, Palmitic Acid, Cholesterol, Bisabolol, Perfume, DMDM Hydantoin, Dimethicone, Sucrose Distearate, Allantoin, Tocopheryl Acetate, Disodium EDTA, Butylene Glycol, BHT, Iodopropynyl Butylcarbamate, Zingiber Officinale (Ginger) Root Extract, CI 77491, CI 77492, CI 77499",
@@ -280,6 +296,54 @@ export const products = [
     quantity: "30 GM TO 100 GM",
   },
   {
+    image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/assets/onion%20hair%20oil.png",
+    category: "HAIR OIL RANGE",
+    name: "RED ONION HAIR OIL",
+    ingredients:
+      "Black Seed Oil, Onion Seed Oil, Sesame Oil, Light Liquid Paraffin, Amla Oil, Green Tea Seed Oil, Brahmi Oil, Soya Oil, Bhringraj Oil, Tea Acetate, Sweet Almond Oil, Argan Oil, Butyl Hydroxy Toluene, Fragrance, Sun Flower Oil.",
+    quantity: "100 ML TO 200 ML"
+  },
+  {
+    image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/assets/Multiherbal%20hair%20oil.png",
+    category: "HAIR OIL RANGE",
+    name: "MULTY HERBAL HAIR OIL",
+    ingredients:
+      "Brahmi (Bacopa Monnieri), Kalinji (Nigella Sativa), Bhringraj (Eclipta Alba), Karipatta (Murraya Koenigi), Amla (Amblica Officinalis), Gudhal (Hibiscus Rose Sinensis), Jatamansi (Nardostachys Jatamansi), Chirongi (Buchanania Latifolia), Akashvalli (Cuscuta Reflexa), Godhuma Oil (Triticum Sativum), Kapoor (Cinnamomum Camphora), Jaitun (European Oils), Nariyala (Cocos Nuts), Til (Indian Sesame).",
+    quantity: "100 ML TO 200 ML"
+  },
+  {
+    image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/assets/advance%20hair%20growth%20oil.png",
+    category: "HAIR OIL RANGE",
+    name: "ADVANCE HAIR GROWTH OIL",
+    ingredients:
+      "Amla Extract, Amika Extract, Bhringraj Extract, Brahmi Extract, Jatamasi Extract, Jojoba Extract, Rosemary Extract, Henna Extract, Jasud Extract, Jatichtheika Extract, Neem Extract, Methi Extract, Indravaruni Extract, Karanj Beej Extract, Vitamin E, Sesame Oil, Lavender Oil, Tea Tree Oil, Onion Seed Oil, Clary Sage Oil, Fenugreek Oil, Redensyl Coconut Oil.",
+    quantity: "100 ML TO 200 ML"
+  },
+  {
+    image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/assets/aloe%20vera%20vitamin%20E%20body%20lotion.png",
+    category: "BODY LOTION RANGE",
+    name: "ALOE VERA VITAMIN E BODY LOTION",
+    ingredients:
+      "Aloevera Extract, Propylene Glycol, Dimethicon, Glycerin & Vitamin-E, DM DM Hydantoin, Ethylhexylglycerin and Fragrance.",
+    quantity: "100 TO 200 ML"
+  },
+  {
+    image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/assets/shea%20butter%20body%20lotion.png",
+    category: "BODY LOTION RANGE",
+    name: "SHEA BUTTER & COCOA BUTTER BODY LOTION",
+    ingredients:
+      "Shea Butter, Cocoa Butter, Dimethicon, Aloevera Extract, Glycerin, Olive Oil, Wheat Germ Extract & Dimethicon.",
+    quantity: "100 TO 200 ML"
+  },
+  {
+    image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/assets/Calamine%20Body%20Lotion.png",
+    category: "BODY LOTION RANGE",
+    name: "CALAMINE, ALOE VERA AND LIQUID PARAFFIN BODY LOTION",
+    ingredients:
+      "Calamine, Aloevera, Light Liquid Paraffin, Glycerin, DM DM Hydantoin, Ethylhexylglycerin & Fragrance.",
+    quantity: "100 TO 200 ML"
+  },
+  {
     image: "https://mp-pharma-cdn-worker.devxoshakya.workers.dev/assets/tea%20tree%20essential%20oil.png",
     category: "FACIAL OIL RANGE",
     name: "TEA TREE ESSENTIAL OIL",
@@ -288,7 +352,7 @@ export const products = [
     quantity: "30 ML TO 100 ML",
   },
   {
-    image: "",
+    image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/assets/almound%20oil.png",
     category: "FACIAL OIL RANGE",
     name: "BRIGHTENING ALMOND OIL",
     ingredients:
@@ -320,7 +384,7 @@ export const products = [
     quantity: "25 ML",
   },
   {
-    image: "",
+    image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/assets/Tea%20Tree%20face%20sheet%20mask.png",
     category: "FACE SHEET MASK RANGE",
     name: "TEA TREE HYALURONIC ACID FACE SHEET MASK",
     ingredients:
@@ -328,7 +392,7 @@ export const products = [
     quantity: "25 ML",
   },
   {
-    image: "",
+    image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/assets/strawberry%20face%20sheet%20mask%20-%20Copy.png",
     category: "FACE SHEET MASK RANGE",
     name: "STRAWBERRY FACE SHEET MASK",
     ingredients:
@@ -344,7 +408,7 @@ export const products = [
     quantity: "25 ML",
   },
   {
-    image: "",
+    image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/assets/charcoal%20plus%20coffee%20face%20sheet%20mask.png",
     category: "FACE & BODY SCRUB RANGE",
     name: "ACTIVATED CHARCOAL FACE & BODY SCRUB",
     ingredients:

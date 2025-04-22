@@ -32,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased mx-auto flex flex-col justify-center items-center bg-[url('/bg-2.png')] bg-repeat bg-[length:250px_250px]`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased mx-auto flex flex-col justify-center items-center bg-[url('/bg-2.png')] bg-repeat bg-[length:180px_180px] `}
       >
         <div className="w-full relative flex flex-col min-h-screen items-center justify-center mx-auto">
           <AcchaNavbar>{children}</AcchaNavbar>
