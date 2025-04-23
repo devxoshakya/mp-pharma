@@ -5,7 +5,7 @@ import React from 'react'
 
 const AnimatedTicker = () => {
   return (
-    <div className='text-center md:pt-32 py-8 max-w-7xl mx-auto px-4'>
+    <div className='text-center md:pt-32  max-w-7xl mx-auto px-4'>
       <h1 className="text-4xl font-semibold md:text-6xl mx-auto">
         <LineShadowText className="italic text-emerald-900" shadowColor={"black"}>
           Expertly Made. Perfectly Yours.

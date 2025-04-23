@@ -77,13 +77,13 @@ const Faq3 = ({
   supportButtonUrl = "https://www.shadcnblocks.com",
 }: Faq3Props) => {
   return (
-    <section className="my-20">
-      <div className="container space-y-16">
+    <section className="my-16 bg-[url('/bg-2.png')] bg-repeat bg-[length:220px_220px] py-2">
+      <div className="container space-y-8">
         <div className="mx-auto flex max-w-3xl flex-col text-left md:text-center">
-          <h2 className="mb-3 text-3xl font-semibold md:mb-4 lg:mb-6 lg:text-4xl">
+          <h2 className="mb-0 text-3xl font-semibold md:mb-4 lg:mb-6 lg:text-4xl">
             {heading}
           </h2>
-          <p className="text-muted-foreground lg:text-lg">{description}</p>
+          <p className="text-muted-foreground lg:text-lg mb-[-8]">{description}</p>
         </div>
         <Accordion
           type="single"
@@ -93,7 +93,7 @@ const Faq3 = ({
           {items.map((item) => (
             <AccordionItem key={item.id} value={item.id}>
               <AccordionTrigger className="transition-opacity duration-200 hover:no-underline hover:opacity-60">
-                <div className="font-medium sm:py-1 lg:py-2 lg:text-lg">
+                <div className="font-medium sm:py-0 lg:py-0 lg:text-lg">
                   {item.question}
                 </div>
               </AccordionTrigger>

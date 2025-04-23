@@ -7,7 +7,7 @@ const FooterLogo = () => {
     <div className="space-y-4">
       <div className="flex items-center">
         <div className="h-20 w-56 rounded-md border border-emerald-600 text-white p-1 flex items-center justify-center font-bold text-xl">
-            <Image src="/logo-footer.png" className="w-50 left-1" width={100} height={100} alt="logo"/>
+            <Image src="/logo-footer.png" className="w-50 left-1" width={4000} height={4000} alt="logo"/>
 
         </div>
       </div>

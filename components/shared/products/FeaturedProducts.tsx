@@ -1,5 +1,5 @@
 import React from 'react';
-import { ProductCard } from './ProductCard';
+import  ProductCard  from '@/components/cards/hero-card';
 import type { Product } from '@/types/product';
 import { products as allProducts } from '@/db/Universe';
 
@@ -45,12 +45,12 @@ export default function FeaturedProducts({
 
   return (
     <div className="w-full py-8">
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6">
         {limitedProducts.length > 0 ? (
           limitedProducts.map((product) => (
             <ProductCard
               key={`product-${Math.random().toString(36).substring(2, 9)}`}
-              
+              category={product.category}
               name={product.name}
               image={product.image}
               quantity={product.quantity}

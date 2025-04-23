@@ -20,7 +20,7 @@ const ProductsPage = () => {
         </BlurFade>
         <div className="p-4 text-center mx-auto">
             <BlurFade key="products-title" delay={0.3} inView>
-                <h1 className="text-4xl font-light text-muted-foreground mt-8">
+                <h1 className="text-4xl font-light text-muted-foreground min-h-16 mt-8">
                         Your <AnimatedTextCycle 
                                 words={[
                                         "business",
@@ -29,7 +29,6 @@ const ProductsPage = () => {
                                         "health",
                                         "family",
                                         "friends",
-                                        "loved ones",
                                         "community",
                                 ]}
                                 interval={3000}

@@ -1,6 +1,7 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import ProductShowcase from "./ProductShowcase";
 import Image from "next/image";
+import FeaturedCards from "@/components/cards/featured-cards";
 
 export default function ProductsTab() {
   return (
@@ -23,13 +24,9 @@ export default function ProductsTab() {
       
         </div>
       </div>
-    <Tabs defaultValue="tab-1" className="px-1 max-w-6xl mx-auto mt-0">
-     
-      {/* TabsContent sections remain unchanged */}
-      
-      <ProductShowcase filter="50ML TO 100ML" />
-      
-    </Tabs>
+    <div className="max-w-7xl mx-auto px-4">
+      <FeaturedCards/>
+    </div>
     </>
   );
 }

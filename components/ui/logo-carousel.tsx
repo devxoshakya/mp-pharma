@@ -20,7 +20,8 @@ interface LogoColumnProps {
 function LogoColumn({ logos, columnIndex, currentTime }: LogoColumnProps) {
   const CYCLE_DURATION = 3000;
   const columnDelay = columnIndex * 200;
-  const adjustedTime = (currentTime + columnDelay) % (CYCLE_DURATION * logos.length);
+  const adjustedTime =
+    (currentTime + columnDelay) % (CYCLE_DURATION * logos.length);
   const currentIndex = Math.floor(adjustedTime / CYCLE_DURATION);
   const currentLogo = logos[currentIndex];
 
@@ -60,11 +61,9 @@ function LogoColumn({ logos, columnIndex, currentTime }: LogoColumnProps) {
             alt={currentLogo.name}
             width={200}
             height={200}
-            
             sizes="(max-width: 640px) 100vw, (max-width: 768px) 80vw, 96vw"
             loading="lazy"
             style={{ objectFit: "contain" }}
-
             className="h-auto w-auto max-h-[80%] max-w-[80%] object-contain"
           />
         </motion.div>
@@ -115,21 +114,22 @@ export function LogoCarousel({ columns = 2, logos }: LogoCarouselProps) {
   }, []);
 
   return (
-    <div className="flex justify-center gap-4 py-4 my-2 mt-8 max-w-7xl mx-auto relative overflow-hidden bg-gradient-to-r from-emerald-700 via-emerald-100 to-emerald-700 bg-[url('/bg-leaf.png')] bg-[length:900px_900px] bg-repeat">
+    <div className="flex justify-center gap-4 py-4 md:h-80 h-24 my-auto items-center mt-8 mx-auto relative overflow-hidden bg-gradient-to-r from-emerald-700 via-emerald-100 to-emerald-700 bg-[url('/bg-4.png')] bg-[length:100%_100%] ">
+
       <InfiniteSlider reverse>
         {logoColumns.map((column, index) => (
-            <div key={index} className="flex items-center">
+          <div key={index} className="flex items-center">
             {column.map((logo, logoIndex) => (
-              <Image 
-              src={logo.src}
-              alt={logo.name}
-              key={`${logo.id}-${logoIndex}`}
-              width={200}
-              height={200}
-              className="mx-8 md:w-24 w-14"
+              <Image
+                src={logo.src}
+                alt={logo.name}
+                key={`${logo.id}-${logoIndex}`}
+                width={200}
+                height={200}
+                className="mx-8 md:w-40 w-20 h-auto object-contain"
               />
             ))}
-            </div>
+          </div>
         ))}
       </InfiniteSlider>
     </div>

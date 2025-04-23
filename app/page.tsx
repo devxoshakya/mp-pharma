@@ -11,6 +11,7 @@ import AnimatedTicker from "@/components/hero/AnimatedTicker";
 import { BlurFade } from "@/components/magicui/blur-fade";
 import Carousel from "@/components/carousel/Carousel";
 import { carouselSlides } from "@/db/carouselData";
+import FeaturedCards from "@/components/cards/featured-cards";
 
 const page = async () => {
   const demoLogos = [
@@ -75,19 +76,21 @@ const page = async () => {
       </BlurFade>
 
       <BlurFade key="logo-carousel" delay={0.25} inView>
-        <LogoCarousel logos={demoLogos} columns={5} />
+          <CategoryCards />
       </BlurFade>
 
-      <div className="mx-auto md:max-w-7xl sm:max-w-4xl max-w-[385px] px-1 z-10">
+      <div className="mx-auto md:max-w-screen max-w-[385px] px-1 z-10">
         {/* <ImageGrid/> */}
-
+        {/* <FeaturedCards/> */}
         {/* <HeroGeometric/> */}
         <BlurFade key="animated-ticker" delay={0.35} inView>
-          <AnimatedTicker />
+        <LogoCarousel logos={demoLogos} columns={5} />
         </BlurFade>
 
         <BlurFade key="category-cards" delay={0.4} inView>
-          <CategoryCards />
+
+          <AnimatedTicker />
+
         </BlurFade>
 
         <BlurFade key="clients-section" delay={0.45} inView>
