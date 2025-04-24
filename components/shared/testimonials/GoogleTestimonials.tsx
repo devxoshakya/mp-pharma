@@ -4,38 +4,37 @@ export default function GoogleReviews() {
   const reviews = [
     {
       id: 1,
-      name: "Rupali Singh",
+      name: "Mukesh Sharma",
       rating: 5,
       timeAgo: "2 weeks ago",
-      content: "They work with really good quality with good value. I am really satisfied with the service, its really professional and on time. Interior company team was extremely helpful, professional and experienced. They gave me good design suggestions and project execution went smoothly. Quality of their products and skill of their team was good. Specially thanks to Mr.Dishant aneja and kunal Overall happy and satisfied."
+      content: "Hi i have startup of Cosmetics Brands.I am very satisfied with the product, My Client had many dark spots previous month and trust me, Now his skin texture is so much better than before. About the dark spots, no they are not completely gone yet, but surely have decreased. Will recommend everyone get the product and you'll see very satisfying results"
     },
     {
       id: 2,
-      name: "Ayush Keshri",
+      name: " Pawan Kumar",
       rating: 5,
       timeAgo: "2 weeks ago",
-      content: "Quality of their products and skill of their team was good. Specially thanks to Mr.Dishant aneja and kunal Overall happy and satisfied."
+      content: "Good staff, always ready to cooperate .They are providing vast range of products in cosmetics,i like how they cooperate from customisation of design and quality of products best in their business.WISHING A GREAT SUCCESS TO THE COMPANY"
     },
     {
       id: 3,
-      name: "Andy Ayush",
+      name: "Priyanka Mourya",
       rating: 5,
       timeAgo: "3 weeks ago",
-      content: "Great service and exceptional quality. The team was professional and delivered on time. Would highly recommend their services to anyone looking for reliability."
-    },
+      content: "Awesome range of products,,, we are manufacture in our product and Product quality and packing is so good .M P PHARMACEUTICALS best cosmetic MANUFACTURE IN in India. THANKU SO MUCH Director Mr. Lokesh and all the Staff are very cooperate"},
     {
       id: 4,
-      name: "Priya Sharma",
-      rating: 4,
+      name: "Preety Saxsena",
+      rating: 5,
       timeAgo: "1 month ago",
-      content: "Very satisfied with the work done. The attention to detail was impressive and the team was very responsive to our needs."
+      content: "Amazing product and value for money all the products gave good results.Timely commitment and great service.The sales team of this company was not only helpful but also friendly."
     },
     {
       id: 5,
-      name: "Rajesh Kumar",
+      name: " Mohan Lal",
       rating: 5,
       timeAgo: "1 month ago",
-      content: "Excellent experience from start to finish. The team was professional and the quality exceeded my expectations."
+      content: "We are dealing with M P PHARMA from last 4 years and all team members are very supportive and responsible. Our all products are of good quality. Designing team is also very talented."
     }
   ];
 
@@ -70,7 +69,7 @@ export default function GoogleReviews() {
           <div className="flex my-3">
             {renderStars(4)}
           </div>
-          <p className="text-gray-600 text-sm">Based on 1296 Reviews</p>
+          <p className="text-gray-600 text-sm">Based on 100+ Reviews</p>
         </div>
 
         {/* Right side - Reviews list with border only on desktop */}
