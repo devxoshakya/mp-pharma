@@ -69,8 +69,6 @@ const page = async () => {
 
   return (
     <>
-      
-
       <BlurFade key="carousel-hero" delay={0.3} inView>
         <Carousel slides={carouselSlides} autoSlideInterval={4000} />
       </BlurFade>
@@ -79,18 +77,14 @@ const page = async () => {
           <CategoryCards />
       </BlurFade>
 
-      <div className="mx-auto md:max-w-screen max-w-[385px] px-1 z-10">
-        {/* <ImageGrid/> */}
-        {/* <FeaturedCards/> */}
-        {/* <HeroGeometric/> */}
+      {/* Fixed the width constraint that was causing overflow */}
+      <div className="mx-auto w-full px-4 md:px-8 z-10 overflow-hidden">
         <BlurFade key="animated-ticker" delay={0.35} inView>
         <LogoCarousel logos={demoLogos} columns={5} />
         </BlurFade>
 
         <BlurFade key="category-cards" delay={0.4} inView>
-
           <AnimatedTicker />
-
         </BlurFade>
 
         <BlurFade key="clients-section" delay={0.45} inView>
