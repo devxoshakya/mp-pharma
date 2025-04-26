@@ -12,6 +12,8 @@ import { BlurFade } from "@/components/magicui/blur-fade";
 import Carousel from "@/components/carousel/Carousel";
 import { carouselSlides } from "@/db/carouselData";
 import FeaturedCards from "@/components/cards/featured-cards";
+import { WorldMapHero } from "@/components/shared/home/WorldMap";
+import Ticker from "@/components/hero/Ticker";
 
 const page = async () => {
   const demoLogos = [
@@ -84,13 +86,13 @@ const page = async () => {
         </BlurFade>
 
         <BlurFade key="category-cards" delay={0.4} inView>
-          <AnimatedTicker />
+          <Ticker />
         </BlurFade>
 
-        <BlurFade key="clients-section" delay={0.45} inView>
-          <Clients />
+        <BlurFade key="featured-cards" delay={0.45} inView>
+          <WorldMapHero/>
         </BlurFade>
-
+       
         <BlurFade key="products-tab" delay={0.5} inView>
           <ProductsTab />
         </BlurFade>

@@ -81,7 +81,7 @@ export default function Clients() {
         </div>
 
         <div className="relative mt-7 h-[100px] w-full">
-          <InfiniteSlider 
+          {/* <InfiniteSlider 
             className='flex h-full w-full items-center z-90' 
             duration={30}
             gap={48}
@@ -94,7 +94,7 @@ export default function Clients() {
                 <Logo />
               </div>
             ))}
-          </InfiniteSlider>
+          </InfiniteSlider> */}
           
         </div>
       </div>

@@ -6,52 +6,52 @@ export default function ProductsList({defaultTab}:any) {
     <>
      
     <Tabs defaultValue={defaultTab} className="px-1 my-4 max-w-7xl mx-auto min-h-screen">
-      <TabsList className="bg-transparent max-w-[950px] px-1 mx-auto gap-1 rounded-lg flex flex-wrap justify-center">
+      <TabsList className="bg-transparent max-w-[1150px] px-1 mx-auto gap-1 rounded-lg flex flex-wrap justify-center">
         <TabsTrigger
           value="tab-1"
-          className="data-[state=active]:bg-emerald-700 data-[state=active]:text-white bg-green-100 text-black data-[state=active]:shadow-none my-1"
+          className="data-[state=active]:bg-emerald-700 w-auto h-10 px-4 border-amber-100 border-2 text-md data-[state=active]:text-white bg-green-100 text-black data-[state=active]:shadow-none my-1"
         >
           Baby Care
         </TabsTrigger>
         <TabsTrigger
           value="tab-2"
-          className="data-[state=active]:bg-emerald-700 data-[state=active]:text-white bg-green-100 text-black data-[state=active]:shadow-none my-1"
+          className="data-[state=active]:bg-emerald-700 w-auto h-10 px-4 border-amber-100 border-2 text-md data-[state=active]:text-white bg-green-100 text-black data-[state=active]:shadow-none my-1"
         >
           Lip Care
         </TabsTrigger>
         <TabsTrigger
           value="tab-3"
-          className="data-[state=active]:bg-emerald-700 data-[state=active]:text-white bg-green-100 text-black data-[state=active]:shadow-none my-1"
+          className="data-[state=active]:bg-emerald-700 w-auto h-10 px-4 border-amber-100 border-2 text-md data-[state=active]:text-white bg-green-100 text-black data-[state=active]:shadow-none my-1"
         >
           Personal Care
         </TabsTrigger>
         <TabsTrigger
           value="tab-4"
-          className="data-[state=active]:bg-emerald-700 data-[state=active]:text-white bg-green-100 text-black data-[state=active]:shadow-none my-1"
+          className="data-[state=active]:bg-emerald-700 w-auto h-10 px-4 border-amber-100 border-2 text-md data-[state=active]:text-white bg-green-100 text-black data-[state=active]:shadow-none my-1"
         >
           Men Grooming
         </TabsTrigger>
         <TabsTrigger
           value="tab-5"
-          className="data-[state=active]:bg-emerald-700 data-[state=active]:text-white bg-green-100 text-black data-[state=active]:shadow-none my-1"
+          className="data-[state=active]:bg-emerald-700 w-auto h-10 px-4 border-amber-100 border-2 text-md data-[state=active]:text-white bg-green-100 text-black data-[state=active]:shadow-none my-1"
         >
           Color Cosmetics
         </TabsTrigger>
         <TabsTrigger
           value="tab-6"
-          className="data-[state=active]:bg-emerald-700 data-[state=active]:text-white bg-green-100 text-black data-[state=active]:shadow-none my-1"
+          className="data-[state=active]:bg-emerald-700 w-auto h-10 px-4 border-amber-100 border-2 text-md data-[state=active]:text-white bg-green-100 text-black data-[state=active]:shadow-none my-1"
         >
           Derma Products
         </TabsTrigger>
         <TabsTrigger
           value="tab-7"
-          className="data-[state=active]:bg-emerald-700 data-[state=active]:text-white bg-green-100 text-black data-[state=active]:shadow-none my-1"
+          className="data-[state=active]:bg-emerald-700 w-auto h-10 px-4 border-amber-100 border-2 text-md data-[state=active]:text-white bg-green-100 text-black data-[state=active]:shadow-none my-1"
         >
           Nutra Products
         </TabsTrigger>
         <TabsTrigger
           value="tab-8"
-          className="data-[state=active]:bg-emerald-700 data-[state=active]:text-white bg-green-100 text-black data-[state=active]:shadow-none my-1"
+          className="data-[state=active]:bg-emerald-700 w-auto h-10 px-4 border-amber-100 border-2 text-md data-[state=active]:text-white bg-green-100 text-black data-[state=active]:shadow-none my-1"
         >
           Essential Oil
         </TabsTrigger>

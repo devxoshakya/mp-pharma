@@ -64,7 +64,12 @@ export default function ProductCard({
   return (
     <div className="max-w-xs rounded-xl overflow-hidden shadow-lg bg-white flex flex-col h-full">
       {/* Product Image with Bestseller Badge */}
-      <div className={`relative bg-gradient-to-r ${randomGradient} p-4 flex justify-center`}>
+      <div className={`relative bg-gradient-to-r bg-[length:900px_900px] p-4 flex justify-center`}
+      style={{
+        backgroundImage:
+            'linear-gradient(rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.01)), url("/bg-leaf.png")',
+      }}
+      >
         <Badge className="absolute top-2 left-2 bg-orange-500 text-white font-bold">
           BESTSELLER ⭐
         </Badge>
