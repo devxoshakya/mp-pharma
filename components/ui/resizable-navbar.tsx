@@ -272,10 +272,17 @@ export const NavbarButton = ({
       "bg-gradient-to-b from-blue-500 to-blue-700 text-white shadow-[0px_2px_0px_0px_rgba(255,255,255,0.3)_inset]",
   }
 
-  return (
-    <Tag href={href || undefined} className={cn(baseStyles, variantStyles[variant], className)} {...props}>
-      {children}
-    </Tag>
+  // Create proper props based on Tag type
+  const tagProps = Tag === 'a' && href ? { href } : {};
+
+  return React.createElement(
+    Tag,
+    {
+      className: cn(baseStyles, variantStyles[variant], className),
+      ...tagProps,
+      ...props
+    },
+    children
   )
 }
 
