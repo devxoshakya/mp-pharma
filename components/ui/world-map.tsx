@@ -12,7 +12,7 @@ interface MapProps {
   lineColor?: string;
 }
 
-export default function WorldMap({
+export default  function WorldMap({
   dots = [],
   lineColor = "#0ea5e9",
 }: MapProps) {
