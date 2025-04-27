@@ -76,23 +76,21 @@ const page = async () => {
       </BlurFade>
 
       <BlurFade key="logo-carousel" delay={0.25} inView>
-          <CategoryCards />
+        <CategoryCards />
       </BlurFade>
 
       {/* Fixed the width constraint that was causing overflow */}
       <div className="mx-auto w-full px-4 md:px-8 z-10 overflow-hidden">
         <BlurFade key="animated-ticker" delay={0.35} inView>
-        <LogoCarousel logos={demoLogos} columns={5} />
+          <LogoCarousel logos={demoLogos} columns={5} />
         </BlurFade>
 
         <BlurFade key="category-cards" delay={0.4} inView>
           <Ticker />
         </BlurFade>
 
-        <BlurFade key="featured-cards" delay={0.45} inView>
-          <WorldMapHero/>
-        </BlurFade>
-       
+        <WorldMapHero />
+
         <BlurFade key="products-tab" delay={0.5} inView>
           <ProductsTab />
         </BlurFade>
