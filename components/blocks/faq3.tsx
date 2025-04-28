@@ -77,7 +77,7 @@ const Faq3 = ({
   supportButtonUrl = "https://www.shadcnblocks.com",
 }: Faq3Props) => {
   return (
-    <section className="my-16 bg-[url('/bg-2.png')] bg-repeat bg-[length:220px_220px] py-2">
+    <section className="my-16 bg-[url('/bg-2.png')] bg-repeat bg-[length:220px_220px] mx-auto py-2">
       <div className="container space-y-8">
         <div className="mx-auto flex max-w-4xl flex-col items-center rounded-lg bg-green-50 border-2 border-emerald-700 p-4 text-center md:rounded-xl md:p-6 lg:p-8" 
         id="contact">

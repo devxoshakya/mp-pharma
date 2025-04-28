@@ -2,7 +2,7 @@ import HeroVideoDialog from "@/components/magicui/hero-video-dialog";
 
 export function HeroVideoDialogDemo() {
   return (
-    <div className="relative max-w-4xl text-center mx-auto my-16">
+    <div className="relative max-w-4xl text-center mx-auto mb-32 mt-0">
       <h1 className="text-2xl md:text-7xl font-bold my-8 dark:text-white">
         Discover M.P Pharmaceuticals
       </h1>

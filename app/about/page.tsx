@@ -10,15 +10,17 @@ import { HeroParallaxDemo } from '@/components/about/Parallax'
 import { MPPharmaBentoGrid } from '@/components/about/Bento'
 import { CarouselAbout } from '@/components/about/Carousel'
 import HeroVideoDialogDemo from '@/components/about/Video'
+import FaqAndContact from '@/components/shared/contact/ContactFAQ'
 
 const AboutPage = () => {
   return (
-    <div className="flex flex-col gap-4 ">
+    <div className="flex flex-col gap-4mx-auto ">
       <Hero/>
       <HeroParallaxDemo/>
+      <HeroVideoDialogDemo/>
       <MPPharmaBentoGrid/>
       <CarouselAbout/>
-      <HeroVideoDialogDemo/>
+      <FaqAndContact/>
      {/* <FeaturedCards/> */}
      {/* <ImageComp/> */}
     </div>

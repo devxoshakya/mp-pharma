@@ -13,11 +13,11 @@ import { motion } from "motion/react";
 
 export function MPPharmaBentoGrid() {
   return (
-    <>
-      <h1 className="text-2xl md:text-7xl text-center mx-auto font-bold dark:text-white">
+    <div className="py-16">
+      <h1 className="text-2xl md:text-7xl text-center mx-auto font-bold dark:text-white ">
         Excellence Across Every Dimension
       </h1>
-      <p className="max-w-4xl text-base mx-auto text-center md:text-lg mt-2 mb-8 dark:text-neutral-200">
+      <p className="max-w-4xl text-base mx-auto text-center md:text-lg mt-2 mb-16 dark:text-neutral-200">
         Explore our expertise — from premium herbal products and uncompromised
         quality standards to a diverse portfolio and a team committed to
         customer satisfaction.
@@ -35,7 +35,7 @@ export function MPPharmaBentoGrid() {
           />
         ))}
       </BentoGrid>
-    </>
+    </div>
   );
 }
 
