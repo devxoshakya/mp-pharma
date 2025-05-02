@@ -4,16 +4,17 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls, useGLTF, Environment } from "@react-three/drei";
 import { Suspense, useRef, useEffect, useState } from "react";
 import { Group } from "three";
+import Loading from "@/app/loading";
 
 function Model({ scale }: { scale: [number, number, number] }) {
-  const { scene } = useGLTF("/logo.gltf");
+  const { scene } = useGLTF("/logo.gltf", true);
   const modelRef = useRef<Group>(null);
 
   return (
     <primitive
       ref={modelRef}
       object={scene}
-      rotation={[0, 0, 0]}
+      rotation={[0, -0.7, 0]}
       scale={scale}
     />
   );
@@ -44,20 +45,25 @@ export default function ImageComp() {
 
   return (
     <section className="w-full h-[450px] md:h-[500px] bg-transparent md:p-4">
-      <Canvas camera={{ position: cameraPosition as [number, number, number], fov: 50 }}>
-        <ambientLight intensity={0.9} />
-        <directionalLight position={[5, 5, 5]} intensity={1.5} />
-        <Suspense fallback={null}>
+      <Suspense fallback={<Loading className={"h-[450px]"} />}>
+        <Canvas
+          camera={{
+            position: cameraPosition as [number, number, number],
+            fov: 50,
+          }}
+        >
+          <ambientLight intensity={0.9} />
+          <directionalLight position={[5, 5, 5]} intensity={1.5} />
           <Model scale={modelScale} />
           <Environment preset="city" background={false} />
-        </Suspense>
-        <OrbitControls
-          enableZoom={false}
-          enableRotate={true}
-          enablePan={false}
-          target={[0, 0, 0]}
-        />
-      </Canvas>
+          <OrbitControls
+            enableZoom={false}
+            enableRotate={true}
+            enablePan={false}
+            target={[0, 0, 0]}
+          />
+        </Canvas>
+      </Suspense>
     </section>
   );
 }
