@@ -14,52 +14,52 @@ type CategoryCard = {
 
 const categories: CategoryCard[] = [
   {
-    id: "face-care",
-    title: "Face Care",
+    id: "baby-care",
+    title: "Baby Care",
     image: "/category/baby.png",
-    url: "/categories/face-care",
+    url: "/products",
   },
   {
-    id: "hair-care",
-    title: "Hair Care",
+    id: "color-cosmetics-care",
+    title: "Color Cosmetics",
     image: "/category/color.png",
-    url: "/categories/hair-care",
+    url: "/products",
+  },
+  {
+    id: "face-care",
+    title: "Face Care",
+    image: "/category/derma.png",
+    url: "/products",
   },
   {
     id: "lip-care",
     title: "Lip Care",
-    image: "/category/derma.png",
-    url: "/categories/lip-care",
-  },
-  {
-    id: "personal-care",
-    title: "Personal Care",
     image: "/category/lip.png",
-    url: "/categories/personal-care",
+    url: "/products",
   },
   {
-    id: "baby-care",
-    title: "Baby Care",
+    id: "men-care",
+    title: "Men's Care",
     image: "/category/men.png",
-    url: "/categories/baby-care",
+    url: "/products",
   },
   {
-    id: "color-cosmetics",
-    title: "Color Cosmetics",
-    image: "/category/nutra.png",
-    url: "/categories/color-cosmetics",
-  },
-  {
-    id: "derma-products",
-    title: "Derma Products",
-    image: "/category/oil.png",
-    url: "/categories/derma-products",
-  },
-  {
-    id: "nutra-products",
+    id: "nutra-cosmetics",
     title: "Nutra Products",
+    image: "/category/nutra.png",
+    url: "/products",
+  },
+  {
+    id: "oil-products",
+    title: "Essential Oils",
+    image: "/category/oil.png",
+    url: "/products",
+  },
+  {
+    id: "personal-products",
+    title: "Personal Care",
     image: "/category/personal.png",
-    url: "/categories/nutra-products",
+    url: "/products",
   },
 ];
 

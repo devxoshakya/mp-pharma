@@ -4,7 +4,7 @@ import path from "path";
 
 // Business configuration
 export const BUSINESS_NAME = "MP Pharmaceuticals group of Companies"; // Replace with your business name
-export const BUSINESS_CONTACT = "WhatsApp: +919457239806"; // Replace with your WhatsApp number
+export const BUSINESS_CONTACT = "WhatsApp: +918687868783"; // Replace with your WhatsApp number
 
 // Store chat history and manage sessions
 export const chatHistory: Record<string, { role: string; content: string }[]> = {};

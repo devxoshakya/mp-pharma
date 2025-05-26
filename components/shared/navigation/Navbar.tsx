@@ -10,6 +10,7 @@ import {
   MobileNavToggle,
   MobileNavMenu,
 } from "@/components/ui/resizable-navbar"
+import Link from "next/link"
 import { useState } from "react"
 
 export default function AcchaNavbar({children}: {children: React.ReactNode}) {
@@ -42,8 +43,9 @@ export default function AcchaNavbar({children}: {children: React.ReactNode}) {
           <NavbarLogo />
           <NavItems items={navItems} featuresDropdown={true} />
           <div className="flex items-center gap-4">
-            
+            <Link href="https://wa.me/918687868783?text=Hello%20there%2C%20I%20have%20a%20question%20about%20your%20service" target="_blank" rel="noopener noreferrer">
             <NavbarButton variant="primary" className="bg-emerald-800 text-white">Book a call</NavbarButton>
+            </Link>
           </div>
         </NavBody>
 

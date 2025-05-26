@@ -35,7 +35,7 @@ export  function WorldMapHero() {
         muted 
         playsInline
       >
-        <source src="/map.mp4" type="video/mp4" />
+        <source src="/map2.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     </div>

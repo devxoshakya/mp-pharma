@@ -46,22 +46,30 @@ const Footer = () => {
                 Ambala Cantt, Haryana 133004
                 </span>
               </div>
-              <div className="flex items-center space-x-3">
-                <Phone className="text-neutral-600 h-5 w-5 flex-shrink-0" />
-                <a href="tel:+18005551234" className="text-neutral-600 hover:text-blue-600 transition-colors text-sm">
-                  +918687868783
-                </a>
+              <div className="flex items-start space-x-3">
+                <Phone className="text-neutral-600 h-5 w-5 mt-0.5 flex-shrink-0" />
+                <div className="flex flex-col space-y-1">
+                  <a href="tel:+918687868783" className="text-neutral-600 hover:text-blue-600 transition-colors text-sm">
+                    +918687868783
+                  </a>
+                  <a href="tel:+919034490812" className="text-neutral-600 hover:text-blue-600 transition-colors text-sm">
+                    +919034490812
+                  </a>
+                  <a href="tel:+917496822579" className="text-neutral-600 hover:text-blue-600 transition-colors text-sm">
+                    +917496822579
+                  </a>
+                </div>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="text-neutral-600 h-5 w-5 flex-shrink-0" />
                 <a href="mailto:info@pharmabrand.com" className="text-neutral-600 hover:text-blue-600 transition-colors text-sm break-all">
-                  info@pharmabrand.com
+                  mppharmaceuticalscor@gmail.com
                 </a>
               </div>
               <div className="flex items-center space-x-3">
                 <Globe className="text-neutral-600 h-5 w-5 flex-shrink-0" />
                 <a href="https://www.pharmabrand.com" className="text-neutral-600 hover:text-blue-600 transition-colors text-sm break-all">
-                  www.pharmabrand.com
+                  www.mppharmaceuticals.com
                 </a>
               </div>
             </div>
@@ -89,12 +97,10 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row justify-between items-center text-sm text-neutral-500">
           <div className="mb-4 md:mb-0">
-            <p>© {currentYear} PharmaBrand. All rights reserved.</p>
+            <p>© {currentYear} mppharmaceuticals.com All rights reserved.</p>
           </div>
           <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
-            <a href="/privacy" className="hover:text-blue-600 transition-colors">Privacy Policy</a>
-            <a href="/terms" className="hover:text-blue-600 transition-colors">Terms of Service</a>
-            <a href="/compliance" className="hover:text-blue-600 transition-colors">Compliance</a>
+            
           </div>
         </div>
       </div>

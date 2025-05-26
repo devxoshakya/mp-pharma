@@ -78,8 +78,8 @@ const Faq3 = ({
 }: Faq3Props) => {
   return (
     <section className="my-16 bg-[url('/bg-2.png')] bg-repeat bg-[length:220px_220px] mx-auto py-2">
-      <div className="container space-y-8">
-        <div className="mx-auto flex max-w-4xl flex-col items-center rounded-lg bg-green-50 border-2 border-emerald-700 p-4 text-center md:rounded-xl md:p-6 lg:p-8" 
+      <div className="container space-y-8 mx-auto">
+        <div className="flex max-w-4xl flex-col items-center rounded-lg bg-green-50 border-2 mx-auto border-emerald-700 p-4 text-center md:rounded-xl md:p-6 lg:p-8" 
         id="contact">
           <div className="relative">
             <Avatar className="absolute mb-4 size-16 origin-bottom -translate-x-[60%] scale-[80%] border md:mb-5">
@@ -103,7 +103,7 @@ const Faq3 = ({
           </p>
           <div className="flex w-full flex-col justify-center gap-2 sm:flex-row">
             <Button className="w-full sm:w-auto" asChild>
-              <a href={supportButtonUrl} target="_blank">
+              <a href={"https://wa.me/918687868783?text=Hello%20there%2C%20I%20have%20a%20question%20about%20your%20service"} target="_blank">
                 {supportButtonText}
               </a>
             </Button>
