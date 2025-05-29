@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 
 export  function WorldMapHero() {
   return (
-    <div className=" md:py-40 py-36 dark:bg-black bg-white w-full max-w-7xl mx-auto">
+    <div className=" md:py-40 py-36 dark:bg-black bg-white w-full max-w-8xl mx-auto">
       <div className="max-w-7xl mx-auto text-center">
         <p className="font-bold text-xl md:text-4xl dark:text-white text-black">
           Shipping Products{" "}
@@ -28,16 +28,9 @@ export  function WorldMapHero() {
         </p>
       </div>
     <div className="w-full flex justify-center">
-      <video 
-        className="w-full max-w-full" 
-        autoPlay 
-        loop 
-        muted 
-        playsInline
-      >
-        <source src="/map2.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      <div className="w-full md:mx-32">
+        <img src="/map.svg" alt="World map" className="w-full" />
+      </div>
     </div>
     </div>
 
