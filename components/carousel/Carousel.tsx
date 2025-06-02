@@ -61,7 +61,7 @@ const Carousel: React.FC<CarouselProps> = ({
       onMouseEnter={pauseSlider}
       onMouseLeave={resumeSlider}
     >
-      <div className="relative aspect-[21/9] md:aspect-[21/7] overflow-hidden">
+      <div className="relative md:h-120 h-36 overflow-hidden">
         {slides.map((slide, index) => (
           <CarouselItem key={index} isActive={activeIndex === index}>
             <img
