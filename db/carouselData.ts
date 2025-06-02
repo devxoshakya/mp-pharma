@@ -16,8 +16,8 @@ export const carouselSlides: SlideType[] = [
     alt: "MP Pharmaceuticals skincare products"
   },
   {
-    desktop: "https://cdn.mppharmaceuticals.com/mp%20home%20page%20for%20webiste.jpg",
-    mobile: "hhttps://cdn.mppharmaceuticals.com/mp%20home%20page%20for%20webiste.jpg",
+    desktop: "https://cdn.mppharmaceuticals.com/mp%20home%20page%20for%20webiste%20nutra%20products.jpg",
+    mobile: "https://cdn.mppharmaceuticals.com/mp%20home%20page%20for%20webiste%20nutra%20products.jpg",
     alt: "MP Pharmaceuticals product showcase"
   },
   {
