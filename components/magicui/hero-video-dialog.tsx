@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { Play, XIcon } from "lucide-react";
+import Image from "next/image";
 
 import { cn } from "@/lib/utils";
 
@@ -83,12 +84,13 @@ export default function HeroVideoDialog({
         className="group relative cursor-pointer"
         onClick={() => setIsVideoOpen(true)}
       >
-        <img
+        <Image
           src={thumbnailSrc}
           alt={thumbnailAlt}
           width={1920}
           height={1080}
           className="w-full rounded-md border shadow-lg transition-all duration-200 ease-out group-hover:brightness-[0.8]"
+          priority
         />
         <div className="absolute inset-0 flex scale-[0.9] items-center justify-center rounded-2xl transition-all duration-200 ease-out group-hover:scale-100">
           <div className="flex size-28 items-center justify-center rounded-full bg-primary/10 backdrop-blur-md">

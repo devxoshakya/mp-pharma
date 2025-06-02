@@ -13,8 +13,57 @@ const ProductsPage = () => {
     // Default to 'tab-1' if no query param or invalid value
     const activeTab = queryTab && ["2", "3","4","1"].includes(queryTab) ? `tab-${queryTab}` : "tab-1";
 
+    // Structured data for products page
+    const productsSchema = {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "MP Pharmaceuticals Products",
+        "description": "Comprehensive range of high-quality pharmaceutical products, medicines, and healthcare solutions manufactured by MP Pharmaceuticals.",
+        "url": "https://www.mppharmaceuticals.com/products",
+        "mainEntity": {
+            "@type": "ItemList",
+            "name": "Pharmaceutical Products",
+            "numberOfItems": "1000+",
+            "itemListElement": [
+                {
+                    "@type": "Product",
+                    "category": "Pharmaceutical",
+                    "manufacturer": {
+                        "@type": "Organization",
+                        "name": "MP Pharmaceuticals"
+                    }
+                }
+            ]
+        },
+        "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://www.mppharmaceuticals.com"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Products",
+                    "item": "https://www.mppharmaceuticals.com/products"
+                }
+            ]
+        }
+    };
+
     return (
         <>
+        {/* Structured Data for SEO */}
+        <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+                __html: JSON.stringify(productsSchema),
+            }}
+        />
+        
         <BlurFade key="hero-geometric" delay={0.25} inView>
             <HeroGeometric/> 
         </BlurFade>

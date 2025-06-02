@@ -2,6 +2,7 @@
 
 import React, { useRef, useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import Image from 'next/image';
 import CarouselItem from './CarouselItem';
 import CarouselDots from './CarouselDots';
 import { useCarousel } from './useCarousel';
@@ -64,10 +65,13 @@ const Carousel: React.FC<CarouselProps> = ({
       <div className="relative md:h-120 h-36 overflow-hidden">
         {slides.map((slide, index) => (
           <CarouselItem key={index} isActive={activeIndex === index}>
-            <img
+            <Image
               src={isMobile ? slide.mobile : slide.desktop}
               alt={slide.alt}
-              className="w-full h-full object-cover"
+              fill
+              className="object-cover"
+              sizes="100vw"
+              priority={index === 0}
             />
           </CarouselItem>
         ))}

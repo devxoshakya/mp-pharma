@@ -1,6 +1,7 @@
 "use client";
 import WorldMap from "@/components/ui/world-map";
 import { motion } from "motion/react";
+import Image from "next/image";
 
 export  function WorldMapHero() {
   return (
@@ -29,7 +30,14 @@ export  function WorldMapHero() {
       </div>
     <div className="w-full flex justify-center">
       <div className="w-full md:mx-32">
-        <img src="/map.svg" alt="World map" className="w-full" />
+        <Image 
+          src="/map.svg" 
+          alt="World map showing global shipping coverage" 
+          width={1200}
+          height={600}
+          className="w-full h-auto"
+          priority
+        />
       </div>
     </div>
     </div>

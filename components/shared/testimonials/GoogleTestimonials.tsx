@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 // Description: This component displays Google reviews with a star rating system and a responsive layout.
 export default function GoogleReviews() {
   const reviews = [
@@ -63,7 +64,14 @@ export default function GoogleReviews() {
         {/* Left side - Google logo and rating */}
         <div className="md:w-1/3 text-left">
           <div className="mb-4">
-            <img src="/google.png" alt="Google Reviews" className="h-10" />
+            <Image 
+              src="/google.png" 
+              alt="Google Reviews Logo" 
+              width={120}
+              height={40}
+              className="h-10 w-auto"
+              priority
+            />
           </div>
           <div className="text-7xl font-bold text-gray-800">4.5</div>
           <div className="flex my-3">

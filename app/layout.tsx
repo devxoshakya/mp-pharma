@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import AcchaNavbar from "@/components/shared/navigation/Navbar";
@@ -16,9 +16,73 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "MP Pharamaceuticals",
-  description: "Leading pharmaceutical manufacturing solutions with cutting-edge technology and unwavering commitment href quality and innovation.",
+  title: {
+    default: "MP Pharmaceuticals - Quality Healthcare Solutions & Medicines",
+    template: "%s | MP Pharmaceuticals"
+  },
+  description: "Leading pharmaceutical manufacturing company providing high-quality, affordable medicines and healthcare solutions. Discover our comprehensive range of pharmaceutical products and health innovations.",
+  keywords: [
+    "pharmaceutical manufacturing",
+    "quality medicines",
+    "healthcare solutions",
+    "pharmaceutical products",
+    "medical supplies",
+    "pharmaceutical company",
+    "health innovations",
+    "medicine manufacturing",
+    "healthcare technology",
+    "pharmaceutical industry"
+  ],
+  authors: [{ name: "MP Pharmaceuticals" }],
+  creator: "MP Pharmaceuticals",
+  publisher: "MP Pharmaceuticals",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://www.mppharmaceuticals.com',
+    siteName: 'MP Pharmaceuticals',
+    title: 'MP Pharmaceuticals - Quality Healthcare Solutions & Medicines',
+    description: 'Leading pharmaceutical manufacturing company providing high-quality, affordable medicines and healthcare solutions worldwide.',
+    images: [
+      {
+        url: 'https://www.mppharmaceuticals.com/images/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'MP Pharmaceuticals - Quality Healthcare Solutions',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'MP Pharmaceuticals - Quality Healthcare Solutions',
+    description: 'Leading pharmaceutical manufacturing company providing high-quality, affordable medicines and healthcare solutions.',
+    images: ['https://www.mppharmaceuticals.com/images/twitter-image.jpg'],
+  },
+
+  verification: {
+    google: 'your-google-verification-code', // Replace with actual verification code
+  },
+  alternates: {
+    canonical: 'https://www.mppharmaceuticals.com',
+  },
 };
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+}
 
 export default function RootLayout({
   children,
