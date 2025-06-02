@@ -198,7 +198,7 @@ export function AIBusinessChatbot({
           <p className="text-sm text-muted-foreground mb-1">
             Ask me anything about our products and services.
           </p>
-          <Button variant="ghost" size="icon" className="absolute top-2 right-2" onClick={toggleChat}>
+          <Button title="chat-bot-close" variant="ghost" size="icon" className="absolute top-2 right-2" onClick={toggleChat}>
             <X className="h-4 w-4" />
           </Button>
         </div>
@@ -318,6 +318,8 @@ export function AIBusinessChatbot({
           "w-14 h-14 rounded-full shadow-md flex items-center justify-center hover:shadow-lg hover:shadow-black/30 transition-all duration-300",
           isOpen ? "sm:opacity-100 opacity-0" : "opacity-100"
         )}
+        title="Open Chat"
+        aria-label="Open Chat"
       >
         {isOpen ? <X className="h-6 w-6" /> : icon}
       </Button>

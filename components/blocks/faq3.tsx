@@ -83,15 +83,15 @@ const Faq3 = ({
         id="contact">
           <div className="relative">
             <Avatar className="absolute mb-4 size-16 origin-bottom -translate-x-[60%] scale-[80%] border md:mb-5">
-              <AvatarImage src="https://shadcnblocks.com/images/block/avatar-2.webp" />
+              <AvatarImage alt="person-image-1" src="https://shadcnblocks.com/images/block/avatar-2.webp" />
               <AvatarFallback>SU</AvatarFallback>
             </Avatar>
             <Avatar className="absolute mb-4 size-16 origin-bottom translate-x-[60%] scale-[80%] border md:mb-5">
-              <AvatarImage src="https://shadcnblocks.com/images/block/avatar-3.webp" />
+              <AvatarImage alt="person-image-2" src="https://shadcnblocks.com/images/block/avatar-3.webp" />
               <AvatarFallback>SU</AvatarFallback>
             </Avatar>
             <Avatar className="mb-4 size-16 border md:mb-5">
-              <AvatarImage src="https://shadcnblocks.com/images/block/avatar-1.webp" />
+              <AvatarImage alt="person-image-3" src="https://shadcnblocks.com/images/block/avatar-1.webp" />
               <AvatarFallback>SU</AvatarFallback>
             </Avatar>
           </div>

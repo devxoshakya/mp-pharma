@@ -94,7 +94,7 @@ export default function CategoryCards() {
                 <div className="aspect-square relative">
                   <Image
                     src={category.image || "/placeholder.svg"}
-                    alt={category.title}
+                    alt={`${category.title} products category image`}
                     fill
                     sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, 25vw"
                     className={`object-cover transition-transform duration-500 ${

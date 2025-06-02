@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import {
   Navbar,
   NavBody,
@@ -9,11 +9,14 @@ import {
   MobileNavHeader,
   MobileNavToggle,
   MobileNavMenu,
-} from "@/components/ui/resizable-navbar"
-import Link from "next/link"
-import { useState } from "react"
+} from "@/components/ui/resizable-navbar";
+import { useState } from "react";
 
-export default function AcchaNavbar({children}: {children: React.ReactNode}) {
+export default function AcchaNavbar({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   const navItems = [
     {
       name: "Home",
@@ -31,9 +34,9 @@ export default function AcchaNavbar({children}: {children: React.ReactNode}) {
       name: "Contact",
       link: "/contact",
     },
-  ]
+  ];
 
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
     <div className="relative w-full">
@@ -43,9 +46,13 @@ export default function AcchaNavbar({children}: {children: React.ReactNode}) {
           <NavbarLogo />
           <NavItems items={navItems} featuresDropdown={true} />
           <div className="flex items-center gap-4">
-            <Link href="https://wa.me/918687868783?text=Hello%20there%2C%20I%20have%20a%20question%20about%20your%20service" target="_blank" rel="noopener noreferrer">
-            <NavbarButton variant="primary" className="bg-emerald-800 text-white">Book a call</NavbarButton>
-            </Link>
+            <NavbarButton
+              href="https://wa.me/918687868783?text=Hello%20there%2C%20I%20have%20a%20question%20about%20your%20service"
+              variant="primary"
+              className="bg-emerald-800 text-white"
+            >
+              Book a call
+            </NavbarButton>
           </div>
         </NavBody>
 
@@ -53,10 +60,16 @@ export default function AcchaNavbar({children}: {children: React.ReactNode}) {
         <MobileNav>
           <MobileNavHeader>
             <NavbarLogo />
-            <MobileNavToggle isOpen={isMobileMenuOpen} onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} />
+            <MobileNavToggle
+              isOpen={isMobileMenuOpen}
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            />
           </MobileNavHeader>
 
-          <MobileNavMenu isOpen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)}>
+          <MobileNavMenu
+            isOpen={isMobileMenuOpen}
+            onClose={() => setIsMobileMenuOpen(false)}
+          >
             {navItems.map((item, idx) => (
               <a
                 key={`mobile-link-${idx}`}
@@ -71,7 +84,12 @@ export default function AcchaNavbar({children}: {children: React.ReactNode}) {
               {/* <NavbarButton onClick={() => setIsMobileMenuOpen(false)} variant="primary" className="w-full">
                 Login
               </NavbarButton> */}
-              <NavbarButton onClick={() => setIsMobileMenuOpen(false)} variant="primary" className="w-full">
+              <NavbarButton
+                href="https://wa.me/918687868783?text=Hello%20there%2C%20I%20have%20a%20question%20about%20your%20service"
+                onClick={() => setIsMobileMenuOpen(false)}
+                variant="primary"
+                className="w-full"
+              >
                 Book a call
               </NavbarButton>
             </div>
@@ -80,16 +98,20 @@ export default function AcchaNavbar({children}: {children: React.ReactNode}) {
       </Navbar>
       {children}
     </div>
-  )
+  );
 }
 
 const DummyContent = () => {
   return (
     <div className="container mx-auto p-8 pt-24">
-      <h1 className="mb-4 text-center text-3xl font-bold">Check the navbar at the top of the container</h1>
+      <h1 className="mb-4 text-center text-3xl font-bold">
+        Check the navbar at the top of the container
+      </h1>
       <p className="mb-10 text-center text-sm text-zinc-500">
-        For demo purpose we have kept the position as <span className="font-medium">Sticky</span>. Keep in mind that
-        this component is <span className="font-medium">fixed</span> and will not move when scrolling.
+        For demo purpose we have kept the position as{" "}
+        <span className="font-medium">Sticky</span>. Keep in mind that this
+        component is <span className="font-medium">fixed</span> and will not
+        move when scrolling.
       </p>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-4">
         {[
@@ -173,5 +195,5 @@ const DummyContent = () => {
         ))}
       </div>
     </div>
-  )
-}
+  );
+};

@@ -17,20 +17,20 @@ const Footer = () => {
           <div>
             <FooterLogo />
             <div className="flex flex-wrap gap-3 mt-6">
-              <a href="https://facebook.com" className="text-neutral-600 hover:text-blue-600 transition-colors">
-                <Facebook size={isMobile ? 18 : 20} />
+              <a aria-label="Facebook" title="Follow us on Facebook" href="https://facebook.com" className="text-neutral-600 hover:text-blue-600 transition-colors">
+              <Facebook size={isMobile ? 18 : 20} aria-hidden="true" />
               </a>
-              <a href="https://twitter.com" className="text-neutral-600 hover:text-blue-600 transition-colors">
-                <Twitter size={isMobile ? 18 : 20} />
+              <a aria-label="Twitter" title="Follow us on Twitter" href="https://twitter.com" className="text-neutral-600 hover:text-blue-600 transition-colors">
+              <Twitter size={isMobile ? 18 : 20} aria-hidden="true" />
               </a>
-              <a href="https://linkedin.com" className="text-neutral-600 hover:text-blue-600 transition-colors">
-                <Linkedin size={isMobile ? 18 : 20} />
+              <a aria-label="LinkedIn" title="Connect with us on LinkedIn" href="https://linkedin.com" className="text-neutral-600 hover:text-blue-600 transition-colors">
+              <Linkedin size={isMobile ? 18 : 20} aria-hidden="true" />
               </a>
-              <a href="https://instagram.com" className="text-neutral-600 hover:text-blue-600 transition-colors">
-                <Instagram size={isMobile ? 18 : 20} />
+              <a aria-label="Instagram" title="Follow us on Instagram" href="https://instagram.com" className="text-neutral-600 hover:text-blue-600 transition-colors">
+              <Instagram size={isMobile ? 18 : 20} aria-hidden="true" />
               </a>
-              <a href="https://youtube.com" className="text-neutral-600 hover:text-blue-600 transition-colors">
-                <Youtube size={isMobile ? 18 : 20} />
+              <a aria-label="YouTube" title="Subscribe to our YouTube channel" href="https://youtube.com" className="text-neutral-600 hover:text-blue-600 transition-colors">
+              <Youtube size={isMobile ? 18 : 20} aria-hidden="true" />
               </a>
             </div>
           </div>
