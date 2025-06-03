@@ -1,3 +1,5 @@
+import { ProductCategory } from "@/types/product";
+
 export const products = [
   {
     image: "https://cdn.mppharmaceuticals.com/assets/neem%20purifining%20face%20wash.png",
@@ -6,6 +8,7 @@ export const products = [
     ingredients:
       "Dm Water, Sodium Lauyl Ether Sulphate, Cocomonoethanolamide, Acrylate Copolymer, Triethanol Amine, Tulsi Extract, Neem Extract, Hydrovance, Dmdm Hydantoin, Cocoamidopropyl Betaine, Methylchloroisothiazolinone, Edta, Fragrance, Tartazine Yellow 19140, Brilliant Blue 42090",
     quantity: "50ML TO 100ML",
+    type: [ProductCategory.FaceCare, ProductCategory.PersonalCare],
   },
   {
     image: "https://cdn.mppharmaceuticals.com/assets/charcoal%20face%20wash.png",
@@ -14,6 +17,7 @@ export const products = [
     ingredients:
       "Aqua, Cocoaminopropyl betain, Carbomer, Charcoal, Titanium Dioxide, Lemon Extract, Trimethanolamine, Alovera Extract, Methylparaben, Propyl Paraben, EDTA, Glycerin, Lactic acid, Hydrovance, Polyquateranium 7, Perfume",
     quantity: "50ML TO 100ML",
+    type: [ProductCategory.FaceCare, ProductCategory.PersonalCare],
   },
   {
     image: "https://cdn.mppharmaceuticals.com/assets/ubtan%20face%20wash.png",
@@ -22,6 +26,7 @@ export const products = [
     ingredients:
       "Aqua, Stearic Acid, Sodium Cocoyl Glycinate, Glycerin, Palmitic Acid, Coconut Oil, Walnut Beads, Saffron Extract, Niacinamide, Carrot Seed Oil, Tocopherol Acetate (Vitamin E), Turmeric Powder, Liquorice Extract, Orange Oil, Ylang Ylang Oil and Patchouli Oil",
     quantity: "50ML TO 100ML",
+    type: [ProductCategory.FaceCare, ProductCategory.PersonalCare],
   },
   {
     image: "https://cdn.mppharmaceuticals.com/assets/ubtan%20face%20wash%20-%20Copy.png",
@@ -30,6 +35,7 @@ export const products = [
     ingredients:
       "DM Water, Sodium Lauryl ether sulphate, Cocomonoethanolamide, Glycerin, Cocoamidoproyl Betaine, Haldi Extract, Chandan Extract, PEG 12 Dimethicone, Acrylate Copolymer, Sodium Hydroxide, Polyquaternium 10, Allantoin, Niacinamide, Aloevera Extract, DMDM Hydantoin, Methylchloroisthiazolinone",
     quantity: "50ML TO 100ML",
+    type: [ProductCategory.FaceCare, ProductCategory.PersonalCare],
   },
   {
     image: "https://cdn.mppharmaceuticals.com/assets/coffee%20%20facewash.png",
@@ -38,6 +44,7 @@ export const products = [
     ingredients:
       "Aqua, Capryloyl/Caproyl Methyl Glucamide (and) Lauroyl/Myristoyl Methyl Glucamide, Cocoamidopropyl Betaine, Glycerine, Maltooligosyl Glucoside (and) Hydrogenated Starch Hydrolysate, Sodium Cocoyl Apple Amino Acids, Polysorbate 60, Caprylhydroxamic Acid (and) Caprylyl Glycol (and) Glycerin, Green Tea, Carbomer, Coffee Extract, Sodium Palmitoyl Proline (and) Nymphaea Alba Flower (White Water Lily) Extract, Betaine, Fragrance, Aloe Barbadensis (Aloe Vera), Citrulluslanatus (Water Melon), Caffeine, Sodium Gluconate, Seaweed Extract, Triethanolamine",
     quantity: "50ML TO 100ML",
+    type: [ProductCategory.FaceCare, ProductCategory.PersonalCare],
   },
   {
     image: "https://cdn.mppharmaceuticals.com/assets/cocoa%20facewash.png",
@@ -46,6 +53,7 @@ export const products = [
     ingredients:
       "Aqua, Carbomer, Sodium Cocoylisethionate, Cocamide MEA, Sodium Lauroyl Sacrosinate, Disodium EDTA, Capryloyl, Caproyl Methyl Glucamide, Lauroyl, Myristoyl Methyl Glucamide, Propylene Glycol Laurate, Turmeric, Polyquaternium-7, Coco Betaine, Phenoxylethanol, Ethylhexyglycerine, Triethanolamine, Citric Acid, Coffee Extract, Cocoa Extract",
     quantity: "50ML TO 100ML",
+    type: [ProductCategory.FaceCare, ProductCategory.PersonalCare],
   },
   {
     image: "https://cdn.mppharmaceuticals.com/assets/glutathione%20salicylic%20acid%20face%20wash.png",
@@ -54,6 +62,7 @@ export const products = [
     ingredients:
       "DM Water, Sodium methyl cocoyl taurate, Caprylyl/ Capryl Glucoside, Cocamidopropyl Betaine, Vitamin C, Vitamin E, Grape Seed Oil, Essential oil, Sodium Cocoamphocetate, Glycerin, Acrylate Copolymer, Arbutin, L-Glutathione, PEG 7 glycol cocoate, Caprylhydroxamic acid (and) 1,2-Hexanediol (and) Propanediol, Phenoxyethanol, Glycolic Acid, Kojic acid, DL Panthenol, Fragrance",
     quantity: "50ML TO 100ML",
+    type: [ProductCategory.FaceCare, ProductCategory.PersonalCare],
   },
   {
     image: "https://cdn.mppharmaceuticals.com/assets/salicylic%20acid%20face%20wash.png",
@@ -62,6 +71,7 @@ export const products = [
     ingredients:
       "DM Water, Salicylic Acid, Glycolic Acid, Sodium Lauryl Ether Sulphate, PEG 12 Dimethione, Cocomonoethanol Amide, Polyquaternium 7, Aloevera Extract, DMDM Hydantoin, Methylchloro Isothiazolinone, Disodium EDTA, Fragrance",
     quantity: "50ML TO 100ML",
+    type: [ProductCategory.FaceCare, ProductCategory.PersonalCare],
   },
   {
     image: "https://cdn.mppharmaceuticals.com/assets/moisturizing%20face%20wash.png",
@@ -70,6 +80,7 @@ export const products = [
     ingredients:
       "Water, Petrolatum, Potassium Cocoyl Glycinate, Glycerin, Potassium Cocoate, Sodium Lauroamphoacetate, Hydroxypropyl Starch Phosphate, Acrylates Copolymer, Lauric Acid, Lauramidopropyl Betaine, Polybutene, BHT, Guar Hydroxypropyltrimonium Chloride, Polyquaternium-6, Tetrasodium EDTA, Citric Acid, Methyl Paraben, Propyl Paraben, Methylchloroisothiazolinone, Methylisothiazolinone, Fragrance",
     quantity: "50ML TO 100ML",
+    type: [ProductCategory.FaceCare, ProductCategory.PersonalCare],
   },
   {
     image: "https://cdn.mppharmaceuticals.com/assets/vodka%20face%20wash.png",
@@ -78,6 +89,7 @@ export const products = [
     ingredients:
       "Sodium Lauryl Sarcosinate, Acrylate Copolymer, Lauryl Glucoside, Decyl Glucoside, Hydrovance, Cocoamphodiacetate, DL Panthenol, Denatured Gum, Triethanol Amine, Potassium Sorbate, Sodim, hyaluronate, Lemon Essential Oil, Orange Essential Oil, Frankincense Essential Oil & Demineralised Water.Ethanol, Mulberry Extract, Liquorice Extract, Sodium Benzoate, Xanthan",
     quantity: "50ML TO 100ML",
+    type: [ProductCategory.FaceCare, ProductCategory.PersonalCare],
   },
   {
     image: "https://cdn.mppharmaceuticals.com/assets/niacinamide%20face%20wash.png",
@@ -86,6 +98,7 @@ export const products = [
     ingredients:
       "Green Tea, DM Water, Salicylic Acid, Glycolic Acid, Sodium Lauryl Ether Sulphat, PEG 12 Dimethione, Cocomonoethanol Amide, Polyquaternium 7, Lemon Extract, Neem Extract, Aloe Vera Extract, DM DM Hydantoin, Methylchloro Isothiazolinone, Disodium EDTA, Fragrance",
     quantity: "50ML TO 100ML",
+    type: [ProductCategory.FaceCare, ProductCategory.PersonalCare],
   },
   {
     image: "https://cdn.mppharmaceuticals.com/assets/tea%20tree%20face%20wash.png",
@@ -94,6 +107,7 @@ export const products = [
     ingredients:
       "Green Tea, DM Water, Salicylic Acid, Glycolic Acid, Sodium Lauryl Ether Sulphat, PEG 12 Dimethione, Cocomonoethanol Amide, Polyquaternium 7, Lemon Extract, Neem Extract, Aloe Vera Extract, DM DM Hydantoin, Methylchloro Isothiazolinone, Disodium EDTA, Fragrance",
     quantity: "50ML TO 100ML",
+    type: [ProductCategory.FaceCare, ProductCategory.PersonalCare],
   },{
     image: "https://cdn.mppharmaceuticals.com/assets/vitamin%20C%20fomaing%20face%20wash.png",
     category: "FOAMING FACE WASH RANGE",
@@ -101,12 +115,14 @@ export const products = [
     ingredients:
     "Vitamin C, DM Water, Salicylic Acid, Glycolic Acid, Sodium Lauryl Ether Sulphate, PEG 12 Dimethicone, Cocoamonoethanol Amide, Polyquaternium 7, Lemon Extract, Neem Extract, Aloe Vera Extract, DM Hydantoin, Methylchloro Isothiazolinone, Disodium EDTA, Fragrance",
     quantity: "50ML TO 100ML",
+    type: [ProductCategory.FaceCare, ProductCategory.PersonalCare],
   },{
     image: "https://cdn.mppharmaceuticals.com/assets/niacinamide%20face%20wash.png",
     category: "FOAMING FACE WASH RANGE",
     name: "SKIN HYDRATING Foaming Face Wash",
     ingredients: "Vitamin C, DM Water, Salicylic Acid, Glycolic Acid, Sodium Lauryl Ether Sulphate, PEG 12 Dimethicone, Cocoamonoethanol Amide, Polyquaternium 7, Lemon Extract, Neem Extract, Aloe Vera Extract, DM Hydantoin, Methylchloro Isothiazolinone, Disodium EDTA, Fragrance",
     quantity: "50ML TO 100ML",
+    type: [ProductCategory.FaceCare, ProductCategory.PersonalCare],
   },
   {
     image: "https://cdn.mppharmaceuticals.com/assets/24k%20gold%20face%20serum.png",
@@ -149,16 +165,15 @@ export const products = [
     quantity: "30 ML",
   },
   {
-    image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/assets/ADVANCE%20hair%20serum.png",
+    image: "https://cdn.mppharmaceuticals.com/assets/ADVANCE%20hair%20serum.png",
     category: "HAIR SERUM RANGE",
     name: "Advance Hair Serum",
     ingredients:
       "DM Water, Procapil, Capixyl, Redensyl, Hydrovance, Dimethicone, DM DM Hydantoin, Sodium CMC, Methylchloroisothiaz-olinone, Fragrance, 6 Gingerol, Topical Valproic Acid, Catechin, Biotin and Chamomile Extract",
     quantity: "50 ML TO 100 ML",
-    // not available
   },
   {
-    image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/assets/anti%20gray%20hair%20serum%202.png",
+    image: "https://cdn.mppharmaceuticals.com/assets/anti%20gray%20hair%20serum%202.png",
     category: "HAIR SERUM RANGE",
     name: "Anti Gray Hair Serum",
     ingredients:
@@ -166,7 +181,7 @@ export const products = [
     quantity: "50 ML TO 100 ML",
   },
   {
-    image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/assets/capixyl%205%25%20hair%20serum.png",
+    image: "https://cdn.mppharmaceuticals.com/assets/capixyl%205%25%20hair%20serum.png",
     category: "HAIR SERUM RANGE",
     name: "Capixyl 5% Fall Serum",
     ingredients:
@@ -174,7 +189,7 @@ export const products = [
     quantity: "50 ML TO 100 ML",
   },
   {
-    image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/assets/Procapil%20hair%20serum.png",
+    image: "https://cdn.mppharmaceuticals.com/assets/Procapil%20hair%20serum.png",
     category: "HAIR SERUM RANGE",
     name: "3% PROCAPIL & 3% BAICAPIL Hair Serum",
     ingredients:
@@ -182,7 +197,7 @@ export const products = [
     quantity: "50 ML TO 100 ML",
   },
   {
-    image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/assets/Coffe%20Shampoo.png",
+    image: "https://cdn.mppharmaceuticals.com/assets/Coffe%20Shampoo.png",
     category: "HAIR SHAMPOO RANGE",
     name: "CAFFEINE STRENGTHENING SHAMPOO",
     ingredients:
@@ -190,7 +205,7 @@ export const products = [
     quantity: "100 TO 200 ML"
   },
   {
-    image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/assets/keratin%20shampoo.png",
+    image: "https://cdn.mppharmaceuticals.com/assets/keratin%20shampoo.png",
     category: "HAIR SHAMPOO RANGE",
     name: "KERATIN SHAMPOO",
     ingredients:
@@ -198,7 +213,7 @@ export const products = [
     quantity: "100 TO 200 ML"
   },
   {
-    image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/assets/yogurt%20shampoo.png",
+    image: "https://cdn.mppharmaceuticals.com/assets/yogurt%20shampoo.png",
     category: "HAIR SHAMPOO RANGE",
     name: "YOGURT SHAMPOO",
     ingredients:
@@ -230,7 +245,7 @@ export const products = [
     quantity: "30 GM TO 100 GM",
   },
   {
-    image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/assets/24K%20GOLD%20FACE%20CREAM.png",
+    image: "https://cdn.mppharmaceuticals.com/assets/24K%20GOLD%20FACE%20CREAM.png",
     category: "FACE CREAM RANGE",
     name: "24K GOLD FACE CREAM",
     ingredients:
@@ -247,7 +262,7 @@ export const products = [
     quantity: "30 GM TO 100 GM",
   },
   {
-    image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/assets/anti-wrinkle%20cream.png",
+    image: "https://cdn.mppharmaceuticals.com/assets/anti-wrinkle%20cream.png",
     category: "FACE CREAM RANGE",
     name: "ANTI-WRINKLE CREAM",
     ingredients:
@@ -272,7 +287,7 @@ export const products = [
     quantity: "30 GM TO 100 GM",
   },
   {
-    image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/assets/spf50plus%20cream.png",
+    image: "https://cdn.mppharmaceuticals.com/assets/spf50plus%20cream.png",
     category: "FACE CREAM RANGE",
     name: "SPF 50 PA+++ SUNSCREEN",
     ingredients:
@@ -280,7 +295,7 @@ export const products = [
     quantity: "50 GM TO 100 GM",
   },
   {
-    image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/assets/bb%20cream.png",
+    image: "https://cdn.mppharmaceuticals.com/assets/bb%20cream.png",
     category: "FACE CREAM RANGE",
     name: "ALL IN ONE (BB) FACE CREAM",
     ingredients:
@@ -296,7 +311,7 @@ export const products = [
     quantity: "30 GM TO 100 GM",
   },
   {
-    image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/assets/onion%20hair%20oil.png",
+    image: "https://cdn.mppharmaceuticals.com/assets/onion%20hair%20oil.png",
     category: "HAIR OIL RANGE",
     name: "RED ONION HAIR OIL",
     ingredients:
@@ -304,7 +319,7 @@ export const products = [
     quantity: "100 ML TO 200 ML"
   },
   {
-    image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/assets/Multiherbal%20hair%20oil.png",
+    image: "https://cdn.mppharmaceuticals.com/assets/Multiherbal%20hair%20oil.png",
     category: "HAIR OIL RANGE",
     name: "MULTY HERBAL HAIR OIL",
     ingredients:
@@ -312,7 +327,7 @@ export const products = [
     quantity: "100 ML TO 200 ML"
   },
   {
-    image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/assets/advance%20hair%20growth%20oil.png",
+    image: "https://cdn.mppharmaceuticals.com/assets/advance%20hair%20growth%20oil.png",
     category: "HAIR OIL RANGE",
     name: "ADVANCE HAIR GROWTH OIL",
     ingredients:
@@ -320,7 +335,7 @@ export const products = [
     quantity: "100 ML TO 200 ML"
   },
   {
-    image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/assets/aloe%20vera%20vitamin%20E%20body%20lotion.png",
+    image: "https://cdn.mppharmaceuticals.com/assets/aloe%20vera%20vitamin%20E%20body%20lotion.png",
     category: "BODY LOTION RANGE",
     name: "ALOE VERA VITAMIN E BODY LOTION",
     ingredients:
@@ -328,7 +343,7 @@ export const products = [
     quantity: "100 TO 200 ML"
   },
   {
-    image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/assets/shea%20butter%20body%20lotion.png",
+    image: "https://cdn.mppharmaceuticals.com/assets/shea%20butter%20body%20lotion.png",
     category: "BODY LOTION RANGE",
     name: "SHEA BUTTER & COCOA BUTTER BODY LOTION",
     ingredients:
@@ -336,7 +351,7 @@ export const products = [
     quantity: "100 TO 200 ML"
   },
   {
-    image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/assets/Calamine%20Body%20Lotion.png",
+    image: "https://cdn.mppharmaceuticals.com/assets/Calamine%20Body%20Lotion.png",
     category: "BODY LOTION RANGE",
     name: "CALAMINE, ALOE VERA AND LIQUID PARAFFIN BODY LOTION",
     ingredients:
@@ -352,7 +367,7 @@ export const products = [
     quantity: "30 ML TO 100 ML",
   },
   {
-    image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/assets/almound%20oil.png",
+    image: "https://cdn.mppharmaceuticals.com/assets/almound%20oil.png",
     category: "FACIAL OIL RANGE",
     name: "BRIGHTENING ALMOND OIL",
     ingredients:
@@ -384,7 +399,7 @@ export const products = [
     quantity: "25 ML",
   },
   {
-    image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/assets/Tea%20Tree%20face%20sheet%20mask.png",
+    image: "https://cdn.mppharmaceuticals.com/assets/Tea%20Tree%20face%20sheet%20mask.png",
     category: "FACE SHEET MASK RANGE",
     name: "TEA TREE HYALURONIC ACID FACE SHEET MASK",
     ingredients:
@@ -392,7 +407,7 @@ export const products = [
     quantity: "25 ML",
   },
   {
-    image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/assets/strawberry%20face%20sheet%20mask%20-%20Copy.png",
+    image: "https://cdn.mppharmaceuticals.com/assets/strawberry%20face%20sheet%20mask%20-%20Copy.png",
     category: "FACE SHEET MASK RANGE",
     name: "STRAWBERRY FACE SHEET MASK",
     ingredients:
@@ -408,7 +423,7 @@ export const products = [
     quantity: "25 ML",
   },
   {
-    image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/assets/charcoal%20plus%20coffee%20face%20sheet%20mask.png",
+    image: "https://cdn.mppharmaceuticals.com/assets/charcoal%20plus%20coffee%20face%20sheet%20mask.png",
     category: "FACE & BODY SCRUB RANGE",
     name: "ACTIVATED CHARCOAL FACE & BODY SCRUB",
     ingredients:

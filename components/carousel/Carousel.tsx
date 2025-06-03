@@ -23,7 +23,7 @@ const Carousel: React.FC<CarouselProps> = ({
   autoSlideInterval = 5000 
 }) => {
   const carouselRef = useRef<HTMLDivElement>(null);
-  const [isMobile, setIsMobile] = useState(false);
+  const [imageHeight, setImageHeight] = useState<number | null>(null);
   
   const { 
     activeIndex, 
@@ -37,48 +37,49 @@ const Carousel: React.FC<CarouselProps> = ({
     autoSlideInterval
   });
 
-  useEffect(() => {
-    const checkScreenSize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-    
-    checkScreenSize();
-    window.addEventListener('resize', checkScreenSize);
-    
-    return () => {
-      window.removeEventListener('resize', checkScreenSize);
-    };
-  }, []);
+  // Function to handle image load and set height based on aspect ratio for desktop
+  const handleImageLoad = (event: React.SyntheticEvent<HTMLImageElement>) => {
+    const img = event.currentTarget;
+    const aspectRatio = img.naturalHeight / img.naturalWidth;
+    const containerWidth = carouselRef.current?.offsetWidth || window.innerWidth;
+    const calculatedHeight = containerWidth * aspectRatio;
+    const maxHeight = window.innerHeight * 0.8;
+    const finalHeight = Math.min(calculatedHeight, maxHeight);
+    setImageHeight(Math.round(finalHeight));
+  };
 
   return (
     <div 
-      className="relative w-[99.5vw] mt-4 -mx-[calc(50vw-50%)] group"
-      style={{ 
-        maxWidth: '100vw',
-        marginLeft: 'calc(50% - 50vw)',
-        marginRight: 'calc(50% - 50vw)'
-      }}
+      className="relative w-full group mt-4"
       ref={carouselRef}
       onMouseEnter={pauseSlider}
       onMouseLeave={resumeSlider}
     >
-      <div className="relative md:h-120 h-36 overflow-hidden">
+      <div 
+        className="relative w-full overflow-hidden"
+        style={{ 
+          height: imageHeight ? `${imageHeight}px` : 'auto',
+          minHeight: imageHeight ? undefined : '400px'
+        }}
+      >
         {slides.map((slide, index) => (
           <CarouselItem key={index} isActive={activeIndex === index}>
             <Image
-              src={isMobile ? slide.mobile : slide.desktop}
+              src={slide.desktop}
               alt={slide.alt}
               fill
-              className="object-cover"
+              className="object-contain w-full h-full"
               sizes="100vw"
               priority={index === 0}
+              onLoad={index === activeIndex ? handleImageLoad : undefined}
+              style={{ objectPosition: 'center', objectFit: 'contain' }}
             />
           </CarouselItem>
         ))}
         
         <button
           onClick={prevSlide}
-          className="absolute left-4 top-1/2 -translate-y-1/2 text-black/70 hover:text-black transition-colors p-2 opacity-0 group-hover:opacity-100 z-20"
+          className="absolute left-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white transition-colors p-2 opacity-0 group-hover:opacity-100 z-20 bg-black/20 rounded-full backdrop-blur-sm"
           aria-label="Previous slide"
         >
           <ChevronLeft size={32} strokeWidth={1.5} />
@@ -86,7 +87,7 @@ const Carousel: React.FC<CarouselProps> = ({
         
         <button
           onClick={nextSlide}
-          className="absolute right-4 top-1/2 -translate-y-1/2 text-black/70 hover:text-black transition-colors p-2 opacity-0 group-hover:opacity-100 z-20"
+          className="absolute right-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white transition-colors p-2 opacity-0 group-hover:opacity-100 z-20 bg-black/20 rounded-full backdrop-blur-sm"
           aria-label="Next slide"
         >
           <ChevronRight size={32} strokeWidth={1.5} />

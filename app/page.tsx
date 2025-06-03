@@ -9,7 +9,7 @@ import { LogoCarousel } from "@/components/ui/logo-carousel";
 import { ProcessSection } from "@/components/shared/home/ProcessSection";
 import AnimatedTicker from "@/components/hero/AnimatedTicker";
 import { BlurFade } from "@/components/magicui/blur-fade";
-import Carousel from "@/components/carousel/Carousel";
+import ResponsiveCarousel from "@/components/carousel/ResponsiveCarousel";
 import { carouselSlides } from "@/db/carouselData";
 import FeaturedCards from "@/components/cards/featured-cards";
 import { WorldMapHero } from "@/components/shared/home/WorldMap";
@@ -185,7 +185,7 @@ const page = async () => {
       />
       
       <BlurFade key="carousel-hero" delay={0.3} inView>
-        <Carousel slides={carouselSlides} autoSlideInterval={4000} />
+        <ResponsiveCarousel slides={carouselSlides} autoSlideInterval={2500} />
       </BlurFade>
 
       <BlurFade key="logo-carousel" delay={0.25} inView>
