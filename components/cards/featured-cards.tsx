@@ -1,11 +1,11 @@
 import React from 'react';
-import ProductCard from './hero-card';
+import SpecialProductCard from './specialized-card';
 
 const FeaturedCards = () => {
   // Sample product data
   const products = [
     {
-      image: "https://mp-pharma-cdn-worker.devxoshakya.workers.dev/assets/de%20tan%20removal%20cream.png",
+      image: "https://pub-268d91b15a844bf9a2745dc91c4b5ad5.r2.dev/images/Goat%20Milk%20SOap%20mp-Recovered.jpg",
       category: "FACE CREAM RANGE",
       name: "DE-TAN FACE CREAM",
       ingredients:
@@ -78,7 +78,7 @@ const FeaturedCards = () => {
         {/* Desktop view: 8 cards in 2 rows of 4 */}
         <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {products.map((product, index) => (
-            <ProductCard
+            <SpecialProductCard
               key={index}
               image={product.image}
               category={product.category}
@@ -92,7 +92,7 @@ const FeaturedCards = () => {
         {/* Mobile view: 4 cards in vertical column */}
         <div className="grid grid-cols-1 gap-6 md:hidden">
           {products.slice(0, 4).map((product, index) => (
-            <ProductCard
+            <SpecialProductCard
               key={index}
               image={product.image}
               category={product.category}

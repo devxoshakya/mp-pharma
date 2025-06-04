@@ -1,6 +1,7 @@
 import { ShoppingCart, PhoneCall } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import Link from "next/link";
 import ImageComp from "./Logo3D";
 
 function Hero() {
@@ -26,11 +27,15 @@ function Hero() {
             </div>
             <div className="flex flex-row gap-4">
             
-              <Button size="lg" className="gap-4" variant="outline">
-                Jump on a call <PhoneCall className="w-4 h-4" />
+              <Button size="lg" className="gap-4" variant="outline" asChild>
+                <Link href="tel:+918687868783">
+                  Jump on a call <PhoneCall className="w-4 h-4" />
+                </Link>
               </Button>
-              <Button size="lg" className="gap-4">
-                See Products <ShoppingCart className="w-4 h-4" />
+              <Button size="lg" className="gap-4" asChild>
+                <Link href="/products">
+                  See Products <ShoppingCart className="w-4 h-4" />
+                </Link>
               </Button>
             </div>
           </div>

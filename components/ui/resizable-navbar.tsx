@@ -292,16 +292,19 @@ export const FeaturesDropdown = () => {
       name: "Baby Care Products",
       description: "Gentle and safe for your little ones",
       image: "/category/baby.png",
+      link: "/products?q=4",
     },
     {
-      name: "Color Cosmetics",
-      description: "Enhance your beauty with our vibrant range",
-      image: "/category/color.png",
+      name: "Body Care",
+      description: "Complete body care solutions",
+      image: "/category/personal.png",
+      link: "/products?q=2",
     },
     {
       name: "Essential Oils",
       description: "Natural and therapeutic",
       image: "/category/oil.png",
+      link: "/products?q=6",
     },
   ]
 
@@ -315,8 +318,9 @@ export const FeaturesDropdown = () => {
     >
       <div className="grid grid-cols-2 gap-4">
         {categories.map((category, idx) => (
-          <div
+          <Link
             key={idx}
+            href={category.link}
             className="col-span-1 cursor-pointer rounded-lg p-3 transition-colors hover:bg-gray-50 dark:hover:bg-neutral-800"
           >
             <div className="flex items-center gap-4">
@@ -334,19 +338,22 @@ export const FeaturesDropdown = () => {
                 <p className="mt-1 text-xs text-neutral-500 dark:text-neutral-400">{category.description}</p>
               </div>
             </div>
-          </div>
+          </Link>
         ))}
-        <div className="col-span-1 cursor-pointer rounded-lg bg-gray-50 p-3 transition-colors hover:bg-gray-100 dark:bg-neutral-800 dark:hover:bg-neutral-700">
+        <Link
+          href="/products"
+          className="col-span-1 cursor-pointer rounded-lg bg-gray-50 p-3 transition-colors hover:bg-gray-100 dark:bg-neutral-800 dark:hover:bg-neutral-700"
+        >
           <div className="flex items-center gap-4">
             <div className="h-16 w-16 flex-shrink-0 rounded-md bg-gray-200 dark:bg-neutral-700 flex items-center justify-center">
               <span className="text-xl font-bold text-gray-400 dark:text-neutral-500">+</span>
             </div>
             <div className="flex-1">
               <h3 className="font-medium text-neutral-800 dark:text-neutral-200">View All</h3>
-              <p className="mt-1 text-xs text-neutral-500 dark:text-neutral-400">Explore all features</p>
+              <p className="mt-1 text-xs text-neutral-500 dark:text-neutral-400">Explore all products</p>
             </div>
           </div>
-        </div>
+        </Link>
       </div>
     </motion.div>
   )

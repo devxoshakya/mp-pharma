@@ -10,8 +10,22 @@ const ProductsPage = () => {
     const searchParams = useSearchParams();
     const queryTab = searchParams.get("q");
     
-    // Default to 'tab-1' if no query param or invalid value
-    const activeTab = queryTab && ["2", "3","4","1"].includes(queryTab) ? `tab-${queryTab}` : "tab-1";
+    // Map query parameter to tab value
+    const getActiveTab = (query: string | null) => {
+        switch (query) {
+            case "1": return "tab-1"; // Face Care
+            case "2": return "tab-2"; // Body Care
+            case "3": return "tab-3"; // Hair Care
+            case "4": return "tab-4"; // Baby Care
+            case "5": return "tab-5"; // Men's Care
+            case "6": return "tab-6"; // Essential Oils
+            case "7": return "tab-7"; // Scrubs & Serums
+            case "8": return "tab-8"; // Specialized
+            default: return "tab-1"; // Default to Face Care
+        }
+    };
+    
+    const activeTab = getActiveTab(queryTab);
 
     // Structured data for products page
     const productsSchema = {

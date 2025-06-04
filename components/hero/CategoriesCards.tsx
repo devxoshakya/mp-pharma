@@ -14,52 +14,52 @@ type CategoryCard = {
 
 const categories: CategoryCard[] = [
   {
-    id: "baby-care",
-    title: "Baby Care",
-    image: "/category/baby.png",
-    url: "/products",
-  },
-  {
-    id: "color-cosmetics-care",
-    title: "Color Cosmetics",
-    image: "/category/color.png",
-    url: "/products",
-  },
-  {
     id: "face-care",
     title: "Face Care",
     image: "/category/derma.png",
-    url: "/products",
+    url: "/products?q=1",
   },
   {
-    id: "lip-care",
-    title: "Lip Care",
-    image: "/category/lip.png",
-    url: "/products",
+    id: "body-care",
+    title: "Body Care",
+    image: "/category/personal.png",
+    url: "/products?q=2",
+  },
+  {
+    id: "hair-care",
+    title: "Hair Care",
+    image: "/category/personal.png",
+    url: "/products?q=3",
+  },
+  {
+    id: "baby-care",
+    title: "Baby Care",
+    image: "/category/baby.png",
+    url: "/products?q=4",
   },
   {
     id: "men-care",
     title: "Men's Care",
     image: "/category/men.png",
-    url: "/products",
+    url: "/products?q=5",
   },
   {
-    id: "nutra-cosmetics",
-    title: "Nutra Products",
-    image: "/category/nutra.png",
-    url: "/products",
-  },
-  {
-    id: "oil-products",
+    id: "essential-oils",
     title: "Essential Oils",
     image: "/category/oil.png",
-    url: "/products",
+    url: "/products?q=6",
   },
   {
-    id: "personal-products",
-    title: "Personal Care",
-    image: "/category/personal.png",
-    url: "/products",
+    id: "scrubs-serums",
+    title: "Scrubs & Serums",
+    image: "/category/color.png",
+    url: "/products?q=7",
+  },
+  {
+    id: "specialized",
+    title: "Specialized",
+    image: "/category/nutra.png",
+    url: "/products?q=8",
   },
 ];
 

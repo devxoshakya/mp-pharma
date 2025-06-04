@@ -1,6 +1,6 @@
 import React from 'react';
 import  ProductCard  from '@/components/cards/hero-card';
-import type { Product } from '@/types/product';
+import type { ProductType } from '@/types/product';
 import { products as allProducts } from '@/db/Universe';
 
 type SortOption = 'name-asc' | 'name-desc' | 'none';
@@ -23,8 +23,7 @@ export default function FeaturedProducts({
   const filteredProducts = filter 
     ? productsData.filter(product => 
         product.image && (
-          product.name.toLowerCase().includes(filter.toLowerCase()) || 
-          product.quantity.toLowerCase().includes(filter.toLowerCase())
+          product.type && Array.isArray(product.type) && product.type.includes(filter)
         )
       )
     : productsData.filter(product => product.image !== null);

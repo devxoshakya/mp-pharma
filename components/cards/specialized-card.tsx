@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function ProductCard({
+export default function SpecialProductCard({
   image,
   category,
   name,
@@ -68,11 +68,8 @@ export default function ProductCard({
   return (
     <div className="max-w-xs rounded-xl overflow-hidden shadow-lg bg-white flex flex-col h-full">
       {/* Product Image with Bestseller Badge */}
-      <div className={`relative bg-gradient-to-r bg-[length:900px_900px] p-4 flex justify-center`}
-      style={{
-        backgroundImage:
-            'linear-gradient(rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.01)), url("/bg-leaf.png")',
-      }}
+      <div className={`relative  flex justify-center`}
+     
       >
         <Badge className="absolute top-2 left-2 bg-orange-500 text-white font-bold">
           BESTSELLER ⭐
@@ -80,7 +77,7 @@ export default function ProductCard({
         <Image
           src={image}
           alt={name}
-          className="h-64 object-contain hover:scale-110 transition-transform duration-300"
+          className="h-64 object-cover w-full hover:scale-110 transition-transform duration-300"
           width={250}
           height={250}
           priority
@@ -123,18 +120,7 @@ export default function ProductCard({
         )}
 
         {/* Ingredients Section with Hidden Scrollbar */}
-        <div className="mt-4 text-left">
-          <h3 className="font-semibold mb-2">Ingredients:</h3>
-          <div
-            className="h-24 overflow-y-auto pr-2 text-xs text-gray-600"
-            style={{
-              msOverflowStyle: "none",
-              scrollbarWidth: "none",
-            }}
-          >
-            <p>{ingredients}</p>
-          </div>
-        </div>
+        
       </div>
 
       {/* Action Buttons */}
