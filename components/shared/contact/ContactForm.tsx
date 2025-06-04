@@ -56,7 +56,7 @@ export default function ContactForm() {
     return (
         <Dialog open={open} onOpenChange={setOpen}>
             <DialogTrigger asChild>
-                <p className="text-xs z-50 hover:scale-110 transition-transform  bg-emerald-950 text-white font-calendas rounded-full py-2 w-20 cursor-pointer">
+                <p className="text-xs z-50 hover:scale-110 transition-transform  bg-emerald-950 text-white font-calendas rounded-full py-1 w-20 cursor-pointer">
                     click here
                 </p>
             </DialogTrigger>
