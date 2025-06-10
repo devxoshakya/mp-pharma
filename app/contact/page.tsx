@@ -9,34 +9,34 @@ export default function ThreeDMarqueeDemo() {
   "https://cdn.mppharmaceuticals.com/webp2-output/dummy.png",
   "https://cdn.mppharmaceuticals.com/webp2-output/dummy.png",
   "https://cdn.mppharmaceuticals.com/webp2-output/dummy.png",
-  "https://cdn.mppharmaceuticals.com/webp2-output/body%20muttar%20mp.webp",//start
-  "https://cdn.mppharmaceuticals.com/webp2-output/botox%20cream%20psd%20file%20mp.webp",
-  "https://cdn.mppharmaceuticals.com/webp2-output/box%20information%20post.webp",
-  "https://cdn.mppharmaceuticals.com/webp2-output/chacoal%20kit%20for%20mp.webp",
-  "https://cdn.mppharmaceuticals.com/webp2-output/chamomile%20body%20wash%20for%20mp.webp",//end
+  "https://cdn.mppharmaceuticals.com/avif-compressed/body%20muttar%20mp.avif",//start
+  "https://cdn.mppharmaceuticals.com/avif-compressed/botox%20cream%20psd%20file%20mp.avif",
+  "https://cdn.mppharmaceuticals.com/avif-compressed/box%20information%20post.avif",
+  "https://cdn.mppharmaceuticals.com/avif-compressed/chacoal%20kit%20for%20mp.avif",
+  "https://cdn.mppharmaceuticals.com/avif-compressed/chamomile%20body%20wash%20for%20mp.avif",//end
   "https://cdn.mppharmaceuticals.com/webp2-output/dummy.png",
   "https://cdn.mppharmaceuticals.com/webp2-output/dummy.png",
   "https://cdn.mppharmaceuticals.com/webp2-output/dummy.png",
-  "https://cdn.mppharmaceuticals.com/webp2-output/copper%20pepetide%20serum%20mp.webp",//start
-  "https://cdn.mppharmaceuticals.com/webp2-output/cream%20mockup%20for%20mp%20(%20amber)-1@1x_1.webp",
-  "https://cdn.mppharmaceuticals.com/webp2-output/curry%20leaf%20face%20serum%20mp.webp",
-  "https://cdn.mppharmaceuticals.com/webp2-output/de%20tan%20face%20scrub%20mp.webp",
-  "https://cdn.mppharmaceuticals.com/webp2-output/EYE%20BROW%20OIL%20mp.webp",//end
+  "https://cdn.mppharmaceuticals.com/avif-compressed/copper%20pepetide%20serum%20mp.avif",//start
+  "https://cdn.mppharmaceuticals.com/avif-compressed/cream%20mockup%20for%20mp%20(%20amber)-1@1x_1.avif",
+  "https://cdn.mppharmaceuticals.com/avif-compressed/curry%20leaf%20face%20serum%20mp.avif",
+  "https://cdn.mppharmaceuticals.com/avif-compressed/de%20tan%20face%20scrub%20mp.avif",
+  "https://cdn.mppharmaceuticals.com/avif-compressed/EYE%20BROW%20OIL%20mp.avif",//end
   "https://cdn.mppharmaceuticals.com/webp2-output/dummy.png",
   "https://cdn.mppharmaceuticals.com/webp2-output/dummy.png",
   "https://cdn.mppharmaceuticals.com/webp2-output/dummy.png",
-  "https://cdn.mppharmaceuticals.com/webp2-output/fig%20face%20gel%20%20mp.webp",//start
-  "https://cdn.mppharmaceuticals.com/webp2-output/foaming%20face%20wash%20%20mp.webp",
-  "https://cdn.mppharmaceuticals.com/webp2-output/glass%20skin%20sewrum%20mp-1@1x_1.webp",
-  "https://cdn.mppharmaceuticals.com/webp2-output/glass%20skin%20sewrum%20mp-2.webp",
-  "https://cdn.mppharmaceuticals.com/webp2-output/glass%20skin%20sewrum%20mp-3@1x_1.webp",//end
+  "https://cdn.mppharmaceuticals.com/avif-compressed/fig%20face%20gel%20%20mp.avif",//start
+  "https://cdn.mppharmaceuticals.com/avif-compressed/foaming%20face%20wash%20%20mp.avif",
+  "https://cdn.mppharmaceuticals.com/avif-compressed/glass%20skin%20sewrum%20mp-1@1x_1.avif",
+  "https://cdn.mppharmaceuticals.com/avif-compressed/glass%20skin%20sewrum%20mp-2.avif",
+  "https://cdn.mppharmaceuticals.com/avif-compressed/glass%20skin%20sewrum%20mp-3@1x_1.avif",//end
   "https://cdn.mppharmaceuticals.com/webp2-output/dummy.png",
   "https://cdn.mppharmaceuticals.com/webp2-output/dummy.png",
   "https://cdn.mppharmaceuticals.com/webp2-output/dummy.png",
   "https://cdn.mppharmaceuticals.com/webp2-output/dummy.png",
-  "https://cdn.mppharmaceuticals.com/webp2-output/hair%20serum%20%20complex%20mp.webp",
-  "https://cdn.mppharmaceuticals.com/webp2-output/hair%20shampoo%20+%20serum%20combo%20pack%20%20for%20mp.webp",//start
-  "https://cdn.mppharmaceuticals.com/webp2-output/HERBAL%20TOOTHPASTE%20mp.webp"//end
+  "https://cdn.mppharmaceuticals.com/avif-compressed/hair%20serum%20%20complex%20mp.avif",
+  "https://cdn.mppharmaceuticals.com/avif-compressed/hair%20shampoo%20+%20serum%20combo%20pack%20%20for%20mp.avif",//start
+  "https://cdn.mppharmaceuticals.com/avif-compressed/HERBAL%20TOOTHPASTE%20mp.avif"//end
 ];
 
   return (
