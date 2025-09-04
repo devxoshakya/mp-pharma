@@ -51,7 +51,7 @@ export function AnimatedBeamMultipleOutputDemo({
         <div className="flex flex-col justify-center gap-2">
           <Circle ref={div1Ref} className="p-1">
             <Image
-                src="https://mp-pharma-cdn-worker.devxoshakya.workers.dev/assets/moisturizing%20face%20wash.png"
+                src="https://cdn2.devshakya.xyz/assets/moisturizing%20face%20wash.png"
                 alt="Animated Beam"
                 width={250}
                 height={250}
@@ -59,7 +59,7 @@ export function AnimatedBeamMultipleOutputDemo({
           </Circle>
           <Circle ref={div2Ref} className="p-1">
             <Image
-                src="https://mp-pharma-cdn-worker.devxoshakya.workers.dev/assets/vodka%20face%20wash.png"
+                src="https://cdn2.devshakya.xyz/assets/vodka%20face%20wash.png"
                 alt="Animated Beam"
                 width={100}
                 height={100}
@@ -67,7 +67,7 @@ export function AnimatedBeamMultipleOutputDemo({
           </Circle>
           <Circle ref={div3Ref} className="p-1">
            <Image
-                src="https://mp-pharma-cdn-worker.devxoshakya.workers.dev/assets/24k%20gold%20face%20serum.png"
+                src="https://cdn2.devshakya.xyz/assets/24k%20gold%20face%20serum.png"
                 alt="Animated Beam"
                 width={100}
                 height={100}
@@ -75,7 +75,7 @@ export function AnimatedBeamMultipleOutputDemo({
           </Circle>
           <Circle ref={div4Ref} className="p-1">
            <Image
-                src="https://mp-pharma-cdn-worker.devxoshakya.workers.dev/assets/glutathione%20face%20serum.png"
+                src="https://cdn2.devshakya.xyz/assets/glutathione%20face%20serum.png"
                 alt="Animated Beam"
                 width={100}
                 height={100}
@@ -83,7 +83,7 @@ export function AnimatedBeamMultipleOutputDemo({
           </Circle>
           <Circle ref={div5Ref} className="p-1">
             <Image
-                src="https://mp-pharma-cdn-worker.devxoshakya.workers.dev/assets/de%20tan%20removal%20cream.png"
+                src="https://cdn2.devshakya.xyz/assets/de%20tan%20removal%20cream.png"
                 alt="Animated Beam"
                 width={100}
                 height={100}
