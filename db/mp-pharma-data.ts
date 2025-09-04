@@ -1,3 +1,4 @@
+export const data = `
   {
     image: "https://mp-pharma-cdn-worker.devxoshakya.workers.dev/assets/neem%20purifining%20face%20wash.png",
     category: "FACE WASH RANGE",
@@ -478,3 +479,4 @@
     quantity: "30 CAPS TO 60 CAPS",
   },
 ];
+`
