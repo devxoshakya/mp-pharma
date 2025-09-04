@@ -7,7 +7,10 @@
     "build": "next build --turbopack && next-sitemap",
     "start": "next start",
     "lint": "next lint",
-    "postbuild": "next-sitemap"
+    "postbuild": "next-sitemap",
+    "pages:build": "npx @cloudflare/next-on-pages",
+    "preview": "npm run pages:build && wrangler pages dev",
+    "deploy": "npm run pages:build && wrangler pages deploy"
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.0",
@@ -48,11 +51,12 @@
     "uuid": "^11.1.0"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@cloudflare/next-on-pages": "^1.13.15",
+    "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4"
+    "tailwindcss": "^4",
+    "typescript": "^5"
   }
 }

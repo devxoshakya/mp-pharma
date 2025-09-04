@@ -87,3 +87,5 @@ export async function POST(req: NextRequest) {
     return withCORS(origin, NextResponse.json({ error: 'Failed to save data' }, { status: 500 }));
   }
 }
+
+export const runtime = "edge";

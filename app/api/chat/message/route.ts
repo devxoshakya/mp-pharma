@@ -121,3 +121,5 @@ Remember:
     );
   }
 }
+
+export const runtime = "edge";
