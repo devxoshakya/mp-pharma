@@ -1,7 +1,5 @@
-import { google } from 'googleapis';
-import { NextRequest, NextResponse } from 'next/server';
 
-const SHEET_ID = '1Vv8gYpT0aVqOgqzDFZXhs28y11fZWM5vYyCPnywZzbg';
+import { NextRequest, NextResponse } from 'next/server';
 
 const ALLOWED_ORIGINS = [
   'http://localhost:3000',
@@ -9,18 +7,6 @@ const ALLOWED_ORIGINS = [
   'https://mp-pharma.vercel.app',
   'https://mppharmaceuticals.com',
 ];
-
-const getSheetsClient = () => {
-  const key = process.env.GOOGLE_SERVICE_ACCOUNT_KEY;
-  if (!key) throw new Error('Missing GOOGLE_SERVICE_ACCOUNT_KEY in environment');
-
-  const auth = new google.auth.GoogleAuth({
-    credentials: JSON.parse(key),
-    scopes: ['https://www.googleapis.com/auth/spreadsheets'],
-  });
-
-  return google.sheets({ version: 'v4', auth });
-};
 
 // Shared CORS logic
 function withCORS(origin: string | null, response: NextResponse) {
@@ -38,7 +24,7 @@ export async function OPTIONS(req: NextRequest) {
   return withCORS(origin, new NextResponse(null, { status: 200 }));
 }
 
-// Handle contact form POST
+// Simple validation endpoint - actual email sending happens on client side
 export async function POST(req: NextRequest) {
   const origin = req.headers.get('origin');
 
@@ -50,41 +36,19 @@ export async function POST(req: NextRequest) {
       return withCORS(origin, NextResponse.json({ error: 'Missing required fields' }, { status: 400 }));
     }
 
-    const sheets = getSheetsClient();
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      return withCORS(origin, NextResponse.json({ error: 'Invalid email format' }, { status: 400 }));
+    }
 
-    const res = await sheets.spreadsheets.values.get({
-      spreadsheetId: SHEET_ID,
-      range: 'Sheet1!A:A',
-    });
+    // Log the submission (you can add database storage here if needed)
+    console.log('Contact form submission:', { name, email, phone, message: message.substring(0, 50) + '...' });
 
-    const rows = res.data.values || [];
-    const lastRow = rows.length;
-
-    const now = new Date();
-    const formattedDate = now.toLocaleString('en-US', {
-      weekday: 'long',
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
-      hour: 'numeric',
-      minute: 'numeric',
-      second: 'numeric',
-      hour12: true,
-    });
-
-    await sheets.spreadsheets.values.append({
-      spreadsheetId: SHEET_ID,
-      range: `Sheet1!A${lastRow + 1}`,
-      valueInputOption: 'USER_ENTERED',
-      requestBody: {
-        values: [[name, phone, email, message, formattedDate]],
-      },
-    });
-
-    return withCORS(origin, NextResponse.json({ success: true, message: 'Data saved successfully!' }, { status: 200 }));
+    return withCORS(origin, NextResponse.json({ success: true, message: 'Form validated successfully' }, { status: 200 }));
   } catch (error) {
-    console.error('Error saving data to Google Sheets:', error);
-    return withCORS(origin, NextResponse.json({ error: 'Failed to save data' }, { status: 500 }));
+    console.error('Contact form error:', error);
+    return withCORS(origin, NextResponse.json({ error: 'Server error' }, { status: 500 }));
   }
 }
 

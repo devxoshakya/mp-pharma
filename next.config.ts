@@ -72,9 +72,9 @@ const nextConfig: NextConfig = {
   },
 };
 
+// Setup Cloudflare dev platform in development
 if (process.env.NODE_ENV === 'development') {
-   await setupDevPlatform();
- }
-
+  setupDevPlatform();
+}
 
 export default nextConfig;

@@ -1,4 +1,5 @@
 import { useId, useState } from "react";
+import emailjs from '@emailjs/browser';
 
 import { Button } from "@/components/ui/button";
 import {
@@ -14,18 +15,25 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import Image from "next/image";
 
+// EmailJS configuration - you can also put these in environment variables
+const EMAILJS_SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || '';
+const EMAILJS_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || '';
+const EMAILJS_PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || '';
+
 export default function ContactForm() {
     const id = useId();
     const [open, setOpen] = useState(false);
     const [isSubmitting, setIsSubmitting] = useState(false);
+    const [message, setMessage] = useState('');
     
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setIsSubmitting(true);
+        setMessage('');
         
         const formData = new FormData(e.currentTarget);
         
-        const data = {
+        const templateParams = {
             name: formData.get('name') as string,
             email: formData.get('email') as string,
             phone: formData.get('phone') as string,
@@ -33,21 +41,25 @@ export default function ContactForm() {
         };
 
         try {
-            const response = await fetch('/api/contact', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(data),
-            });
+            // Send email using EmailJS
+            const result = await emailjs.send(
+                EMAILJS_SERVICE_ID,
+                EMAILJS_TEMPLATE_ID,
+                templateParams,
+                EMAILJS_PUBLIC_KEY
+            );
             
-            if (response.ok) {
-                setOpen(false);
-                // Optional: reset form
-                e.currentTarget.reset();
+            if (result.status === 200) {
+                setMessage('Message sent successfully!');
+                setTimeout(() => {
+                    setOpen(false);
+                    setMessage('');
+                    e.currentTarget.reset();
+                }, 2000);
             }
         } catch (error) {
-            console.error('Error submitting form:', error);
+            console.error('Error sending email:', error);
+            setMessage('Failed to send message. Please try again.');
         } finally {
             setIsSubmitting(false);
         }
@@ -120,8 +132,14 @@ export default function ContactForm() {
                         </div>
                     </div>
                     <Button type="submit" className="w-full" disabled={isSubmitting}>
-                        {isSubmitting ? "Submitting..." : "Submit"}
+                        {isSubmitting ? "Sending..." : "Send Message"}
                     </Button>
+                    
+                    {message && (
+                        <div className={`text-center text-sm ${message.includes('success') ? 'text-green-600' : 'text-red-600'}`}>
+                            {message}
+                        </div>
+                    )}
                 </form>
             </DialogContent>
         </Dialog>
