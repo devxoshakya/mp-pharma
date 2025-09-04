@@ -37,7 +37,7 @@ const FeaturedCards = () => {
       quantity: "30 GM TO 100 GM",
     },
     {
-      image: "https://mp-pharma-cdn-worker.devxoshakya.workers.dev/assets/skin-whiting%20cream.png",
+      image: "https://mp-pharma-cdn2-worker.devxoshakya.workers.dev/assets/skin-whiting%20cream.png",
       category: "FACE CREAM RANGE",
       name: "SKIN WHITENING CREAM",
       ingredients:
@@ -45,7 +45,7 @@ const FeaturedCards = () => {
       quantity: "30 GM TO 100 GM",
     },
     {
-      image: "https://mp-pharma-cdn-worker.devxoshakya.workers.dev/assets/skin%20hydarting%20cream.png",
+      image: "https://mp-pharma-cdn2-worker.devxoshakya.workers.dev/assets/skin%20hydarting%20cream.png",
       category: "FACE CREAM RANGE",
       name: "HYDRATING FACE CREAM",
       ingredients:

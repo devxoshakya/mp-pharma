@@ -2,7 +2,7 @@ import { ProductType } from "@/types/product";
 
 export const products = [
   {
-    image: "https://cdn.devshakya.xyz/assets/neem%20purifining%20face%20wash.png",
+    image: "https://cdn2.devshakya.xyz/assets/neem%20purifining%20face%20wash.png",
     category: "FACE WASH RANGE",
     name: "NEEM Face Wash",
     ingredients:
@@ -11,7 +11,7 @@ export const products = [
     type: [ProductType.FaceCare, ProductType.BodyCare]
   },
   {
-    image: "https://cdn.devshakya.xyz/assets/charcoal%20face%20wash.png",
+    image: "https://cdn2.devshakya.xyz/assets/charcoal%20face%20wash.png",
     category: "FACE WASH RANGE",
     name: "CHARCOAL Face Wash",
     ingredients:
@@ -20,7 +20,7 @@ export const products = [
     type: [ProductType.FaceCare, ProductType.BodyCare]
   },
   {
-    image: "https://cdn.devshakya.xyz/assets/ubtan%20face%20wash.png",
+    image: "https://cdn2.devshakya.xyz/assets/ubtan%20face%20wash.png",
     category: "FACE WASH RANGE",
     name: "UBTAN Face Wash",
     ingredients:
@@ -29,7 +29,7 @@ export const products = [
     type: [ProductType.FaceCare, ProductType.BodyCare]
   },
   {
-    image: "https://cdn.devshakya.xyz/assets/ubtan%20face%20wash%20-%20Copy.png",
+    image: "https://cdn2.devshakya.xyz/assets/ubtan%20face%20wash%20-%20Copy.png",
     category: "FACE WASH RANGE",
     name: "HALDI CHANDAN Face Wash",
     ingredients:
@@ -38,7 +38,7 @@ export const products = [
     type: [ProductType.FaceCare, ProductType.BodyCare]
   },
   {
-    image: "https://cdn.devshakya.xyz/assets/coffee%20%20facewash.png",
+    image: "https://cdn2.devshakya.xyz/assets/coffee%20%20facewash.png",
     category: "FACE WASH RANGE",
     name: "COFFEE WITH GREEN TEA Face Wash",
     ingredients:
@@ -47,7 +47,7 @@ export const products = [
     type: [ProductType.FaceCare, ProductType.BodyCare]
   },
   {
-    image: "https://cdn.devshakya.xyz/assets/cocoa%20facewash.png",
+    image: "https://cdn2.devshakya.xyz/assets/cocoa%20facewash.png",
     category: "FACE WASH RANGE",
     name: "COCO WITH TURMERIC Face Wash",
     ingredients:
@@ -56,7 +56,7 @@ export const products = [
     type: [ProductType.FaceCare, ProductType.BodyCare]
   },
   {
-    image: "https://cdn.devshakya.xyz/assets/glutathione%20salicylic%20acid%20face%20wash.png",
+    image: "https://cdn2.devshakya.xyz/assets/glutathione%20salicylic%20acid%20face%20wash.png",
     category: "FACE WASH RANGE",
     name: "GLUTATHIONE Face Wash",
     ingredients:
@@ -65,7 +65,7 @@ export const products = [
     type: [ProductType.FaceCare, ProductType.BodyCare]
   },
   {
-    image: "https://cdn.devshakya.xyz/assets/salicylic%20acid%20face%20wash.png",
+    image: "https://cdn2.devshakya.xyz/assets/salicylic%20acid%20face%20wash.png",
     category: "FACE WASH RANGE",
     name: "SALICYLIC ACID Face Wash",
     ingredients:
@@ -74,7 +74,7 @@ export const products = [
     type: [ProductType.FaceCare, ProductType.BodyCare]
   },
   {
-    image: "https://cdn.devshakya.xyz/assets/moisturizing%20face%20wash.png",
+    image: "https://cdn2.devshakya.xyz/assets/moisturizing%20face%20wash.png",
     category: "FACE WASH RANGE",
     name: "MOISTURIZING Face Wash",
     ingredients:
@@ -83,7 +83,7 @@ export const products = [
     type: [ProductType.FaceCare, ProductType.BodyCare]
   },
   {
-    image: "https://cdn.devshakya.xyz/assets/vodka%20face%20wash.png",
+    image: "https://cdn2.devshakya.xyz/assets/vodka%20face%20wash.png",
     category: "FACE WASH RANGE",
     name: "VODKA Face Wash",
     ingredients:
@@ -92,7 +92,7 @@ export const products = [
     type: [ProductType.FaceCare, ProductType.BodyCare]
   },
   {
-    image: "https://cdn.devshakya.xyz/assets/niacinamide%20face%20wash.png",
+    image: "https://cdn2.devshakya.xyz/assets/niacinamide%20face%20wash.png",
     category: "FOAMING FACE WASH RANGE",
     name: "NIACINAMIDE Foaming Face Wash",
     ingredients:
@@ -101,7 +101,7 @@ export const products = [
     type: [ProductType.FaceCare, ProductType.BodyCare]
   },
   {
-    image: "https://cdn.devshakya.xyz/assets/tea%20tree%20face%20wash.png",
+    image: "https://cdn2.devshakya.xyz/assets/tea%20tree%20face%20wash.png",
     category: "FOAMING FACE WASH RANGE",
     name: "TEA TREE Foaming Face Wash",
     ingredients:
@@ -110,7 +110,7 @@ export const products = [
     type: [ProductType.FaceCare, ProductType.BodyCare]
   },
   {
-    image: "https://cdn.devshakya.xyz/assets/vitamin%20C%20fomaing%20face%20wash.png",
+    image: "https://cdn2.devshakya.xyz/assets/vitamin%20C%20fomaing%20face%20wash.png",
     category: "FOAMING FACE WASH RANGE",
     name: "VITAMIN C Foaming Face Wash",
     ingredients:
@@ -119,7 +119,7 @@ export const products = [
     type: [ProductType.FaceCare, ProductType.BodyCare]
   },
   {
-    image: "https://cdn.devshakya.xyz/assets/niacinamide%20face%20wash.png",
+    image: "https://cdn2.devshakya.xyz/assets/niacinamide%20face%20wash.png",
     category: "FOAMING FACE WASH RANGE",
     name: "SKIN HYDRATING Foaming Face Wash",
     ingredients:
@@ -128,7 +128,7 @@ export const products = [
     type: [ProductType.FaceCare, ProductType.BodyCare]
   },
   {
-    image: "https://cdn.devshakya.xyz/assets/24k%20gold%20face%20serum.png",
+    image: "https://cdn2.devshakya.xyz/assets/24k%20gold%20face%20serum.png",
     category: "FACE SERUM RANGE",
     name: "24K GOLD Face Serum",
     ingredients:
@@ -137,7 +137,7 @@ export const products = [
     type: [ProductType.ScrubsAndSerums]
   },
   {
-    image: "https://cdn.devshakya.xyz/assets/retinol%20face%20serum.png",
+    image: "https://cdn2.devshakya.xyz/assets/retinol%20face%20serum.png",
     category: "FACE SERUM RANGE",
     name: "RETINOL Face Serum",
     ingredients:
@@ -146,7 +146,7 @@ export const products = [
     type: [ProductType.ScrubsAndSerums]
   },
   {
-    image: "https://cdn.devshakya.xyz/assets/rejuvenating%20face%20serum'%3B.png",
+    image: "https://cdn2.devshakya.xyz/assets/rejuvenating%20face%20serum'%3B.png",
     category: "FACE SERUM RANGE",
     name: "REJUVENATING Face Serum",
     ingredients:
@@ -155,7 +155,7 @@ export const products = [
     type: [ProductType.ScrubsAndSerums]
   },
   {
-    image: "https://cdn.devshakya.xyz/assets/glutathione%20face%20serum.png",
+    image: "https://cdn2.devshakya.xyz/assets/glutathione%20face%20serum.png",
     category: "FACE SERUM RANGE",
     name: "2% GLUTATHIONE Face Serum",
     ingredients:
@@ -164,7 +164,7 @@ export const products = [
     type: [ProductType.ScrubsAndSerums]
   },
   {
-    image: "https://cdn.devshakya.xyz/assets/10%25%20Niacinamide%20face%20serum.png",
+    image: "https://cdn2.devshakya.xyz/assets/10%25%20Niacinamide%20face%20serum.png",
     category: "FACE SERUM RANGE",
     name: "10% NIACINAMIDE Face Serum",
     ingredients:
@@ -173,7 +173,7 @@ export const products = [
     type: [ProductType.ScrubsAndSerums]
   },
   {
-    image: "https://cdn.devshakya.xyz/assets/ADVANCE%20hair%20serum.png",
+    image: "https://cdn2.devshakya.xyz/assets/ADVANCE%20hair%20serum.png",
     category: "HAIR SERUM RANGE",
     name: "Advance Hair Serum",
     ingredients:
@@ -182,7 +182,7 @@ export const products = [
     type: [ProductType.HairCare]
   },
   {
-    image: "https://cdn.devshakya.xyz/assets/anti%20gray%20hair%20serum%202.png",
+    image: "https://cdn2.devshakya.xyz/assets/anti%20gray%20hair%20serum%202.png",
     category: "HAIR SERUM RANGE",
     name: "Anti Gray Hair Serum",
     ingredients:
@@ -191,7 +191,7 @@ export const products = [
     type: [ProductType.HairCare]
   },
   {
-    image: "https://cdn.devshakya.xyz/assets/capixyl%205%25%20hair%20serum.png",
+    image: "https://cdn2.devshakya.xyz/assets/capixyl%205%25%20hair%20serum.png",
     category: "HAIR SERUM RANGE",
     name: "Capixyl 5% Fall Serum",
     ingredients:
@@ -200,7 +200,7 @@ export const products = [
     type: [ProductType.HairCare]
   },
   {
-    image: "https://cdn.devshakya.xyz/assets/Procapil%20hair%20serum.png",
+    image: "https://cdn2.devshakya.xyz/assets/Procapil%20hair%20serum.png",
     category: "HAIR SERUM RANGE",
     name: "3% PROCAPIL & 3% BAICAPIL Hair Serum",
     ingredients:
@@ -209,7 +209,7 @@ export const products = [
     type: [ProductType.HairCare]
   },
   {
-    image: "https://cdn.devshakya.xyz/assets/Coffe%20Shampoo.png",
+    image: "https://cdn2.devshakya.xyz/assets/Coffe%20Shampoo.png",
     category: "HAIR SHAMPOO RANGE",
     name: "CAFFEINE STRENGTHENING SHAMPOO",
     ingredients:
@@ -218,7 +218,7 @@ export const products = [
     type: [ProductType.HairCare]
   },
   {
-    image: "https://cdn.devshakya.xyz/assets/keratin%20shampoo.png",
+    image: "https://cdn2.devshakya.xyz/assets/keratin%20shampoo.png",
     category: "HAIR SHAMPOO RANGE",
     name: "KERATIN SHAMPOO",
     ingredients:
@@ -227,7 +227,7 @@ export const products = [
     type: [ProductType.HairCare]
   },
   {
-    image: "https://cdn.devshakya.xyz/assets/yogurt%20shampoo.png",
+    image: "https://cdn2.devshakya.xyz/assets/yogurt%20shampoo.png",
     category: "HAIR SHAMPOO RANGE",
     name: "YOGURT SHAMPOO",
     ingredients:
@@ -236,7 +236,7 @@ export const products = [
     type: [ProductType.HairCare]
   },
   {
-    image: "https://cdn.devshakya.xyz/assets/day%20moisturizing%20cream.png",
+    image: "https://cdn2.devshakya.xyz/assets/day%20moisturizing%20cream.png",
     category: "FACE CREAM RANGE",
     name: "DAY MOISTURIZING CREAM",
     ingredients:
@@ -245,7 +245,7 @@ export const products = [
     type: [ProductType.FaceCare]
   },
   {
-    image: "https://cdn.devshakya.xyz/assets/night%20moisturizing%20cream.png",
+    image: "https://cdn2.devshakya.xyz/assets/night%20moisturizing%20cream.png",
     category: "FACE CREAM RANGE",
     name: "NIGHT FACE CREAM",
     ingredients:
@@ -254,7 +254,7 @@ export const products = [
     type: [ProductType.FaceCare]
   },
   {
-    image: "https://cdn.devshakya.xyz/assets/de%20tan%20removal%20cream.png",
+    image: "https://cdn2.devshakya.xyz/assets/de%20tan%20removal%20cream.png",
     category: "FACE CREAM RANGE",
     name: "DE-TAN FACE CREAM",
     ingredients:
@@ -263,7 +263,7 @@ export const products = [
     type: [ProductType.FaceCare]
   },
   {
-    image: "https://cdn.devshakya.xyz/assets/24K%20GOLD%20FACE%20CREAM.png",
+    image: "https://cdn2.devshakya.xyz/assets/24K%20GOLD%20FACE%20CREAM.png",
     category: "FACE CREAM RANGE",
     name: "24K GOLD FACE CREAM",
     ingredients:
@@ -272,7 +272,7 @@ export const products = [
     type: [ProductType.FaceCare]
   },
   {
-    image: "https://cdn.devshakya.xyz/assets/vitamin%20C%20Cream.png",
+    image: "https://cdn2.devshakya.xyz/assets/vitamin%20C%20Cream.png",
     category: "FACE CREAM RANGE",
     name: "VITAMIN C FACE CREAM",
     ingredients:
@@ -281,7 +281,7 @@ export const products = [
     type: [ProductType.FaceCare]
   },
   {
-    image: "https://cdn.devshakya.xyz/assets/anti-wrinkle%20cream.png",
+    image: "https://cdn2.devshakya.xyz/assets/anti-wrinkle%20cream.png",
     category: "FACE CREAM RANGE",
     name: "ANTI-WRINKLE CREAM",
     ingredients:
@@ -290,7 +290,7 @@ export const products = [
     type: [ProductType.FaceCare]
   },
   {
-    image: "https://cdn.devshakya.xyz/assets/skin-whiting%20cream.png",
+    image: "https://cdn2.devshakya.xyz/assets/skin-whiting%20cream.png",
     category: "FACE CREAM RANGE",
     name: "SKIN WHITENING CREAM",
     ingredients:
@@ -299,7 +299,7 @@ export const products = [
     type: [ProductType.FaceCare]
   },
   {
-    image: "https://cdn.devshakya.xyz/assets/skin%20hydarting%20cream.png",
+    image: "https://cdn2.devshakya.xyz/assets/skin%20hydarting%20cream.png",
     category: "FACE CREAM RANGE",
     name: "HYDRATING FACE CREAM",
     ingredients:
@@ -308,7 +308,7 @@ export const products = [
     type: [ProductType.FaceCare]
   },
   {
-    image: "https://cdn.devshakya.xyz/assets/spf50plus%20cream.png",
+    image: "https://cdn2.devshakya.xyz/assets/spf50plus%20cream.png",
     category: "FACE CREAM RANGE",
     name: "SPF 50 PA+++ SUNSCREEN",
     ingredients:
@@ -317,7 +317,7 @@ export const products = [
     type: [ProductType.FaceCare]
   },
   {
-    image: "https://cdn.devshakya.xyz/assets/bb%20cream.png",
+    image: "https://cdn2.devshakya.xyz/assets/bb%20cream.png",
     category: "FACE CREAM RANGE",
     name: "ALL IN ONE (BB) FACE CREAM",
     ingredients:
@@ -326,7 +326,7 @@ export const products = [
     type: [ProductType.FaceCare]
   },
   {
-    image: "https://cdn.devshakya.xyz/assets/cold%20winter%20cream.png",
+    image: "https://cdn2.devshakya.xyz/assets/cold%20winter%20cream.png",
     category: "COLD CREAM RANGE",
     name: "COLD CREAM",
     ingredients:
@@ -335,7 +335,7 @@ export const products = [
     type: [ProductType.BodyCare]
   },
   {
-    image: "https://cdn.devshakya.xyz/assets/onion%20hair%20oil.png",
+    image: "https://cdn2.devshakya.xyz/assets/onion%20hair%20oil.png",
     category: "HAIR OIL RANGE",
     name: "RED ONION HAIR OIL",
     ingredients:
@@ -344,7 +344,7 @@ export const products = [
     type: [ProductType.HairCare]
   },
   {
-    image: "https://cdn.devshakya.xyz/assets/Multiherbal%20hair%20oil.png",
+    image: "https://cdn2.devshakya.xyz/assets/Multiherbal%20hair%20oil.png",
     category: "HAIR OIL RANGE",
     name: "MULTY HERBAL HAIR OIL",
     ingredients:
@@ -353,7 +353,7 @@ export const products = [
     type: [ProductType.HairCare]
   },
   {
-    image: "https://cdn.devshakya.xyz/assets/advance%20hair%20growth%20oil.png",
+    image: "https://cdn2.devshakya.xyz/assets/advance%20hair%20growth%20oil.png",
     category: "HAIR OIL RANGE",
     name: "ADVANCE HAIR GROWTH OIL",
     ingredients:
@@ -362,7 +362,7 @@ export const products = [
     type: [ProductType.HairCare]
   },
   {
-    image: "https://cdn.devshakya.xyz/assets/aloe%20vera%20vitamin%20E%20body%20lotion.png",
+    image: "https://cdn2.devshakya.xyz/assets/aloe%20vera%20vitamin%20E%20body%20lotion.png",
     category: "BODY LOTION RANGE",
     name: "ALOE VERA VITAMIN E BODY LOTION",
     ingredients:
@@ -371,7 +371,7 @@ export const products = [
     type: [ProductType.BodyCare]
   },
   {
-    image: "https://cdn.devshakya.xyz/assets/shea%20butter%20body%20lotion.png",
+    image: "https://cdn2.devshakya.xyz/assets/shea%20butter%20body%20lotion.png",
     category: "BODY LOTION RANGE",
     name: "SHEA BUTTER & COCOA BUTTER BODY LOTION",
     ingredients:
@@ -380,7 +380,7 @@ export const products = [
     type: [ProductType.BodyCare]
   },
   {
-    image: "https://cdn.devshakya.xyz/assets/Calamine%20Body%20Lotion.png",
+    image: "https://cdn2.devshakya.xyz/assets/Calamine%20Body%20Lotion.png",
     category: "BODY LOTION RANGE",
     name: "CALAMINE, ALOE VERA AND LIQUID PARAFFIN BODY LOTION",
     ingredients:
@@ -389,7 +389,7 @@ export const products = [
     type: [ProductType.BodyCare]
   },
   {
-    image: "https://cdn.devshakya.xyz/assets/tea%20tree%20essential%20oil.png",
+    image: "https://cdn2.devshakya.xyz/assets/tea%20tree%20essential%20oil.png",
     category: "FACIAL OIL RANGE",
     name: "TEA TREE ESSENTIAL OIL",
     ingredients:
@@ -398,7 +398,7 @@ export const products = [
     type: [ProductType.EssentialOils]
   },
   {
-    image: "https://cdn.devshakya.xyz/assets/almound%20oil.png",
+    image: "https://cdn2.devshakya.xyz/assets/almound%20oil.png",
     category: "FACIAL OIL RANGE",
     name: "BRIGHTENING ALMOND OIL",
     ingredients:
@@ -407,7 +407,7 @@ export const products = [
     type: [ProductType.EssentialOils]
   },
   {
-    image: "https://cdn.devshakya.xyz/assets/kumkumandi%20oil.png",
+    image: "https://cdn2.devshakya.xyz/assets/kumkumandi%20oil.png",
     category: "FACIAL OIL RANGE",
     name: "KUMKUMADI OIL",
     ingredients:
@@ -416,7 +416,7 @@ export const products = [
     type: [ProductType.EssentialOils]
   },
   {
-    image: "https://cdn.devshakya.xyz/assets/jojoba%20oil%20%2BRosehip%20extract%20face%20oil.png",
+    image: "https://cdn2.devshakya.xyz/assets/jojoba%20oil%20%2BRosehip%20extract%20face%20oil.png",
     category: "FACIAL OIL RANGE",
     name: "JOJOBA FACIAL OIL",
     ingredients:
@@ -425,7 +425,7 @@ export const products = [
     type: [ProductType.EssentialOils]
   },
   {
-    image: "https://cdn.devshakya.xyz/assets/charcoal%20plus%20coffee%20face%20sheet%20mask.png",
+    image: "https://cdn2.devshakya.xyz/assets/charcoal%20plus%20coffee%20face%20sheet%20mask.png",
     category: "FACE SHEET MASK RANGE",
     name: "CHARCOAL + COFFEE FACE SHEET MASK",
     ingredients:
@@ -434,7 +434,7 @@ export const products = [
     type: [ProductType.FaceCare, ProductType.BodyCare]
   },
   {
-    image: "https://cdn.devshakya.xyz/assets/Tea%20Tree%20face%20sheet%20mask.png",
+    image: "https://cdn2.devshakya.xyz/assets/Tea%20Tree%20face%20sheet%20mask.png",
     category: "FACE SHEET MASK RANGE",
     name: "TEA TREE HYALURONIC ACID FACE SHEET MASK",
     ingredients:
@@ -443,7 +443,7 @@ export const products = [
     type: [ProductType.FaceCare, ProductType.BodyCare]
   },
   {
-    image: "https://cdn.devshakya.xyz/assets/strawberry%20face%20sheet%20mask%20-%20Copy.png",
+    image: "https://cdn2.devshakya.xyz/assets/strawberry%20face%20sheet%20mask%20-%20Copy.png",
     category: "FACE SHEET MASK RANGE",
     name: "STRAWBERRY FACE SHEET MASK",
     ingredients:
@@ -452,7 +452,7 @@ export const products = [
     type: [ProductType.FaceCare, ProductType.BodyCare]
   },
   {
-    image: "https://cdn.devshakya.xyz/assets/blueberry%20%20face%20sheet%20mask.png",
+    image: "https://cdn2.devshakya.xyz/assets/blueberry%20%20face%20sheet%20mask.png",
     category: "FACE SHEET MASK RANGE",
     name: "BLUEBERRY FACE SHEET MASK",
     ingredients:
@@ -461,7 +461,7 @@ export const products = [
     type: [ProductType.FaceCare, ProductType.BodyCare]
   },
   {
-    image: "https://cdn.devshakya.xyz/assets/charcoal%20plus%20coffee%20face%20sheet%20mask.png",
+    image: "https://cdn2.devshakya.xyz/assets/charcoal%20plus%20coffee%20face%20sheet%20mask.png",
     category: "FACE & BODY SCRUB RANGE",
     name: "ACTIVATED CHARCOAL FACE & BODY SCRUB",
     ingredients:
@@ -470,7 +470,7 @@ export const products = [
     type: [ProductType.ScrubsAndSerums]
   },
   {
-    image: "https://cdn.devshakya.xyz/assets/ubtan%20scrub%20-.png",
+    image: "https://cdn2.devshakya.xyz/assets/ubtan%20scrub%20-.png",
     category: "FACE & BODY SCRUB RANGE",
     name: "UBTAN FACE & BODY SCRUB",
     ingredients:
@@ -497,7 +497,7 @@ export const products = [
     type: [ProductType.ScrubsAndSerums]
   },
   {
-    image: "https://cdn.devshakya.xyz/assets/lavenderascrub.png",
+    image: "https://cdn2.devshakya.xyz/assets/lavenderascrub.png",
     category: "FACE & BODY SCRUB RANGE",
     name: "LAVENDER & VANILLA FACE & BODY SCRUB",
     ingredients:
@@ -506,7 +506,7 @@ export const products = [
     type: [ProductType.ScrubsAndSerums]
   },
   {
-    image: "https://cdn.devshakya.xyz/assets/honeyscrub.png",
+    image: "https://cdn2.devshakya.xyz/assets/honeyscrub.png",
     category: "FACE & BODY SCRUB RANGE",
     name: "HONEY & APRICOT FACE & BODY SCRUB",
     ingredients:
@@ -524,7 +524,7 @@ export const products = [
     type: [ProductType.BodyCare, ProductType.HairCare]
   },
   {
-    image: "https://cdn.devshakya.xyz/assets/hair%20removal%20sparay%20for%20men%20and%20woman.png",
+    image: "https://cdn2.devshakya.xyz/assets/hair%20removal%20sparay%20for%20men%20and%20woman.png",
     category: "HAIR REMOVAL PRODUCT RANGE",
     name: "HAIR REMOVAL SPRAY FOR MEN & WOMEN",
     ingredients:
@@ -542,7 +542,7 @@ export const products = [
     type: [ProductType.Specialized]
   },
   {
-    image: "https://cdn.devshakya.xyz/assets/foot%20care%20cream.png",
+    image: "https://cdn2.devshakya.xyz/assets/foot%20care%20cream.png",
     category: "SPECIAL PRODUCT RANGE",
     name: "FOOT CARE CREAM",
     ingredients:
@@ -551,7 +551,7 @@ export const products = [
     type: [ProductType.Specialized]
   },
   {
-    image: "https://cdn.devshakya.xyz/assets/baby%20shampoo%20of%20mp.png",
+    image: "https://cdn2.devshakya.xyz/assets/baby%20shampoo%20of%20mp.png",
     category: "Baby's Care Range",
     name: "Baby Shampoo",
     ingredients:
@@ -560,7 +560,7 @@ export const products = [
     type: [ProductType.BabyCare]
   },
   {
-    image: "https://cdn.devshakya.xyz/assets/baby%20oil%20of%20mp.png",
+    image: "https://cdn2.devshakya.xyz/assets/baby%20oil%20of%20mp.png",
     category: "Baby's Care Range",
     name: "Baby Massage Oil",
     ingredients:
@@ -569,7 +569,7 @@ export const products = [
     type: [ProductType.BabyCare]
   },
   {
-    image: "https://cdn.devshakya.xyz/assets/baby%20lotion%20of%20mp.png",
+    image: "https://cdn2.devshakya.xyz/assets/baby%20lotion%20of%20mp.png",
     category: "Baby's Care Range",
     name: "Baby Moisturizing Lotion",
     ingredients:
@@ -596,7 +596,7 @@ export const products = [
     type: [ProductType.BabyCare]
   },
   {
-    image: "https://cdn.devshakya.xyz/assets/minoxidil%205%25%20Solution%20New%20mp.png",
+    image: "https://cdn2.devshakya.xyz/assets/minoxidil%205%25%20Solution%20New%20mp.png",
     category: "Men's Care Range",
     name: "Minoxidil Topical Solution USP 5%",
     ingredients: "Minoxidil IP 5% W/V",
@@ -604,7 +604,7 @@ export const products = [
     type: [ProductType.MensCare]
   },
   {
-    image: "https://cdn.devshakya.xyz/assets/biotin%20capsules%20mp.png",
+    image: "https://cdn2.devshakya.xyz/assets/biotin%20capsules%20mp.png",
     category: "Men's Care Range",
     name: "Biotin 4000MC Capsules",
     ingredients:

@@ -1,6 +1,6 @@
 export const data = `
   {
-    image: "https://mp-pharma-cdn-worker.devxoshakya.workers.dev/assets/neem%20purifining%20face%20wash.png",
+    image: "https://mp-pharma-cdn2-worker.devxoshakya.workers.dev/assets/neem%20purifining%20face%20wash.png",
     category: "FACE WASH RANGE",
     name: "NEEM Face Wash",
     ingredients:
@@ -8,7 +8,7 @@ export const data = `
     quantity: "50ML TO 100ML",
   },
   {
-    image: "https://mp-pharma-cdn-worker.devxoshakya.workers.dev/assets/charcoal%20face%20wash.png",
+    image: "https://mp-pharma-cdn2-worker.devxoshakya.workers.dev/assets/charcoal%20face%20wash.png",
     category: "FACE WASH RANGE",
     name: "CHARCOAL Face Wash",
     ingredients:
@@ -16,7 +16,7 @@ export const data = `
     quantity: "50ML TO 100ML",
   },
   {
-    image: "https://mp-pharma-cdn-worker.devxoshakya.workers.dev/assets/ubtan%20face%20wash.png",
+    image: "https://mp-pharma-cdn2-worker.devxoshakya.workers.dev/assets/ubtan%20face%20wash.png",
     category: "FACE WASH RANGE",
     name: "UBTAN Face Wash",
     ingredients:
@@ -24,7 +24,7 @@ export const data = `
     quantity: "50ML TO 100ML",
   },
   {
-    image: "https://mp-pharma-cdn-worker.devxoshakya.workers.dev/assets/ubtan%20face%20wash%20-%20Copy.png",
+    image: "https://mp-pharma-cdn2-worker.devxoshakya.workers.dev/assets/ubtan%20face%20wash%20-%20Copy.png",
     category: "FACE WASH RANGE",
     name: "HALDI CHANDAN Face Wash",
     ingredients:
@@ -32,7 +32,7 @@ export const data = `
     quantity: "50ML TO 100ML",
   },
   {
-    image: "https://mp-pharma-cdn-worker.devxoshakya.workers.dev/assets/coffee%20%20facewash.png",
+    image: "https://mp-pharma-cdn2-worker.devxoshakya.workers.dev/assets/coffee%20%20facewash.png",
     category: "FACE WASH RANGE",
     name: "COFFEE WITH GREEN TEA Face Wash",
     ingredients:
@@ -40,7 +40,7 @@ export const data = `
     quantity: "50ML TO 100ML",
   },
   {
-    image: "https://mp-pharma-cdn-worker.devxoshakya.workers.dev/assets/cocoa%20facewash.png",
+    image: "https://mp-pharma-cdn2-worker.devxoshakya.workers.dev/assets/cocoa%20facewash.png",
     category: "FACE WASH RANGE",
     name: "COCO WITH TURMERIC Face Wash",
     ingredients:
@@ -48,7 +48,7 @@ export const data = `
     quantity: "50ML TO 100ML",
   },
   {
-    image: "https://mp-pharma-cdn-worker.devxoshakya.workers.dev/assets/glutathione%20salicylic%20acid%20face%20wash.png",
+    image: "https://mp-pharma-cdn2-worker.devxoshakya.workers.dev/assets/glutathione%20salicylic%20acid%20face%20wash.png",
     category: "FACE WASH RANGE",
     name: "GLUTATHIONE Face Wash",
     ingredients:
@@ -56,7 +56,7 @@ export const data = `
     quantity: "50ML TO 100ML",
   },
   {
-    image: "https://mp-pharma-cdn-worker.devxoshakya.workers.dev/assets/salicylic%20acid%20face%20wash.png",
+    image: "https://mp-pharma-cdn2-worker.devxoshakya.workers.dev/assets/salicylic%20acid%20face%20wash.png",
     category: "FACE WASH RANGE",
     name: "SALICYLIC ACID Face Wash",
     ingredients:
@@ -64,7 +64,7 @@ export const data = `
     quantity: "50ML TO 100ML",
   },
   {
-    image: "https://mp-pharma-cdn-worker.devxoshakya.workers.dev/assets/moisturizing%20face%20wash.png",
+    image: "https://mp-pharma-cdn2-worker.devxoshakya.workers.dev/assets/moisturizing%20face%20wash.png",
     category: "FACE WASH RANGE",
     name: "MOISTURIZING Face Wash",
     ingredients:
@@ -72,7 +72,7 @@ export const data = `
     quantity: "50ML TO 100ML",
   },
   {
-    image: "https://mp-pharma-cdn-worker.devxoshakya.workers.dev/assets/vodka%20face%20wash.png",
+    image: "https://mp-pharma-cdn2-worker.devxoshakya.workers.dev/assets/vodka%20face%20wash.png",
     category: "FACE WASH RANGE",
     name: "VODKA Face Wash",
     ingredients:
@@ -80,7 +80,7 @@ export const data = `
     quantity: "50ML TO 100ML",
   },
   {
-    image: "https://mp-pharma-cdn-worker.devxoshakya.workers.dev/assets/niacinamide%20face%20wash.png",
+    image: "https://mp-pharma-cdn2-worker.devxoshakya.workers.dev/assets/niacinamide%20face%20wash.png",
     category: "FOAMING FACE WASH RANGE",
     name: "NIACINAMIDE Foaming Face Wash",
     ingredients:
@@ -88,28 +88,28 @@ export const data = `
     quantity: "50ML TO 100ML",
   },
   {
-    image: "https://mp-pharma-cdn-worker.devxoshakya.workers.dev/assets/tea%20tree%20face%20wash.png",
+    image: "https://mp-pharma-cdn2-worker.devxoshakya.workers.dev/assets/tea%20tree%20face%20wash.png",
     category: "FOAMING FACE WASH RANGE",
     name: "TEA TREE Foaming Face Wash",
     ingredients:
       "Green Tea, DM Water, Salicylic Acid, Glycolic Acid, Sodium Lauryl Ether Sulphat, PEG 12 Dimethione, Cocomonoethanol Amide, Polyquaternium 7, Lemon Extract, Neem Extract, Aloe Vera Extract, DM DM Hydantoin, Methylchloro Isothiazolinone, Disodium EDTA, Fragrance",
     quantity: "50ML TO 100ML",
   },{
-    image: "https://mp-pharma-cdn-worker.devxoshakya.workers.dev/assets/vitamin%20C%20fomaing%20face%20wash.png",
+    image: "https://mp-pharma-cdn2-worker.devxoshakya.workers.dev/assets/vitamin%20C%20fomaing%20face%20wash.png",
     category: "FOAMING FACE WASH RANGE",
     name: "VITAMIN C Foaming Face Wash",
     ingredients:
     "Vitamin C, DM Water, Salicylic Acid, Glycolic Acid, Sodium Lauryl Ether Sulphate, PEG 12 Dimethicone, Cocoamonoethanol Amide, Polyquaternium 7, Lemon Extract, Neem Extract, Aloe Vera Extract, DM Hydantoin, Methylchloro Isothiazolinone, Disodium EDTA, Fragrance",
     quantity: "50ML TO 100ML",
   },{
-    image: "https://mp-pharma-cdn-worker.devxoshakya.workers.dev/assets/niacinamide%20face%20wash.png",
+    image: "https://mp-pharma-cdn2-worker.devxoshakya.workers.dev/assets/niacinamide%20face%20wash.png",
     category: "FOAMING FACE WASH RANGE",
     name: "SKIN HYDRATING Foaming Face Wash",
     ingredients: "Vitamin C, DM Water, Salicylic Acid, Glycolic Acid, Sodium Lauryl Ether Sulphate, PEG 12 Dimethicone, Cocoamonoethanol Amide, Polyquaternium 7, Lemon Extract, Neem Extract, Aloe Vera Extract, DM Hydantoin, Methylchloro Isothiazolinone, Disodium EDTA, Fragrance",
     quantity: "50ML TO 100ML",
   },
   {
-    image: "https://mp-pharma-cdn-worker.devxoshakya.workers.dev/assets/24k%20gold%20face%20serum.png",
+    image: "https://mp-pharma-cdn2-worker.devxoshakya.workers.dev/assets/24k%20gold%20face%20serum.png",
     category: "FACE SERUM RANGE",
     name: "24K GOLD Face Serum",
     ingredients:
@@ -117,7 +117,7 @@ export const data = `
     quantity: "50 ML",
   },
   {
-    image: "https://mp-pharma-cdn-worker.devxoshakya.workers.dev/assets/retinol%20face%20serum.png",
+    image: "https://mp-pharma-cdn2-worker.devxoshakya.workers.dev/assets/retinol%20face%20serum.png",
     category: "FACE SERUM RANGE",
     name: "RETINOL Face Serum",
     ingredients:
@@ -125,7 +125,7 @@ export const data = `
     quantity: "50 ML",
   },
   {
-    image: "https://mp-pharma-cdn-worker.devxoshakya.workers.dev/assets/rejuvenating%20face%20serum'%3B.png",
+    image: "https://mp-pharma-cdn2-worker.devxoshakya.workers.dev/assets/rejuvenating%20face%20serum'%3B.png",
     category: "FACE SERUM RANGE",
     name: "REJUVENATING Face Serum",
     ingredients:
@@ -133,7 +133,7 @@ export const data = `
     quantity: "50 ML",
   },
   {
-    image: "https://mp-pharma-cdn-worker.devxoshakya.workers.dev/assets/glutathione%20face%20serum.png",
+    image: "https://mp-pharma-cdn2-worker.devxoshakya.workers.dev/assets/glutathione%20face%20serum.png",
     category: "FACE SERUM RANGE",
     name: "GLUTATHIONE Face Serum",
     ingredients:
@@ -141,7 +141,7 @@ export const data = `
     quantity: "30 ML",
   },
   {
-    image: "https://mp-pharma-cdn-worker.devxoshakya.workers.dev/assets/10%25%20Niacinamide%20face%20serum.png",
+    image: "https://mp-pharma-cdn2-worker.devxoshakya.workers.dev/assets/10%25%20Niacinamide%20face%20serum.png",
     category: "FACE SERUM RANGE",
     name: "10% NIACINAMIDE Face Serum",
     ingredients:
@@ -174,7 +174,7 @@ export const data = `
     quantity: "75 ML TO 200 ML",
   },
   {
-    image: "https://mp-pharma-cdn-worker.devxoshakya.workers.dev/assets/day%20moisturizing%20cream.png",
+    image: "https://mp-pharma-cdn2-worker.devxoshakya.workers.dev/assets/day%20moisturizing%20cream.png",
     category: "FACE CREAM RANGE",
     name: "DAY MOISTURIZING CREAM",
     ingredients:
@@ -182,7 +182,7 @@ export const data = `
     quantity: "30 GM TO 100 GM",
   },
   {
-    image: "https://mp-pharma-cdn-worker.devxoshakya.workers.dev/assets/night%20moisturizing%20cream.png",
+    image: "https://mp-pharma-cdn2-worker.devxoshakya.workers.dev/assets/night%20moisturizing%20cream.png",
     category: "FACE CREAM RANGE",
     name: "NIGHT FACE CREAM",
     ingredients:
@@ -190,7 +190,7 @@ export const data = `
     quantity: "30 GM TO 100 GM",
   },
   {
-    image: "https://mp-pharma-cdn-worker.devxoshakya.workers.dev/assets/de%20tan%20removal%20cream.png",
+    image: "https://mp-pharma-cdn2-worker.devxoshakya.workers.dev/assets/de%20tan%20removal%20cream.png",
     category: "FACE CREAM RANGE",
     name: "DE-TAN FACE CREAM",
     ingredients:
@@ -207,7 +207,7 @@ export const data = `
     // not available
   },
   {
-    image: "https://mp-pharma-cdn-worker.devxoshakya.workers.dev/assets/vitamin%20C%20Cream.png",
+    image: "https://mp-pharma-cdn2-worker.devxoshakya.workers.dev/assets/vitamin%20C%20Cream.png",
     category: "FACE CREAM RANGE",
     name: "VITAMIN C FACE CREAM",
     ingredients:
@@ -224,7 +224,7 @@ export const data = `
     // same image url as of vitamin C face cream
   },
   {
-    image: "https://mp-pharma-cdn-worker.devxoshakya.workers.dev/assets/skin-whiting%20cream.png",
+    image: "https://mp-pharma-cdn2-worker.devxoshakya.workers.dev/assets/skin-whiting%20cream.png",
     category: "FACE CREAM RANGE",
     name: "SKIN WHITENING CREAM",
     ingredients:
@@ -232,7 +232,7 @@ export const data = `
     quantity: "30 GM TO 100 GM",
   },
   {
-    image: "https://mp-pharma-cdn-worker.devxoshakya.workers.dev/assets/skin%20hydarting%20cream.png",
+    image: "https://mp-pharma-cdn2-worker.devxoshakya.workers.dev/assets/skin%20hydarting%20cream.png",
     category: "FACE CREAM RANGE",
     name: "HYDRATING FACE CREAM",
     ingredients:
@@ -272,7 +272,7 @@ export const data = `
     quantity: "50 GM TO 100 GM",
   },
   {
-    image: "https://mp-pharma-cdn-worker.devxoshakya.workers.dev/assets/cold%20winter%20cream.png",
+    image: "https://mp-pharma-cdn2-worker.devxoshakya.workers.dev/assets/cold%20winter%20cream.png",
     category: "COLD CREAM RANGE",
     name: "COLD CREAM",
     ingredients:
@@ -280,7 +280,7 @@ export const data = `
     quantity: "30 GM TO 100 GM",
   },
   {
-    image: "https://mp-pharma-cdn-worker.devxoshakya.workers.dev/assets/tea%20tree%20essential%20oil.png",
+    image: "https://mp-pharma-cdn2-worker.devxoshakya.workers.dev/assets/tea%20tree%20essential%20oil.png",
     category: "FACIAL OIL RANGE",
     name: "TEA TREE ESSENTIAL OIL",
     ingredients:
@@ -296,7 +296,7 @@ export const data = `
     quantity: "30 ML TO 100 ML",
   },
   {
-    image: "https://mp-pharma-cdn-worker.devxoshakya.workers.dev/assets/kumkumandi%20oil.png",
+    image: "https://mp-pharma-cdn2-worker.devxoshakya.workers.dev/assets/kumkumandi%20oil.png",
     category: "FACIAL OIL RANGE",
     name: "KUMKUMADI OIL",
     ingredients:
@@ -304,7 +304,7 @@ export const data = `
     quantity: "30 ML TO 100 ML",
   },
   {
-    image: "https://mp-pharma-cdn-worker.devxoshakya.workers.dev/assets/jojoba%20oil%20%2BRosehip%20extract%20face%20oil.png",
+    image: "https://mp-pharma-cdn2-worker.devxoshakya.workers.dev/assets/jojoba%20oil%20%2BRosehip%20extract%20face%20oil.png",
     category: "FACIAL OIL RANGE",
     name: "JOJOBA FACIAL OIL",
     ingredients:
@@ -312,7 +312,7 @@ export const data = `
     quantity: "30 ML TO 100 ML",
   },
   {
-    image: "https://mp-pharma-cdn-worker.devxoshakya.workers.dev/assets/charcoal%20plus%20coffee%20face%20sheet%20mask.png",
+    image: "https://mp-pharma-cdn2-worker.devxoshakya.workers.dev/assets/charcoal%20plus%20coffee%20face%20sheet%20mask.png",
     category: "FACE SHEET MASK RANGE",
     name: "CHARCOAL + COFFEE FACE SHEET MASK",
     ingredients:
@@ -336,7 +336,7 @@ export const data = `
     quantity: "25 ML",
   },
   {
-    image: "https://mp-pharma-cdn-worker.devxoshakya.workers.dev/assets/blueberry%20%20face%20sheet%20mask.png",
+    image: "https://mp-pharma-cdn2-worker.devxoshakya.workers.dev/assets/blueberry%20%20face%20sheet%20mask.png",
     category: "FACE SHEET MASK RANGE",
     name: "BLUEBERRY FACE SHEET MASK",
     ingredients:
@@ -352,7 +352,7 @@ export const data = `
     quantity: "100 GM TO 500 GM",
   },
   {
-    image: "https://mp-pharma-cdn-worker.devxoshakya.workers.dev/assets/ubtan%20scrub%20-.png",
+    image: "https://mp-pharma-cdn2-worker.devxoshakya.workers.dev/assets/ubtan%20scrub%20-.png",
     category: "FACE & BODY SCRUB RANGE",
     name: "UBTAN FACE & BODY SCRUB",
     ingredients:
@@ -376,7 +376,7 @@ export const data = `
     quantity: "100 GM TO 500 GM",
   },
   {
-    image: "https://mp-pharma-cdn-worker.devxoshakya.workers.dev/assets/lavenderascrub.png",
+    image: "https://mp-pharma-cdn2-worker.devxoshakya.workers.dev/assets/lavenderascrub.png",
     category: "FACE & BODY SCRUB RANGE",
     name: "LAVENDER & VANILLA FACE & BODY SCRUB",
     ingredients:
@@ -384,7 +384,7 @@ export const data = `
     quantity: "100 GM TO 500 GM",
   },
   {
-    image: "https://mp-pharma-cdn-worker.devxoshakya.workers.dev/assets/honeyscrub.png",
+    image: "https://mp-pharma-cdn2-worker.devxoshakya.workers.dev/assets/honeyscrub.png",
     category: "FACE & BODY SCRUB RANGE",
     name: "HONEY & APRICOT FACE & BODY SCRUB",
     ingredients:
@@ -400,7 +400,7 @@ export const data = `
     quantity: "50 GM TO 100 GM",
   },
   {
-    image: "https://mp-pharma-cdn-worker.devxoshakya.workers.dev/assets/hair%20removal%20sparay%20for%20men%20and%20woman.png",
+    image: "https://mp-pharma-cdn2-worker.devxoshakya.workers.dev/assets/hair%20removal%20sparay%20for%20men%20and%20woman.png",
     category: "HAIR REMOVAL PRODUCT RANGE",
     name: "HAIR REMOVAL SPRAY FOR MEN & WOMEN",
     ingredients:
@@ -416,7 +416,7 @@ export const data = `
     quantity: "15 GM TO 50 GM",
   },
   {
-    image: "https://mp-pharma-cdn-worker.devxoshakya.workers.dev/assets/foot%20care%20cream.png",
+    image: "https://mp-pharma-cdn2-worker.devxoshakya.workers.dev/assets/foot%20care%20cream.png",
     category: "SPECIAL PRODUCT RANGE",
     name: "FOOT CARE CREAM",
     ingredients:
@@ -424,7 +424,7 @@ export const data = `
     quantity: "50 GM TO 100 GM",
   },
   {
-    image: "https://mp-pharma-cdn-worker.devxoshakya.workers.dev/assets/baby%20shampoo%20of%20mp.png",
+    image: "https://mp-pharma-cdn2-worker.devxoshakya.workers.dev/assets/baby%20shampoo%20of%20mp.png",
     category: "Baby's Care Range",
     name: "Baby Shampoo",
     ingredients:
@@ -432,7 +432,7 @@ export const data = `
     quantity: "100 ML TO 200 ML",
   },
   {
-    image: "https://mp-pharma-cdn-worker.devxoshakya.workers.dev/assets/baby%20oil%20of%20mp.png",
+    image: "https://mp-pharma-cdn2-worker.devxoshakya.workers.dev/assets/baby%20oil%20of%20mp.png",
     category: "Baby's Care Range",
     name: "Baby Massage Oil",
     ingredients:
@@ -440,7 +440,7 @@ export const data = `
     quantity: "100 ML TO 200 ML",
   },
   {
-    image: "https://mp-pharma-cdn-worker.devxoshakya.workers.dev/assets/baby%20lotion%20of%20mp.png",
+    image: "https://mp-pharma-cdn2-worker.devxoshakya.workers.dev/assets/baby%20lotion%20of%20mp.png",
     category: "Baby's Care Range",
     name: "Baby Moisturizing Lotion",
     ingredients:
@@ -464,14 +464,14 @@ export const data = `
     quantity: "50 GM TO 100 GM",
   },
   {
-    image: "https://mp-pharma-cdn-worker.devxoshakya.workers.dev/assets/minoxidil%205%25%20Solution%20New%20mp.png",
+    image: "https://mp-pharma-cdn2-worker.devxoshakya.workers.dev/assets/minoxidil%205%25%20Solution%20New%20mp.png",
     category: "Men's Care Range",
     name: "Minoxidil Topical Solution USP 5%",
     ingredients: "Minoxidil IP 5% W/V",
     quantity: "60 ML TO 100 ML",
   },
   {
-    image: "https://mp-pharma-cdn-worker.devxoshakya.workers.dev/assets/biotin%20capsules%20mp.png",
+    image: "https://mp-pharma-cdn2-worker.devxoshakya.workers.dev/assets/biotin%20capsules%20mp.png",
     category: "Men's Care Range",
     name: "Biotin 4000MC Capsules",
     ingredients:
