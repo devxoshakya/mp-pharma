@@ -28,7 +28,7 @@ const categories: CategoryCard[] = [
   {
     id: "hair-care",
     title: "Hair Care",
-    image: "/category/personal.png",
+    image: "/category/hair.png",
     url: "/products?q=3",
   },
   {
@@ -52,13 +52,13 @@ const categories: CategoryCard[] = [
   {
     id: "scrubs-serums",
     title: "Scrubs & Serums",
-    image: "/category/color.png",
+    image: "/category/scrubs.png",
     url: "/products?q=7",
   },
   {
     id: "specialized",
     title: "Specialized",
-    image: "/category/nutra.png",
+    image: "/category/special.png",
     url: "/products?q=8",
   },
 ];
