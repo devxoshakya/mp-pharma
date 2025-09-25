@@ -1,9 +1,14 @@
 export interface Product {
-    // id: string;
+    id: string;
     name: string;
-    image: string ;
+    image: string;
     quantity: string;
     ingredients: string;
+    price: number;
+    description: string;
+    category: string;
+    rating?: number;
+    createdAt?: string;
 }
 
 export enum ProductCategory {

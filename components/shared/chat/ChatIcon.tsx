@@ -18,7 +18,7 @@ const chatConfig = {
     full: "sm:w-full sm:h-full",
   },
   positions: {
-    "bottom-right": "bottom-5 right-5",
+    // "bottom-right": "bottom-5 right-5",
     "bottom-left": "bottom-5 left-5",
   },
   chatPositions: {
@@ -38,7 +38,7 @@ type Message = {
 }
 
 export function AIBusinessChatbot({
-  position = "bottom-right",
+  position = "bottom-left",
   size = "lg",
   icon = <Bot className="h-6 w-6" />,
   className
@@ -56,6 +56,7 @@ export function AIBusinessChatbot({
   const [isOpen, setIsOpen] = useState(false)
   const messagesEndRef = useRef<HTMLDivElement>(null)
   const chatRef = useRef<HTMLDivElement>(null)
+  const messageIdRef = useRef(1)
 
   // Initialize chat session when component mounts
   useEffect(() => {
@@ -74,15 +75,17 @@ export function AIBusinessChatbot({
         setSessionId(data.sessionId)
         
         // Add the greeting message
+        messageIdRef.current = 1;
         setMessages([{
-          id: 1,
+          id: messageIdRef.current++,
           content: data.greeting,
           sender: "ai"
         }])
       } catch (error) {
         console.error('Error starting chat session:', error)
+        messageIdRef.current = 1;
         setMessages([{
-          id: 1,
+          id: messageIdRef.current++,
           content: "Sorry, I couldn't initialize the chat. Please try again later.",
           sender: "ai"
         }])
@@ -100,6 +103,43 @@ export function AIBusinessChatbot({
   }, [messages])
 
   const toggleChat = () => setIsOpen(!isOpen)
+  
+  const restartChat = async () => {
+    try {
+      setIsInitializing(true)
+      setMessages([])
+      setSessionId(null)
+      
+      const response = await fetch('/api/chat/start', {
+        method: 'POST',
+      })
+      
+      if (!response.ok) {
+        throw new Error('Failed to restart chat session')
+      }
+      
+      const data = await response.json()
+      setSessionId(data.sessionId)
+      
+      // Add the greeting message
+      messageIdRef.current = 1;
+      setMessages([{
+        id: messageIdRef.current++,
+        content: data.greeting,
+        sender: "ai"
+      }])
+    } catch (error) {
+      console.error('Error restarting chat session:', error)
+      messageIdRef.current = 1;
+      setMessages([{
+        id: messageIdRef.current++,
+        content: "Sorry, I couldn't restart the chat. Please refresh the page.",
+        sender: "ai"
+      }])
+    } finally {
+      setIsInitializing(false)
+    }
+  }
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault()
@@ -112,7 +152,7 @@ export function AIBusinessChatbot({
     setMessages((prev) => [
       ...prev,
       {
-        id: Date.now(),
+        id: messageIdRef.current++,
         content: userMessage,
         sender: "user",
       },
@@ -132,17 +172,37 @@ export function AIBusinessChatbot({
         }),
       })
       
-      if (!response.ok) {
-        throw new Error('Failed to send message')
-      }
-      
       const data = await response.json()
+      
+      if (!response.ok) {
+        // Handle specific error cases
+        if (response.status === 404) {
+          // Session expired, try to restart
+          console.log('Session expired, attempting to restart chat')
+          const restartResponse = await fetch('/api/chat/start', { method: 'POST' })
+          if (restartResponse.ok) {
+            const restartData = await restartResponse.json()
+            setSessionId(restartData.sessionId)
+            // Add session restart message
+            setMessages((prev) => [
+              ...prev,
+              {
+                id: messageIdRef.current++,
+                content: "Your session expired. I've restarted our conversation. Please send your message again.",
+                sender: "ai",
+              },
+            ])
+            return
+          }
+        }
+        throw new Error(data.error || 'Failed to send message')
+      }
       
       // Add AI response
       setMessages((prev) => [
         ...prev,
         {
-          id: Date.now() + 1,
+          id: messageIdRef.current++,
           content: data.reply,
           sender: "ai",
         },
@@ -152,8 +212,8 @@ export function AIBusinessChatbot({
       setMessages((prev) => [
         ...prev,
         {
-          id: Date.now() + 1,
-          content: "Sorry, I couldn't process your request. Please try again later.",
+          id: messageIdRef.current++,
+          content: "Sorry, I couldn't process your request. Please try again or restart the chat if the issue persists.",
           sender: "ai",
         },
       ])
@@ -177,28 +237,37 @@ export function AIBusinessChatbot({
   };
 
   return (
-    <div className={cn("fixed z-50", chatConfig.positions[position], className)}>
+    <div className={cn("fixed z-50 bottom-5 left-5", className)}>
       <div
         ref={chatRef}
         className={cn(
           "flex flex-col bg-background border shadow-md overflow-hidden transition-all duration-250 ease-out",
-          "sm:rounded-lg sm:absolute sm:w-[90vw] sm:h-auto sm:max-h-[80vh]",
+          "sm:rounded-lg sm:absolute sm:w-[90vw] sm:h-auto sm:max-h-[80vh] sm:bottom-[calc(100%+10px)] sm:left-0",
           "fixed w-full h-[95vh] bottom-0 left-0 right-0",
-          chatConfig.chatPositions[position],
           chatConfig.dimensions[size],
           isOpen ? chatConfig.states.open : chatConfig.states.closed
         )}
         style={{
-          maxHeight: isOpen ? (window.innerWidth >= 640 ? '80vh' : '95vh') : '0'
+          maxHeight: isOpen ? (typeof window !== 'undefined' && window.innerWidth >= 640 ? '80vh' : '95vh') : '0'
         }}
       >
         {/* Header */}
-        <div className="flex items-center p-4 border-b flex-col text-center">
+        <div className="flex items-center p-4 border-b flex-col text-center relative">
           <h1 className="text-xl font-semibold">MP Pharmaceuticals AI ✨</h1>
           <p className="text-sm text-muted-foreground mb-1">
             Ask me anything about our products and services.
           </p>
-          <Button title="chat-bot-close" variant="ghost" size="icon" className="absolute top-2 right-2" onClick={toggleChat}>
+          <Button 
+            title="Restart Chat" 
+            variant="ghost" 
+            size="icon" 
+            className="absolute top-2 left-2" 
+            onClick={restartChat}
+            disabled={isInitializing}
+          >
+            <Bot className="h-4 w-4" />
+          </Button>
+          <Button title="Close Chat" variant="ghost" size="icon" className="absolute top-2 right-2" onClick={toggleChat}>
             <X className="h-4 w-4" />
           </Button>
         </div>

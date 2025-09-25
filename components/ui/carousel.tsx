@@ -1,7 +1,8 @@
 "use client";
 import { IconArrowNarrowRight } from "@tabler/icons-react";
-import { useState, useRef, useId, useEffect } from "react";
-import Image from "next/image";
+import { useState, useRef, useId, useEffect, useCallback, memo } from "react";
+import OptimizedImage from "@/components/ui/optimized-image";
+import { useUIStore } from "@/lib/stores/ui-store";
 
 interface SlideData {
   title: string;
@@ -16,14 +17,18 @@ interface SlideProps {
   handleSlideClick: (index: number) => void;
 }
 
-const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
+const Slide = memo(function Slide({ slide, index, current, handleSlideClick }: SlideProps) {
   const slideRef = useRef<HTMLLIElement>(null);
-
+  const { performanceMode } = useUIStore();
+  
   const xRef = useRef(0);
   const yRef = useRef(0);
   const frameRef = useRef<number>(0);
 
   useEffect(() => {
+    // Skip expensive animations in performance mode
+    if (performanceMode === 'performance') return;
+    
     const animate = () => {
       if (!slideRef.current) return;
 
@@ -43,25 +48,28 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
         cancelAnimationFrame(frameRef.current);
       }
     };
-  }, []);
+  }, [performanceMode]);
 
-  const handleMouseMove = (event: React.MouseEvent) => {
+  const handleMouseMove = useCallback((event: React.MouseEvent) => {
+    if (performanceMode === 'performance') return;
+    
     const el = slideRef.current;
     if (!el) return;
 
     const r = el.getBoundingClientRect();
     xRef.current = event.clientX - (r.left + Math.floor(r.width / 2));
     yRef.current = event.clientY - (r.top + Math.floor(r.height / 2));
-  };
+  }, [performanceMode]);
 
-  const handleMouseLeave = () => {
+  const handleMouseLeave = useCallback(() => {
+    if (performanceMode === 'performance') return;
     xRef.current = 0;
     yRef.current = 0;
-  };
+  }, [performanceMode]);
 
-  const imageLoaded = (event: React.SyntheticEvent<HTMLImageElement>) => {
-    event.currentTarget.style.opacity = "1";
-  };
+  const handleSlideClickMemo = useCallback(() => {
+    handleSlideClick(index);
+  }, [handleSlideClick, index]);
 
   const { src, button, title } = slide;
 
@@ -70,7 +78,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
       <li
         ref={slideRef}
         className="flex flex-1 flex-col items-center justify-center relative text-center text-white opacity-100 transition-all duration-300 ease-in-out w-[70vmin] h-[70vmin] mx-[4vmin] z-10 "
-        onClick={() => handleSlideClick(index)}
+        onClick={handleSlideClickMemo}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
         style={{
@@ -91,18 +99,21 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
                 : "none",
           }}
         >
-          <Image
-            className="absolute inset-0 w-[120%] h-[120%] object-cover opacity-100 transition-opacity duration-600 ease-in-out"
+          <div 
+            className="absolute inset-0 w-[120%] h-[120%] transition-opacity duration-600 ease-in-out"
             style={{
               opacity: current === index ? 1 : 0.5,
             }}
-            alt={title}
-            src={src}
-            fill
-            onLoad={imageLoaded}
-            loading="eager"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          />
+          >
+            <OptimizedImage
+              className="w-full h-full object-cover"
+              alt={title}
+              src={src}
+              fill
+              priority={current === index}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
+          </div>
           {current === index && (
             <div className="absolute inset-0 bg-black/30 transition-all duration-1000" />
           )}
@@ -121,7 +132,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
       </li>
     </div>
   );
-};
+});
 
 interface CarouselControlProps {
   type: string;
@@ -129,11 +140,11 @@ interface CarouselControlProps {
   handleClick: () => void;
 }
 
-const CarouselControl = ({
+const CarouselControl = memo(function CarouselControl({
   type,
   title,
   handleClick,
-}: CarouselControlProps) => {
+}: CarouselControlProps) {
   return (
     <button
       className={`w-10 h-10 flex items-center mx-2 justify-center bg-neutral-200 dark:bg-neutral-800 border-3 border-transparent rounded-full focus:border-[#6D64F7] focus:outline-none hover:-translate-y-0.5 active:translate-y-0.5 transition duration-200 ${
@@ -145,30 +156,30 @@ const CarouselControl = ({
       <IconArrowNarrowRight className="text-neutral-600 dark:text-neutral-200" />
     </button>
   );
-};
+});
 
 interface CarouselProps {
   slides: SlideData[];
 }
 
-export default function Carousel({ slides }: CarouselProps) {
+const Carousel = memo(function Carousel({ slides }: CarouselProps) {
   const [current, setCurrent] = useState(1);
 
-  const handlePreviousClick = () => {
+  const handlePreviousClick = useCallback(() => {
     const previous = current - 1;
     setCurrent(previous < 0 ? slides.length - 1 : previous);
-  };
+  }, [current, slides.length]);
 
-  const handleNextClick = () => {
+  const handleNextClick = useCallback(() => {
     const next = current + 1;
     setCurrent(next === slides.length ? 0 : next);
-  };
+  }, [current, slides.length]);
 
-  const handleSlideClick = (index: number) => {
+  const handleSlideClick = useCallback((index: number) => {
     if (current !== index) {
       setCurrent(index);
     }
-  };
+  }, [current]);
 
   const id = useId();
 
@@ -209,4 +220,6 @@ export default function Carousel({ slides }: CarouselProps) {
       </div>
     </div>
   );
-}
+});
+
+export default Carousel;

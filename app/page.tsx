@@ -188,36 +188,38 @@ const page = async () => {
         <ResponsiveCarousel slides={carouselSlides} autoSlideInterval={2500} />
       </BlurFade>
 
-      <BlurFade key="logo-carousel" delay={0.25} inView>
+      <BlurFade key="logo-carousel" delay={0.4} inView>
         <CategoryCards />
       </BlurFade>
 
       {/* Fixed the width constraint that was causing overflow */}
       <div className="mx-auto w-full px-4 md:px-8 z-10 overflow-hidden">
-        <BlurFade key="animated-ticker" delay={0.35} inView>
+        <BlurFade key="animated-ticker" delay={0.5} inView>
           <LogoCarousel logos={demoLogos} columns={5} />
         </BlurFade>
 
-        <BlurFade key="category-cards" delay={0.4} inView>
+        <BlurFade key="category-cards" delay={0.6} inView>
           <Ticker />
         </BlurFade>
 
-        <WorldMapHero />
+        <BlurFade key="world-map" delay={0.7} inView>
+          <WorldMapHero />
+        </BlurFade>
 
-        <BlurFade key="products-tab" delay={0.5} inView>
+        <BlurFade key="products-tab" delay={0.8} inView>
           <ProductsTab />
         </BlurFade>
 
-        <BlurFade key="google-reviews" delay={0.55} inView>
+        <BlurFade key="google-reviews" delay={0.9} inView>
           <GoogleReviews />
         </BlurFade>
 
-        <BlurFade key="process-section" delay={0.6} inView>
+        <BlurFade key="process-section" delay={1.0} inView>
           <ProcessSection />
         </BlurFade>
 
         {/* <Testimonials /> */}
-        <BlurFade key="faq-contact" delay={0.65} inView>
+        <BlurFade key="faq-contact" delay={1.1} inView>
           <FaqAndContact />
         </BlurFade>
       </div>

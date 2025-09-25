@@ -1,7 +1,6 @@
 "use client";
 
 import {
-  AnimatePresence,
   motion,
   useInView,
   UseInViewOptions,
@@ -32,17 +31,21 @@ export function BlurFade({
   children,
   className,
   variant,
-  duration = 0.4,
+  duration = 0.6,
   delay = 0,
-  offset = 6,
+  offset = 20,
   direction = "down",
   inView = false,
-  inViewMargin = "-50px",
-  blur = "6px",
+  inViewMargin = "0px 0px -100px 0px",
+  blur = "4px",
   ...props
 }: BlurFadeProps) {
   const ref = useRef(null);
-  const inViewResult = useInView(ref, { once: true, margin: inViewMargin });
+  const inViewResult = useInView(ref, { 
+    once: true, 
+    margin: inViewMargin,
+    amount: 0.1 // Trigger when 10% of element is visible
+  });
   const isInView = !inView || inViewResult;
   const defaultVariants: Variants = {
     hidden: {
@@ -59,23 +62,23 @@ export function BlurFade({
   };
   const combinedVariants = variant || defaultVariants;
   return (
-    <AnimatePresence>
-      <motion.div
-        ref={ref}
-        initial="hidden"
-        animate={isInView ? "visible" : "hidden"}
-        exit="hidden"
-        variants={combinedVariants}
-        transition={{
-          delay: 0.04 + delay,
-          duration,
-          ease: "easeOut",
-        }}
-        className={className}
-        {...props}
-      >
-        {children}
-      </motion.div>
-    </AnimatePresence>
+    <motion.div
+      ref={ref}
+      initial={false} // Prevent hydration mismatch
+      animate={isInView ? "visible" : "hidden"}
+      variants={combinedVariants}
+      transition={{
+        delay: 0.1 + delay,
+        duration,
+        ease: [0.21, 1.11, 0.81, 0.99], // Custom spring easing
+        type: "spring",
+        stiffness: 100,
+        damping: 15,
+      }}
+      className={className}
+      {...props}
+    >
+      {children}
+    </motion.div>
   );
 }

@@ -5,7 +5,9 @@ import {
   chatHistory, 
   resetSessionTimeout, 
   businessData, 
-  BUSINESS_CONTACT 
+  BUSINESS_CONTACT,
+  ensureSession,
+  BUSINESS_NAME
 } from "../shared";
 
 // Initialize Google AI
@@ -24,11 +26,14 @@ export async function POST(request: NextRequest) {
       );
     }
     
-    if (!chatHistory[sessionId]) {
-      return NextResponse.json(
-        { error: "Session not found or expired" },
-        { status: 404 }
-      );
+    // Ensure session exists (recreate if expired)
+    const sessionExisted = ensureSession(sessionId);
+    if (!sessionExisted) {
+      // Session was recreated, add a welcome back message
+      chatHistory[sessionId].push({ 
+        role: "model", 
+        content: `Welcome back to ${BUSINESS_NAME}! Your previous session expired, but I'm here to help. How can I assist you?` 
+      });
     }
 
     // Add user message to history
@@ -122,4 +127,5 @@ Remember:
   }
 }
 
-export const runtime = "edge";
+// Removed edge runtime to avoid session storage issues with timeouts
+// export const runtime = "edge";

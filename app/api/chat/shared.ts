@@ -7,7 +7,7 @@ export const BUSINESS_CONTACT = "WhatsApp: +918687868783"; // Replace with your 
 // Store chat history and manage sessions
 export const chatHistory: Record<string, { role: string; content: string }[]> = {};
 export const activeSessions: Record<string, NodeJS.Timeout> = {};
-export const SESSION_TIMEOUT = 10 * 60 * 1000; // 10 minutes
+export const SESSION_TIMEOUT = 30 * 60 * 1000; // 30 minutes (increased from 10)
 
 // Load business data from file
 export const businessData = data;//data.replace(/\n/g, ' ').replace(/"/g, '\\"');
@@ -29,4 +29,16 @@ export function resetSessionTimeout(sessionId: string) {
 
     console.log(`Session ${sessionId} expired and history cleaned up`);
   }, SESSION_TIMEOUT);
+}
+
+// Helper function to validate and ensure session exists
+export function ensureSession(sessionId: string): boolean {
+  if (!chatHistory[sessionId]) {
+    // Initialize session if it doesn't exist
+    chatHistory[sessionId] = [];
+    resetSessionTimeout(sessionId);
+    console.log(`Session ${sessionId} recreated`);
+    return false; // Return false to indicate it was recreated
+  }
+  return true; // Return true to indicate it already existed
 }

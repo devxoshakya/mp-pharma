@@ -3,7 +3,10 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import AcchaNavbar from "@/components/shared/navigation/Navbar";
 import Footer from "@/components/shared/navigation/Footer";
-import { AIBusinessChatbot } from "@/components/shared/chat/ChatIcon";
+import { DynamicChatIcon } from "@/components/dynamic-imports";
+import { PerformanceDebugPanel } from "@/components/ui/performance-debug-panel";
+import { ResourcePreloader } from "@/components/ui/resource-preloader";
+import { Suspense } from "react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -100,11 +103,16 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased mx-auto flex flex-col justify-center items-center  `}
       >
-        <div className="w-full relative flex flex-col min-h-screen items-center justify-center mx-auto">
-          <AcchaNavbar>{children}</AcchaNavbar>
-          <Footer />
-          <AIBusinessChatbot position="bottom-left" size="lg"/>
-        </div>
+        <ResourcePreloader>
+          <div className="w-full relative flex flex-col min-h-screen items-center justify-center mx-auto">
+            <AcchaNavbar>{children}</AcchaNavbar>
+            <Footer />
+            <Suspense fallback={null}>
+              <DynamicChatIcon />
+            </Suspense>
+            <PerformanceDebugPanel />
+          </div>
+        </ResourcePreloader>
       </body>
     </html>
   );

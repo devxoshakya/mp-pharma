@@ -34,4 +34,5 @@ export async function POST(request: NextRequest) {
   }
 }
 
-export const runtime = "edge";
+// Removed edge runtime to avoid session storage issues
+// export const runtime = "edge";

@@ -10,14 +10,17 @@ import {
   MobileNavToggle,
   MobileNavMenu,
 } from "@/components/ui/resizable-navbar";
-import { useState } from "react";
+import { memo, useMemo, useCallback } from "react";
+import { useUIStore } from "@/lib/stores/ui-store";
 
-export default function AcchaNavbar({
+const AcchaNavbar = memo(function AcchaNavbar({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const navItems = [
+  const { isMobileMenuOpen, toggleMobileMenu, setMobileMenu } = useUIStore();
+  
+  const navItems = useMemo(() => [
     {
       name: "Home",
       link: "/",
@@ -34,9 +37,19 @@ export default function AcchaNavbar({
       name: "Contact",
       link: "/contact",
     },
-  ];
+  ], []);
 
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const handleMobileToggle = useCallback(() => {
+    toggleMobileMenu();
+  }, [toggleMobileMenu]);
+
+  const handleLinkClick = useCallback(() => {
+    setMobileMenu(false);
+  }, [setMobileMenu]);
+
+  const handleMobileClose = useCallback(() => {
+    setMobileMenu(false);
+  }, [setMobileMenu]);
 
   return (
     <div className="relative w-full">
@@ -62,19 +75,19 @@ export default function AcchaNavbar({
             <NavbarLogo />
             <MobileNavToggle
               isOpen={isMobileMenuOpen}
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              onClick={handleMobileToggle}
             />
           </MobileNavHeader>
 
           <MobileNavMenu
             isOpen={isMobileMenuOpen}
-            onClose={() => setIsMobileMenuOpen(false)}
+            onClose={handleMobileClose}
           >
             {navItems.map((item, idx) => (
               <a
                 key={`mobile-link-${idx}`}
                 href={item.link}
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={handleMobileClose}
                 className="relative text-neutral-600 dark:text-neutral-300"
               >
                 <span className="block">{item.name}</span>
@@ -86,7 +99,7 @@ export default function AcchaNavbar({
               </NavbarButton> */}
               <NavbarButton
                 href="https://wa.me/918687868783?text=Hello%20there%2C%20I%20have%20a%20question%20about%20your%20service"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={handleMobileClose}
                 variant="primary"
                 className="w-full"
               >
@@ -99,7 +112,9 @@ export default function AcchaNavbar({
       {children}
     </div>
   );
-}
+});
+
+export default AcchaNavbar;
 
 const DummyContent = () => {
   return (
