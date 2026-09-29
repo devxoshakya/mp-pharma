@@ -21,7 +21,7 @@ const FeaturedCards = () => {
       quantity: "30 GM TO 100 GM",
     },
     {
-      image: "https://cdn2.devshakya.xyz/assets/vitamin%20C%20Cream.png",
+      image: "https://cdn2.devxoshakya.xyz/assets/vitamin%20C%20Cream.png",
       category: "FACE CREAM RANGE",
       name: "VITAMIN C FACE CREAM",
       ingredients:
@@ -37,7 +37,7 @@ const FeaturedCards = () => {
       quantity: "30 GM TO 100 GM",
     },
     {
-      image: "https://cdn2.devshakya.xyz/assets/skin-whiting%20cream.png",
+      image: "https://cdn2.devxoshakya.xyz/assets/skin-whiting%20cream.png",
       category: "FACE CREAM RANGE",
       name: "SKIN WHITENING CREAM",
       ingredients:
@@ -45,7 +45,7 @@ const FeaturedCards = () => {
       quantity: "30 GM TO 100 GM",
     },
     {
-      image: "https://cdn2.devshakya.xyz/assets/skin%20hydarting%20cream.png",
+      image: "https://cdn2.devxoshakya.xyz/assets/skin%20hydarting%20cream.png",
       category: "FACE CREAM RANGE",
       name: "HYDRATING FACE CREAM",
       ingredients:
